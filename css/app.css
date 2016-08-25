@@ -80,17 +80,9 @@ body {
     flex-grow: 1;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button, {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-
 input[type="number"] {
-    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: textfield;
     -moz-appearance: textfield;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .clear-label {
@@ -112,13 +104,19 @@ input[type="number"] {
     margin-right: 10px;
 }
 
+.results {
+    margin: 15px 20px;
+}
 .table * {
     text-align: center;
-    margin: 0px 20px;
 }
 
 .error-message {
     font-size: 18px;
     text-align: center;
     margin-top: 20px;
+}
+
+ul {
+    list-style-image: url("../img/favicon.png");
 }

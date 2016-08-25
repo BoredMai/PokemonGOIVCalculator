@@ -130,4 +130,25 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
     $scope.toggleCheck = function(check) {
         $scope[check] = !$scope[check];
     }
+
+    $scope.exportData = function() {
+        var data = {};
+        data.pokemon = $scope.pokemon;
+        data.cp = $scope.cp;
+        data.hp = $scope.hp;
+        data.stardust = $scope.stardust;
+        if ($scope.team) {
+            data.team = $scope.team.name;
+            if ($scope.overall) {
+                data.overall = $scope.overall;
+            }
+            if ($scope.stats) {
+                data.stats = $scope.stats;
+            }
+        }
+        data.results = $scope.results;
+        var json = JSON.stringify(data);
+        var file = new File([json], $scope.pokemon.name + ".json", {type: "application/json"});
+        saveAs(file);
+    }
 }]);
