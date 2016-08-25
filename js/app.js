@@ -10,6 +10,7 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
     });
 
     $scope.team = {};
+    $scope.poweredup = false;
 
     $scope.calculateIV = function() {
         if ($scope.pokemon && $scope.cp && $scope.hp && $scope.stardust) {
@@ -29,7 +30,7 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
                                         * Math.pow($scope.pokemon.BHP + HP, 0.5) * Math.pow(ECpM, 2) / 10);
                                 CP = CP < 10 ? 10 : CP;
                                 if (CP == $scope.cp) {
-                                    var result = { level: LVL, HP: HP, ATK: ATK, DEF: DEF};
+                                    var result = { level: LVL, HP: HP, ATK: ATK, DEF: DEF, total: HP+ATK+DEF };
                                     $scope.results.push(result);
                                 }
                             }
@@ -124,5 +125,9 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
         $scope.highHP = false;
         $scope.highATK = false;
         $scope.highDEF = false;
+    }
+
+    $scope.toggleCheck = function(check) {
+        $scope[check] = !$scope[check];
     }
 }]);

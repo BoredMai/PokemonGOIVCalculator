@@ -4,6 +4,8 @@
         <script type="text/javascript" src="./js/app.js"></script>
         <link rel="stylesheet" href="./css/bootstrap.min.css" />
         <link rel="stylesheet" href="./css/app.css" />
+        <link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
         <title>Pok&eacute;mon GO IV Calculator</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <script>
@@ -18,8 +20,7 @@
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Pok&eacute;mon GO IV Calculator</a>
-                <p class="navbar-text pull-right"><a href="mailto:nannesribeiro@gmail.com" class="navbar-link pull-right">Found a bug?</a></p>
+                <a class="navbar-brand" href="#"><img src="./img/pokeball.png" class="logo" />Pok&eacute;mon GO IV Calculator</a>
             </div>
         </nav>
         <div class="container" ng-app="PoGOApp" ng-controller="PoGOController">
@@ -41,7 +42,7 @@
                     </label>
                 </div>
                 <div class="col-md-2 col-sm-6 col-xs-6 text-center">
-                    <label>Powered Up<input class="form-control blockbox" ng-model="poweredup" type="checkbox" /></label>
+                    <label>Powered Up<img class="check-img" src="./img/pokeball.png" ng-class="{'not-selected' : !poweredup}" ng-click="toggleCheck('poweredup')" /></label>
                 </div>
             </div>
             <div class="row">
@@ -63,25 +64,31 @@
                     <label>Stats Feedback<select class="form-control" ng-model="stats" ng-options="s.text for s in team.stats"></select></label>
                 </div>
                 <div class="col-sm-1 col-xs-2 text-center">
-                    <label>HP<input class="form-control blockbox" ng-model="highHP" type="checkbox" /></label>
+                    <label>HP
+                        <img class="check-img" src="./img/pokeball.png" ng-class="{'not-selected' : !highHP}" ng-click="toggleCheck('highHP')" />
+                    </label>
                 </div>
                 <div class="col-sm-1 col-xs-2 text-center">
-                    <label>ATK<input class="form-control blockbox" ng-model="highATK" type="checkbox" /></label>
+                    <label>ATK
+                        <img class="check-img" src="./img/pokeball.png" ng-class="{'not-selected' : !highATK}" ng-click="toggleCheck('highATK')" />
+                    </label>
                 </div>
                 <div class="col-sm-1 col-xs-2 text-center">
-                    <label>DEF<input class="form-control blockbox" ng-model="highDEF" type="checkbox" /></label>
+                    <label>DEF
+                        <img class="check-img" src="./img/pokeball.png" ng-class="{'not-selected' : !highDEF}" ng-click="toggleCheck('highDEF')" />
+                    </label>
                 </div>
                 <div class="col-sm-3 col-xs-6">
                     <label class="clear-label">Clear Team<button class="btn btn-danger btn-block" ng-click="clearTeam()">Clear Team</button></label>
                 </div>
             </div>
-            <div class="btn-container">
-                <button class="btn btn-primary btn-lg btn-calc" ng-click="calculateIV()">Calculate</button>
+            <div class="row">
+                <div class="col-sm-12 btn-container">
+                    <button class="btn btn-primary btn-lg btn-calc" ng-click="calculateIV()">Calculate</button>
+                </div>
             </div>
-            <br />
-            <br />
-            <h4 ng-show="results.length == 0"><big><b>Oops!</b></big> There might be something wrong with your input.<span ng-show="!poweredup"> Try checking the "Powered Up" option to include half-level status.</span></h4>
-            <table class="table" ng-show="results.length > 0">
+            <div class="error-message" ng-show="results.length == 0"><big><b>Oops!</b></big>&nbsp;&nbsp;<small>There might be something wrong with your input.<span ng-show="!poweredup"> Try checking the "Powered Up" option to include half-level status.</span></small></div>
+            <table class="table table-hover" ng-show="results.length > 0">
                 <tr>
                     <th>Level</th>
                     <th>HP</th>
@@ -89,14 +96,20 @@
                     <th>Defence</th>
                     <th>Total</th>
                 </tr>
-                <tr ng-repeat="r in results">
+                <tr class="text-center" ng-repeat="r in results">
                     <td>{{r.level}}</td>
                     <td>{{r.HP}}</td>
                     <td>{{r.ATK}}</td>
                     <td>{{r.DEF}}</td>
-                    <td>{{r.HP + r.ATK + r.DEF}}/45 ({{((r.HP + r.ATK + r.DEF)/0.45).toFixed(1)}}%)</td>
+                    <td>{{r.total}}/45 ({{(r.total/0.45).toFixed(1)}}%)</td>
                 </tr>
             </table>
         </div>
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+          <div class="container-fluid">
+              <p class="navbar-text pull-left">Made by BoredMai</p>
+              <p class="navbar-text pull-right"><a href="mailto:nannesribeiro@gmail.com" class="navbar-link  pull-right">Found a bug?</a></p>
+          </div>
+        </nav>
     </body>
 </html>

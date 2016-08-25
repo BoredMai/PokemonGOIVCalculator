@@ -1,18 +1,35 @@
 body {
     padding: 80px 20px;
+    background-color: #ececf4;
+    font-family: "Ubuntu", sans-serif;
 }
 
-.navbar {
-    background-color: #ec2929;
+.container {
+    background-color: #fcfcfc;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.navbar-fixed-top {
+    background-color: #d32026;
     border-color: black;
     border-width: 0px 0px 5px;
 }
 
-.navbar .navbar-brand {
-    color: white;
+.navbar-fixed-bottom {
+    background-color: #d32026;
+    border-color: black;
+    border-width: 5px 0px 0px;
+    /*height: 20px;*/
 }
 
-.navbar .navbar-link {
+
+.navbar .navbar-brand {
+    color: white;
+    font-weight: 500;
+}
+
+.navbar .navbar-text, .navbar .navbar-link {
     color: whitesmoke;
 }
 
@@ -24,6 +41,7 @@ body {
 
 .row input, .row select, .row button {
     margin: 4px 0px;
+    font-weight: normal;
 }
 
 .blockbox {
@@ -53,6 +71,8 @@ body {
 
 .btn-container {
     display: flex;
+    margin-top: 10px;
+    padding: 0px;
 }
 
 .btn-calc {
@@ -69,4 +89,30 @@ input::-webkit-inner-spin-button {
 
 .clear-label {
     color: rgba(0, 0, 0, 0);
+}
+
+.check-img {
+    cursor: pointer;
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: 4px auto 0px;
+}
+
+.logo {
+    display: inline-block !important;
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.table * {
+    text-align: center;
+    margin: 0px 20px;
+}
+
+.error-message {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
 }
