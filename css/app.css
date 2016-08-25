@@ -1,0 +1,72 @@
+body {
+    padding: 80px 20px;
+}
+
+.navbar {
+    background-color: #ec2929;
+    border-color: black;
+    border-width: 0px 0px 5px;
+}
+
+.navbar .navbar-brand {
+    color: white;
+}
+
+.navbar .navbar-link {
+    color: whitesmoke;
+}
+
+.row label {
+    margin: 0px 10px 10px;
+    width: 100%;
+    font-size: 120%;
+}
+
+.row input, .row select, .row button {
+    margin: 4px 0px;
+}
+
+.blockbox {
+    display: block;
+    width: 100%;
+    min-width: 34px;
+    height: 34px;
+    box-shadow: none;
+}
+
+.centered {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.toggle-img {
+    cursor: pointer;
+    /*max-height: 130px;*/
+    max-width: 100%;
+    margin: 5px;
+}
+
+.not-selected {
+    opacity: 0.3;
+}
+
+.btn-container {
+    display: flex;
+}
+
+.btn-calc {
+    margin: 15px 10px 0px;
+    flex-grow: 1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.clear-label {
+    color: rgba(0, 0, 0, 0);
+}

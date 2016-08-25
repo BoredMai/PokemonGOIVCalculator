@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <script type="text/javascript" src="./js/angular.js"></script>
+        <script type="text/javascript" src="./js/app.js"></script>
+        <link rel="stylesheet" href="./css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/app.css" />
+        <title>Pokémon GO IV Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Pokémon GO IV Calculator</a>
+                <p class="navbar-text pull-right"><a href="mailto:nannesribeiro@gmail.com" class="navbar-link pull-right">Found a bug?</a></p>
+            </div>
+        </nav>
+        <div class="container" ng-app="PoGOApp" ng-controller="PoGOController">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <label>Pokémon<select class="form-control" ng-model="pokemon" ng-options="p.name for p in pokemons"></select></label>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <label>CP<input class="form-control" ng-model="cp" type="number" placeholder="CP" /></label>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <label>HP<input class="form-control" ng-model="hp" type="number" placeholder="HP" /></label>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <label>Stardust
+                        <select class="form-control" ng-model="stardust">
+                            <option ng-repeat="d in dustValues" ng-value="$index">{{d}}</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-6 text-center">
+                    <label>Powered Up<input class="form-control blockbox" ng-model="poweredup" type="checkbox" /></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-xs-4 text-center">
+                    <img src="./img/valor/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team.name != 'Valor'}" ng-click="selectTeam(0);" />
+                </div>
+                <div class="col-sm-4 col-xs-4 text-center">
+                    <img src="./img/mystic/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team.name != 'Mystic'}" ng-click="selectTeam(1);" />
+                </div>
+                <div class="col-sm-4 col-xs-4 text-center">
+                    <img src="./img/instinct/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team.name != 'Instinct'}" ng-click="selectTeam(2);" />
+                </div>
+            </div>
+            <div class="row" ng-show="team.name && pokemon">
+                <div class="col-sm-6">
+                    <label>Overall, your<span ng-show="pokemon"> {{pokemon.name}}...</span><select class="form-control" ng-model="overall" ng-options="o.text for o in team.overall"></select></label>
+                </div>
+                <div class="col-sm-6">
+                    <label>Stats Feedback<select class="form-control" ng-model="stats" ng-options="s.text for s in team.stats"></select></label>
+                </div>
+                <div class="col-sm-1 col-xs-2 text-center">
+                    <label>HP<input class="form-control blockbox" ng-model="highHP" type="checkbox" /></label>
+                </div>
+                <div class="col-sm-1 col-xs-2 text-center">
+                    <label>ATK<input class="form-control blockbox" ng-model="highATK" type="checkbox" /></label>
+                </div>
+                <div class="col-sm-1 col-xs-2 text-center">
+                    <label>DEF<input class="form-control blockbox" ng-model="highDEF" type="checkbox" /></label>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <label class="clear-label">Clear Team<button class="btn btn-danger btn-block" ng-click="clearTeam()">Clear Team</button></label>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="btn btn-primary btn-lg btn-calc" ng-click="calculateIV()">Calculate</button>
+            </div>
+            <br />
+            <br />
+            <h4 ng-show="results.length == 0"><big><b>Oops!</b></big> There might be something wrong with your input.</h4>
+            <table class="table" ng-show="results.length > 0">
+                <tr>
+                    <th>Level</th>
+                    <th>HP</th>
+                    <th>Attack</th>
+                    <th>Defence</th>
+                    <th>Total</th>
+                </tr>
+                <tr ng-repeat="r in results">
+                    <td>{{r.level}}</td>
+                    <td>{{r.HP}}</td>
+                    <td>{{r.ATK}}</td>
+                    <td>{{r.DEF}}</td>
+                    <td>{{r.HP + r.ATK + r.DEF}}/45 ({{((r.HP + r.ATK + r.DEF)/0.45).toFixed(1)}}%)</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
