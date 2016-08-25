@@ -120,3 +120,9 @@ input[type="number"] {
 ul {
     list-style-image: url("../img/favicon.png");
 }
+
+.donate-btn {
+    position: relative;
+    bottom: 4px;
+    margin-left: 10px;
+}
