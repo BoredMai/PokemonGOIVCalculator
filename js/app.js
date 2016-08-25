@@ -21,11 +21,13 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
                 var ECpM = $scope.getECpM(i);
                 for (var HP = 0; HP < 16; HP++) {
                     var THP = Math.floor(ECpM * ($scope.pokemon.BHP + HP));
+                    THP = THP < 10 ? 10 : THP;
                     if (THP == $scope.hp) {
                         for (var ATK = 0; ATK < 16; ATK++) {
                             for (var DEF = 0; DEF < 16; DEF++) {
                                 var CP = Math.floor(($scope.pokemon.BATK + ATK) * Math.pow($scope.pokemon.BDEF + DEF, 0.5)
                                         * Math.pow($scope.pokemon.BHP + HP, 0.5) * Math.pow(ECpM, 2) / 10);
+                                CP = CP < 10 ? 10 : CP;
                                 if (CP == $scope.cp) {
                                     var result = { level: LVL, HP: HP, ATK: ATK, DEF: DEF};
                                     $scope.results.push(result);
