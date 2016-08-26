@@ -56,11 +56,13 @@
                         <a ng-click="switchLanguage('en')"><img ng-class="{'not-selected' : language != 'en'}" src="./img/blank.png" class="flag flag-gb" /></a>&nbsp;&nbsp;
                         <a ng-click="switchLanguage('de')"><img ng-class="{'not-selected' : language != 'de'}" src="./img/blank.png" class="flag flag-de" /></a>&nbsp;&nbsp;
                         <a ng-click="switchLanguage('fr')"><img ng-class="{'not-selected' : language != 'fr'}" src="./img/blank.png" class="flag flag-fr" /></a>&nbsp;&nbsp;
+                        <a ng-click="switchLanguage('it')"><img ng-class="{'not-selected' : language != 'it'}" src="./img/blank.png" class="flag flag-it" /></a>&nbsp;&nbsp;
                         <!-- <a ng-click="switchLanguage('jp')"><img src="./img/blank.png" class="flag flag-jp" /></a>&nbsp;&nbsp; -->
                         <!-- <a ng-click="switchLanguage('kr')"><img src="./img/blank.png" class="flag flag-kr" /></a> -->
-                        <input class="form-control" data-toggle="dropdown" ng-model="pokemonName" type="text" ng-change="pokemonInputChanged = true" ng-blur="checkPokemonName()" /></label>
-                    <ul class="dropdown-menu" ng-show="pokemonInputChanged" ng-mouseover="mouseOverDropdown = true" ng-mouseout="mouseOverDropdown = false; checkPokemonName();">
-                        <li ng-repeat="p in pokemonList[language] | filter:pokemonName:startsWith"><a ng-click="selectPokemon(p)">{{p.name}}</a></li>
+                        <input class="form-control" data-toggle="dropdown" ng-model="pokemonName" type="text" ng-change="pokemonInputChanged = true" ng-blur="checkPokemonName()" />
+                    </label>
+                    <ul class="dropdown-menu" ng-show="pokemonInputChanged" ng-mouseover="mouseOverDropdown = true" ng-mouseout="checkPokemonName();">
+                        <li ng-repeat="p in pokemonList[language] | filter:pokemonName:startsWith" ng-mouseover="mouseOverDropdown = true" ><a ng-click="selectPokemon(p)">{{p.name}}</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2 col-sm-6 col-xs-6">
@@ -156,6 +158,7 @@
                             <li> 1.2 - Added AdSense and Donate Button </li>
                             <li> 1.3 - Fixed AdSense, added DE and FR Pok&eacute;mon names support, changed name dropdown to input with list </li>
                             <li> 1.4 - Fixed a bug with typing the Pok&eacute;mon's name instead of selecting, added DE and FR translations to leaders' feedback, added Instructions, changed Changelog and Credits' design </li>
+                            <li> 1.5 - Added IT translations to leaders' feedback, fixed a bug on the Pokémon list </li>
                         </ul>
                     </div>
                 </div>
@@ -173,6 +176,9 @@
                             <li><a href="http://pokemongo.gamepress.gg/">Pok&eacute;mon GO Game Press</a> for the Stardust table and Leaders' Appraisal Lines;</li>
                             <li><a href="https://www.reddit.com/r/pokemongodev/comments/4t7xb4/exact_cp_formula_from_stats_and_cpm_and_an_update/">/r/__isitin__</a> for CP formula and CPM table;</li>
                             <li><a href="https://www.reddit.com/r/pokemongodev/comments/4t59t1/decoded_game_master_protobuf_file_v01_all_pokemon/d5f2y91">/u/a1k0n</a> for the formatted CPM array.</li>
+                            <li><a href="https://www.reddit.com/r/pokemongodev/comments/4zkngn/i_made_an_iv_calculator_that_uses_the_leaders/d6xd88m?context=3">/u/Selfron</a> for linking me to <a href="https://www.reddit.com/r/TheSilphRoad/comments/4zdwn5/german_appraisalbewertung/">TheSilphRoad's list of DE leaders' feedback lines</a>.</li>
+                            <li><a href="https://www.reddit.com/r/pokemongodev/comments/4zkngn/i_made_an_iv_calculator_that_uses_the_leaders/d6xdlk8?context=3">/u/LeFugu</a> for the FR leaders' feedback lines.</li>
+                            <li><a href="https://www.reddit.com/r/pokemongo/comments/4zkktg/i_made_an_iv_calculator_that_uses_the_leaders/d6xhus7?context=3">/u/Oneiros90</a> for the formatted json with the IT leaders' feedback lines.</li>
                         </ul>
                     </div>
                 </div>

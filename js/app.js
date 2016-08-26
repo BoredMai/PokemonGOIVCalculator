@@ -5,6 +5,7 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
     $http.get('data/data.json').success(function(data) {
         $scope.language = "en";
         $scope.pokemonList = data.pokemonList;
+        $scope.pokemonList.it = data.pokemonList.en;
         $scope.pokemonData = data.pokemonData;
         $scope.cpm = data.cpm;
         $scope.dustValues = data.dustValues;
@@ -135,6 +136,8 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
             }
             if (!$scope.pokemon) {
                 $scope.pokemonName = '';
+                $scope.pokemonInputChanged = false;
+                $scope.mouseOverDropdown = false;
             }
         }
     }
@@ -143,11 +146,11 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
         $scope.pokemon = $scope.pokemonData[p.number];
         $scope.pokemonName = p.name;
         $scope.pokemonInputChanged = false;
+        $scope.mouseOverDropdown = false;
     };
 
     $scope.selectTeam = function(team) {
         $scope.team = $scope.teams[$scope.language].entries[team];
-        console.log($scope.team);
     };
 
     $scope.clearTeam = function() {

@@ -174,5 +174,64 @@
                 ]
             }
         ]
+    },
+
+    "it" :
+    {
+        "title": "Nel complesso, il tuo ",
+        "entries":
+        [
+            {
+                "name":"Valor",
+                "overall":
+                [
+                    {"text":"...è semplicemente stupefacente. Non ha rivali!", "min":"37", "max":"45"},
+                    {"text":"...è molto forte. Devi esserne orgoglioso!", "min":"30", "max":"36"},
+                    {"text":"...non è niente male.", "min":"23", "max":"29"},
+                    {"text":"...potrebbe non essere forte nella lotta, ma mi piace lo stesso!", "min":"0", "max":"22"}
+                ],
+                "stats":
+                [
+                    {"text":"Che statistiche sbalorditive. Non riesco a credere ai miei occhi!", "min":"15", "max":"15"},
+                    {"text":"Ha delle statistiche eccellenti. Forte!", "min":"13", "max":"14"},
+                    {"text":"Delle statistiche del genere dovrebbero bastare nelle lotte.", "min":"8", "max":"12"},
+                    {"text":"Delle statistiche del genere non gli saranno di grande aiuto nella lotta.", "min":"0", "max":"7"}
+                ]
+            },
+            {
+                "name": "Mystic",
+                "overall":
+                [
+                    {"text":"...è una meraviglia assoluta. Che esemplare unico!", "min":"37", "max":"45"},
+                    {"text":"...ha attirato la mia attenzione.", "min":"30", "max":"36"},
+                    {"text":"...è sopra la media.", "min":"23", "max":"29"},
+                    {"text":"...non avrà grande successo nelle lotte.", "min":"0", "max":"22"}
+                ],
+                "stats":
+                [
+                    {"text":"Delle statistiche così non si sono mai viste. Incredibile.", "min":"15", "max":"15"},
+                    {"text":"Devo dire che le sue statistiche sono eccellenti.", "min":"13", "max":"14"},
+                    {"text":"Le sue statistiche sono piuttosto buone.", "min":"8", "max":"12"},
+                    {"text":"Credo che le sue statistiche non siano fuori dell’ordinario.", "min":"0", "max":"7"}
+                ]
+            },
+            {
+                "name":"Instinct",
+                "overall":
+                [
+                    {"text":"...sembra potercela fare contro i migliori!", "min":"37", "max":"45"},
+                    {"text":"...è molto forte!", "min":"30", "max":"36"},
+                    {"text":"...non è malaccio!", "min":"23", "max":"29"},
+                    {"text":"...potrebbe migliorare nelle lotte.", "min":"0", "max":"22"}
+                ],
+                "stats":
+                [
+                    {"text":"Le sue statistiche sono senza dubbio le migliori che abbia mai visto!", "min":"15", "max":"15"},
+                    {"text":"Che statistiche forti! Incredibile!", "min":"13", "max":"14"},
+                    {"text":"C’è certamente qualcosa di valido nelle sue statistiche.", "min":"8", "max":"12"},
+                    {"text":"Credo che le sue statistiche non siano il massimo, ma possono andare.", "min":"0", "max":"7"}
+                ]
+            }
+        ]
     }
 }
