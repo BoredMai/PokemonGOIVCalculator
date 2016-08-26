@@ -330,7 +330,8 @@
                     3000, 3500, 4000, 4500, 5000,
                     6000, 7000, 8000, 9000, 10000 ],
     "teams":
-    [
+    {
+      "en" : [
         {
             "name":"Valor",
             "overall":
@@ -382,5 +383,60 @@
                 {"text":"Its stats are all right, but kinda basic, as far as I can see.", "min":"0", "max":"7"}
             ]
         }
-    ]
+      ],
+
+      "de" : [
+        {
+            "name":"Wagemut",
+            "overall":
+            [
+                {"text":"...bin ich insgesamt total beeindruckt. Es kann einfach alles!", "min":"37", "max":"45"},
+                {"text":"...ist insgesamt sehr stark. Du kannst stolz sein!", "min":"30", "max":"36"},
+                {"text":"...ist insgesamt ganz gut!", "min":"23", "max":"29"},
+                {"text":"...ist zwar insgesamt im Kampf nicht allzu beeindruckend, aber ich mag es trotzdem!", "min":"0", "max":"22"}
+            ],
+            "stats":
+            [
+                {"text":"Seine Werte hauen mich um. WOW!", "min":"15", "max":"15"},
+                {"text":"Er hat hervorragende Werte! Wie aufregend!", "min":"13", "max":"14"},
+                {"text":"Seine Werte sind nicht von schlechten Eltern!", "min":"8", "max":"12"},
+                {"text":"Seine Werte werden dir im Kampf nicht viel bringen.", "min":"0", "max":"7"}
+            ]
+        },
+        {
+            "name": "Weisheit",
+            "overall":
+            [
+                {"text":"...ist insgesamt einfach erstaunlich. Wirklich ein atemberaubendes Exemplar!", "min":"37", "max":"45"},
+                {"text":"...ist mir insgesamt wirklich aufgefallen.", "min":"30", "max":"36"},
+                {"text":"...ist insgesamt ein gutes Pokémon.", "min":"23", "max":"29"},
+                {"text":"...wird im Kampf wahrscheinlich keine großen Fortschritte machen.", "min":"0", "max":"22"}
+            ],
+            "stats":
+            [
+                {"text":"Seine Werte sind so hoch, dass ich sie gar nicht berechnen kann! Unglaublich!", "min":"15", "max":"15"},
+                {"text":"Ich muss sagen, dass ich von seinen Werten sehr beeindruckt bin.", "min":"13", "max":"14"},
+                {"text":"Seine Werte sind recht beeindruckend.", "min":"8", "max":"12"},
+                {"text":"Seine Werte sind insgesamt ganz okay.", "min":"0", "max":"7"}
+            ]
+        },
+        {
+            "name":"Intuition",
+            "overall":
+            [
+                {"text":"...kann es im Kampf mit allen aufnehmen!", "min":"37", "max":"45"},
+                {"text":"...ist insgesamt wirklich stark!", "min":"30", "max":"36"},
+                {"text":"...ist insgesamt ganz gut.", "min":"23", "max":"29"},
+                {"text":"...kann sich im Kampf noch verbessern!", "min":"0", "max":"22"}
+            ],
+            "stats":
+            [
+                {"text":"Seine Werte sind die besten, die ich je gesehen habe!", "min":"15", "max":"15"},
+                {"text":"Seine Werte sind wirklich hoch! Hut ab!", "min":"13", "max":"14"},
+                {"text":"Seine Werte können sich sehen lassen!", "min":"8", "max":"12"},
+                {"text":"Seine Werte sind okay.", "min":"0", "max":"7"}
+            ]
+        }
+      ]
+    }
 }
