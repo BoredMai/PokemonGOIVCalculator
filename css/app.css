@@ -126,3 +126,16 @@ ul {
     bottom: 4px;
     margin-left: 10px;
 }
+
+.dropdown-menu {
+    display: block;
+    top: 58px;
+    left: 25px;
+    width: calc(100% - 30px);
+    max-height: 293px;
+    overflow: auto;
+}
+
+.dropdown-menu li a {
+    /*padding: 0px;*/
+}

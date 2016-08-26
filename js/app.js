@@ -3,7 +3,9 @@ angular.module('PoGOApp', ['PoGOCtrl']);
 angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', function($scope, $http) {
 
     $http.get('data/data.json').success(function(data) {
-        $scope.pokemons = data.pokemons;
+        $scope.language = "en";
+        $scope.pokemonList = data.pokemonList;
+        $scope.pokemonData = data.pokemonData;
         $scope.cpm = data.cpm;
         $scope.dustValues = data.dustValues;
         $scope.teams = data.teams;
@@ -114,9 +116,17 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
         }
     };
 
+
+
+    $scope.selectPokemon = function(p) {
+        $scope.pokemon = $scope.pokemonData[p.number];
+        $scope.pokemonName = p.name;
+        $scope.pokemonInputChanged = false;
+    };
+
     $scope.selectTeam = function(team) {
         $scope.team = $scope.teams[team];
-    }
+    };
 
     $scope.clearTeam = function() {
         $scope.team = {};
@@ -125,15 +135,15 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
         $scope.highHP = false;
         $scope.highATK = false;
         $scope.highDEF = false;
-    }
+    };
 
     $scope.toggleCheck = function(check) {
         $scope[check] = !$scope[check];
-    }
+    };
 
     $scope.exportData = function() {
         var data = {};
-        data.pokemon = $scope.pokemon;
+        data.pokemon = $scope.pokemonName;
         data.cp = $scope.cp;
         data.hp = $scope.hp;
         data.stardust = $scope.stardust;
@@ -148,7 +158,16 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
         }
         data.results = $scope.results;
         var json = JSON.stringify(data);
-        var file = new File([json], $scope.pokemon.name + ".json", {type: "application/json"});
+        var file = new File([json], $scope.pokemonName + ".json", {type: "application/json"});
         saveAs(file);
+    };
+
+    $scope.startsWith = function(actual, expected) {
+        var lowerStr = (actual + "").toLowerCase();
+        return lowerStr.indexOf(expected.toLowerCase()) === 0;
+    };
+
+    $scope.switchLanguage = function(language) {
+        $scope.language = language;
     }
 }]);

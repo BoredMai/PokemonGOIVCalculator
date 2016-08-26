@@ -5,6 +5,7 @@
         <script type="text/javascript" src="./js/angular.min.js"></script>
         <script type="text/javascript" src="./js/app.js"></script>
         <link rel="stylesheet" href="./css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/flags.css" />
         <link rel="stylesheet" href="./css/app.css" />
         <link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
@@ -29,10 +30,22 @@
                 <a class="navbar-brand" href="#"><img src="./img/pokeball.png" class="logo" />Pok&eacute;mon GO IV Calculator</a>
             </div>
         </nav>
-        <div class="container" ng-app="PoGOApp" ng-controller="PoGOController">
+        <div class="container" ng-app="PoGOApp" ng-controller="PoGOController" ng-focus="pokemonInputChanged = false">
             <div class="row">
-                <div class="col-md-4 col-sm-12">
+                <!-- <div class="col-md-4 col-sm-12">
                     <label>Pok&eacute;mon<select class="form-control" ng-model="pokemon" ng-options="p.name for p in pokemons"></select></label>
+                </div> -->
+                <div class="col-md-4 col-sm-12">
+                    <label>Pok&eacute;mon&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" ng-click="switchLanguage('en')"><img src="./img/blank.png" class="flag flag-gb" /></a>&nbsp;&nbsp;
+                        <a href="#" ng-click="switchLanguage('de')"><img src="./img/blank.png" class="flag flag-de" /></a>&nbsp;&nbsp;
+                        <a href="#" ng-click="switchLanguage('fr')"><img src="./img/blank.png" class="flag flag-fr" /></a>&nbsp;&nbsp;
+                        <!-- <a href="#" ng-click="switchLanguage('jp')"><img src="./img/blank.png" class="flag flag-jp" /></a>&nbsp;&nbsp; -->
+                        <!-- <a href="#" ng-click="switchLanguage('kr')"><img src="./img/blank.png" class="flag flag-kr" /></a> -->
+                        <input class="form-control" data-toggle="dropdown" ng-model="pokemonName" type="text" ng-change="pokemonInputChanged = true" ng-blur="pokemonInputChanged = mouseOverDropdown" /></label>
+                    <ul class="dropdown-menu" ng-show="pokemonInputChanged" ng-mouseover="mouseOverDropdown = true" ng-mouseout="mouseOverDropdown = false">
+                        <li ng-repeat="p in pokemonList[language] | filter:pokemonName:startsWith"><a href="#" ng-click="selectPokemon(p)">{{p.name}}</a></li>
+                    </ul>
                 </div>
                 <div class="col-md-2 col-sm-6 col-xs-6">
                     <label>CP<input class="form-control" ng-model="cp" type="number" placeholder="CP" /></label>
@@ -62,9 +75,9 @@
                     <img src="./img/instinct/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team.name != 'Instinct'}" ng-click="selectTeam(2);" />
                 </div>
             </div>
-            <div class="row" ng-show="team.name && pokemon">
+            <div class="row" ng-show="team.name && pokemonData">
                 <div class="col-sm-6">
-                    <label>Overall, your<span ng-show="pokemon"> {{pokemon.name}}...</span><select class="form-control" ng-model="overall" ng-options="o.text for o in team.overall"></select></label>
+                    <label>Overall, your<span ng-show="pokemonData"> {{pokemonName}}...</span><select class="form-control" ng-model="overall" ng-options="o.text for o in team.overall"></select></label>
                 </div>
                 <div class="col-sm-6">
                     <label>Stats Feedback<select class="form-control" ng-model="stats" ng-options="s.text for s in team.stats"></select></label>
@@ -141,11 +154,11 @@
             </div>
             <div class="row">
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- Bottom Ad - PoGO Calculator -->
+                <!-- PoGo Calculator -->
                 <ins class="adsbygoogle"
                      style="display:block"
-                     data-ad-client="ca-pub-7828805827023333"
-                     data-ad-slot="6493505801"
+                     data-ad-client="ca-pub-7688135019046353"
+                     data-ad-slot="1730384973"
                      data-ad-format="auto"></ins>
                 <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
