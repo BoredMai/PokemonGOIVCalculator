@@ -1,4 +1,4 @@
-angular.module('PoGOApp', ['PoGOCtrl']);
+angular.module('PoGOApp', ['ui.bootstrap', 'ngAnimate', 'PoGOCtrl']);
 
 angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', function($scope, $http) {
 
@@ -13,6 +13,10 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
 
     $scope.team = {};
     $scope.poweredup = false;
+    $scope.mouseOverDropdown = false;
+    $scope.collapseHelp = true;
+    $scope.collapseChangelog = true;
+    $scope.collapseCredits = true;
 
     $scope.calculateIV = function() {
         if ($scope.pokemon && $scope.cp && $scope.hp && $scope.stardust) {
@@ -116,7 +120,21 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
         }
     };
 
-
+    $scope.checkPokemonName = function() {
+        if (!$scope.mouseOverDropdown) {
+            $scope.pokemon = null;
+            if ($scope.pokemonName != '') {
+                for (var i = 0; i < $scope.pokemonList[$scope.language].length; i++) {
+                    if ($scope.pokemonName.toLowerCase() === $scope.pokemonList[$scope.language][i].name.toLowerCase()) {
+                        $scope.selectPokemon($scope.pokemonList[$scope.language][i]);
+                    }
+                }
+            }
+            if (!$scope.pokemon) {
+                $scope.pokemonName = '';
+            }
+        }
+    }
 
     $scope.selectPokemon = function(p) {
         $scope.pokemon = $scope.pokemonData[p.number];
@@ -169,5 +187,7 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
 
     $scope.switchLanguage = function(language) {
         $scope.language = language;
+        $scope.pokemon = null;
+        $scope.pokemonName = '';
     }
 }]);

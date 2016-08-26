@@ -362,7 +362,7 @@
                 {"text":"Its stats exceed my calculations. It's incredible!", "min":"15", "max":"15"},
                 {"text":"I am certainly impressed by its stats, I must say.", "min":"13", "max":"14"},
                 {"text":"Its stats are noticeably trending to the positive.", "min":"8", "max":"12"},
-                {"text":"Its stats are not out of the norm, in my opinion", "min":"0", "max":"7"}
+                {"text":"Its stats are not out of the norm, in my estimation.", "min":"0", "max":"7"}
             ]
         },
         {

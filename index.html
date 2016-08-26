@@ -3,6 +3,8 @@
         <script type="text/javascript" src="./js/Blob.js"></script>
         <script type="text/javascript" src="./js/FileSaver.min.js"></script>
         <script type="text/javascript" src="./js/angular.min.js"></script>
+        <script type="text/javascript" src="./js/angular-animate.min.js"></script>
+        <script type="text/javascript" src="./js/ui-bootstrap-2.1.3.min.js"></script>
         <script type="text/javascript" src="./js/app.js"></script>
         <link rel="stylesheet" href="./css/bootstrap.min.css" />
         <link rel="stylesheet" href="./css/flags.css" />
@@ -31,20 +33,34 @@
             </div>
         </nav>
         <div class="container" ng-app="PoGOApp" ng-controller="PoGOController" ng-focus="pokemonInputChanged = false">
+            <div class="row help">
+                <label>
+                    <a ng-click="collapseHelp = !collapseHelp">Instructions
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true" ng-show="collapseHelp"></span>
+                    <span class="glyphicon glyphicon-menu-up" aria-hidden="true" ng-show="!collapseHelp"></span></a>
+                </label>
+                <div class="col-md-12 col-sm-12" uib-collapse="collapseHelp">
+                    <div class="card card-block">
+                        <ul>
+                            <li>Input your Pok&eacute;mon's name, CP and HP value.</li>
+                            <li>Input how much Stardust your Pok&eacute;mon needs to Power Up.</li>
+                            <li>If you already Powered Up your Pok&eacute;mon, check this to include half-levels.</li>
+                            <li>Optionally, you can click a Team Logo to add Appraisal data. Select the correct phrases and check the boxes that correspond to your Pok&eacute;mon's highest stats, based on leader feedback.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="row">
-                <!-- <div class="col-md-4 col-sm-12">
-                    <label>Pok&eacute;mon<select class="form-control" ng-model="pokemon" ng-options="p.name for p in pokemons"></select></label>
-                </div> -->
                 <div class="col-md-4 col-sm-12">
                     <label>Pok&eacute;mon&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" ng-click="switchLanguage('en')"><img ng-class="{'not-selected' : language != 'en'}" src="./img/blank.png" class="flag flag-gb" /></a>&nbsp;&nbsp;
-                        <a href="#" ng-click="switchLanguage('de')"><img ng-class="{'not-selected' : language != 'de'}" src="./img/blank.png" class="flag flag-de" /></a>&nbsp;&nbsp;
-                        <a href="#" ng-click="switchLanguage('fr')"><img ng-class="{'not-selected' : language != 'fr'}" src="./img/blank.png" class="flag flag-fr" /></a>&nbsp;&nbsp;
-                        <!-- <a href="#" ng-click="switchLanguage('jp')"><img src="./img/blank.png" class="flag flag-jp" /></a>&nbsp;&nbsp; -->
-                        <!-- <a href="#" ng-click="switchLanguage('kr')"><img src="./img/blank.png" class="flag flag-kr" /></a> -->
-                        <input class="form-control" data-toggle="dropdown" ng-model="pokemonName" type="text" ng-change="pokemonInputChanged = true" ng-blur="pokemonInputChanged = mouseOverDropdown" /></label>
-                    <ul class="dropdown-menu" ng-show="pokemonInputChanged" ng-mouseover="mouseOverDropdown = true" ng-mouseout="mouseOverDropdown = false">
-                        <li ng-repeat="p in pokemonList[language] | filter:pokemonName:startsWith"><a href="#" ng-click="selectPokemon(p)">{{p.name}}</a></li>
+                        <a ng-click="switchLanguage('en')"><img ng-class="{'not-selected' : language != 'en'}" src="./img/blank.png" class="flag flag-gb" /></a>&nbsp;&nbsp;
+                        <a ng-click="switchLanguage('de')"><img ng-class="{'not-selected' : language != 'de'}" src="./img/blank.png" class="flag flag-de" /></a>&nbsp;&nbsp;
+                        <a ng-click="switchLanguage('fr')"><img ng-class="{'not-selected' : language != 'fr'}" src="./img/blank.png" class="flag flag-fr" /></a>&nbsp;&nbsp;
+                        <!-- <a ng-click="switchLanguage('jp')"><img src="./img/blank.png" class="flag flag-jp" /></a>&nbsp;&nbsp; -->
+                        <!-- <a ng-click="switchLanguage('kr')"><img src="./img/blank.png" class="flag flag-kr" /></a> -->
+                        <input class="form-control" data-toggle="dropdown" ng-model="pokemonName" type="text" ng-change="pokemonInputChanged = true" ng-blur="checkPokemonName()" /></label>
+                    <ul class="dropdown-menu" ng-show="pokemonInputChanged" ng-mouseover="mouseOverDropdown = true" ng-mouseout="mouseOverDropdown = false; checkPokemonName();">
+                        <li ng-repeat="p in pokemonList[language] | filter:pokemonName:startsWith"><a ng-click="selectPokemon(p)">{{p.name}}</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2 col-sm-6 col-xs-6">
@@ -126,31 +142,43 @@
                 </table>
                 <button class="btn btn-success btn-lg pull-right" ng-click="exportData()">Export Data</button>
             </div>
-            <h4>Changelog:</h4>
-            <ul>
-                <li> 1.0 - First Launch </li>
-                <li> 1.1 - Design fixes, added Export Data option, Credits and Source </li>
-                <li> 1.2 - Added AdSense and Donate Button </li>
-                <li> 1.3 - Fixed AdSense, added DE and FR Pok&eacute;mon names support, changed name dropdown to input with list </li>
-            </ul>
-            <h4>Credits to:</h4>
-            <ul>
-                <li>
-                    <a href="https://thesilphroad.com/research">TheSilphRoad</a> for the Base Stats data;
-                </li>
-                <li>
-                    <a href="http://pokemongo.gamepress.gg/">Pok&eacute;mon GO Game Press</a> for the Stardust table and Leaders' Appraisal Lines;
-                </li>
-                <li>
-                    <a href="https://www.reddit.com/r/pokemongodev/comments/4t7xb4/exact_cp_formula_from_stats_and_cpm_and_an_update/">/r/__isitin__</a> for CP formula and CPM table;
-                </li>
-                <li>
-                    <a href="https://www.reddit.com/r/pokemongodev/comments/4t59t1/decoded_game_master_protobuf_file_v01_all_pokemon/d5f2y91">/u/a1k0n</a> for the formatted CPM array.</span>
-                </li>
-            </ul>
+            <div class="row">
+                <label>
+                    <a ng-click="collapseChangelog = !collapseChangelog">Changelog
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true" ng-show="collapseChangelog"></span>
+                    <span class="glyphicon glyphicon-menu-up" aria-hidden="true" ng-show="!collapseChangelog"></span></a>
+                </label>
+                <div class="col-md-12 col-sm-12" uib-collapse="collapseChangelog">
+                    <div class="card card-block">
+                        <ul>
+                            <li> 1.0 - First Launch </li>
+                            <li> 1.1 - Design fixes, added Export Data option, Credits and Source </li>
+                            <li> 1.2 - Added AdSense and Donate Button </li>
+                            <li> 1.3 - Fixed AdSense, added DE and FR Pok&eacute;mon names support, changed name dropdown to input with list </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <label>
+                    <a ng-click="collapseCredits = !collapseCredits">Credits
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true" ng-show="collapseCredits"></span>
+                    <span class="glyphicon glyphicon-menu-up" aria-hidden="true" ng-show="!collapseCredits"></span></a>
+                </label>
+                <div class="col-md-12 col-sm-12" uib-collapse="collapseCredits">
+                    <div class="card card-block">
+                        <ul>
+                            <li><a href="https://thesilphroad.com/research">TheSilphRoad</a> for the Base Stats data;</li>
+                            <li><a href="http://pokemongo.gamepress.gg/">Pok&eacute;mon GO Game Press</a> for the Stardust table and Leaders' Appraisal Lines;</li>
+                            <li><a href="https://www.reddit.com/r/pokemongodev/comments/4t7xb4/exact_cp_formula_from_stats_and_cpm_and_an_update/">/r/__isitin__</a> for CP formula and CPM table;</li>
+                            <li><a href="https://www.reddit.com/r/pokemongodev/comments/4t59t1/decoded_game_master_protobuf_file_v01_all_pokemon/d5f2y91">/u/a1k0n</a> for the formatted CPM array.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <p class="pull-left">
-                    Source code can be found on <a href="https://github.com/BoredMai/PokemonGOIVCalculator">GitHub</a>.
+                    Source code can be found on <a href="https://github.com/BoredMai/PokemonGOIVCalculator">GitHub</a>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.&nbsp;&nbsp;<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
                 </p>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="pull-left donate-btn">
                     <input type="hidden" name="cmd" value="_s-xclick">

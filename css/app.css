@@ -71,12 +71,12 @@ body {
 
 .btn-container {
     display: flex;
-    margin-top: 10px;
+    margin: 10px 0px;
     padding: 0px;
 }
 
 .btn-calc {
-    margin: 15px 10px 0px;
+    margin: 15px 10px 5px;
     flex-grow: 1;
 }
 
@@ -118,12 +118,11 @@ input[type="number"] {
 }
 
 ul {
-    list-style-image: url("../img/favicon.png");
+    list-style-image: url("../img/bullet.png");
 }
 
 .donate-btn {
     position: relative;
-    bottom: 4px;
     margin-left: 10px;
 }
 
@@ -138,4 +137,22 @@ ul {
 
 .dropdown-menu li a {
     /*padding: 0px;*/
+}
+
+.help {
+    margin: 10px 0px;
+}
+
+a {
+    cursor: pointer;
+    color: #d32026;
+}
+
+a:hover {
+    color: #93070a;
+}
+
+.glyphicon {
+    top: 3px;
+    left: 3px;
 }
