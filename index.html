@@ -37,9 +37,9 @@
                 </div> -->
                 <div class="col-md-4 col-sm-12">
                     <label>Pok&eacute;mon&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" ng-click="switchLanguage('en')"><img src="./img/blank.png" class="flag flag-gb" /></a>&nbsp;&nbsp;
-                        <a href="#" ng-click="switchLanguage('de')"><img src="./img/blank.png" class="flag flag-de" /></a>&nbsp;&nbsp;
-                        <a href="#" ng-click="switchLanguage('fr')"><img src="./img/blank.png" class="flag flag-fr" /></a>&nbsp;&nbsp;
+                        <a href="#" ng-click="switchLanguage('en')"><img ng-class="{'not-selected' : language != 'en'}" src="./img/blank.png" class="flag flag-gb" /></a>&nbsp;&nbsp;
+                        <a href="#" ng-click="switchLanguage('de')"><img ng-class="{'not-selected' : language != 'de'}" src="./img/blank.png" class="flag flag-de" /></a>&nbsp;&nbsp;
+                        <a href="#" ng-click="switchLanguage('fr')"><img ng-class="{'not-selected' : language != 'fr'}" src="./img/blank.png" class="flag flag-fr" /></a>&nbsp;&nbsp;
                         <!-- <a href="#" ng-click="switchLanguage('jp')"><img src="./img/blank.png" class="flag flag-jp" /></a>&nbsp;&nbsp; -->
                         <!-- <a href="#" ng-click="switchLanguage('kr')"><img src="./img/blank.png" class="flag flag-kr" /></a> -->
                         <input class="form-control" data-toggle="dropdown" ng-model="pokemonName" type="text" ng-change="pokemonInputChanged = true" ng-blur="pokemonInputChanged = mouseOverDropdown" /></label>
@@ -126,6 +126,13 @@
                 </table>
                 <button class="btn btn-success btn-lg pull-right" ng-click="exportData()">Export Data</button>
             </div>
+            <h4>Changelog:</h4>
+            <ul>
+                <li> 1.0 - First Launch </li>
+                <li> 1.1 - Design fixes, added Export Data option, Credits and Source </li>
+                <li> 1.2 - Added AdSense and Donate Button </li>
+                <li> 1.3 - Fixed AdSense, added DE and FR Pok&eacute;mon names support, changed name dropdown to input with list </li>
+            </ul>
             <h4>Credits to:</h4>
             <ul>
                 <li>
