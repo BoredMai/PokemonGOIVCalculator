@@ -1,11 +1,12 @@
 angular.module('PoGOApp', ['ui.bootstrap', 'ngAnimate', 'PoGOCtrl']);
 
-angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', function($scope, $http) {
+angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', '$interpolate', function($scope, $http, $interpolate) {
 
     $http.get('data/data.json').success(function(data) {
         $scope.language = "en";
         $scope.pokemonList = data.pokemonList;
         $scope.pokemonList.it = data.pokemonList.en;
+        $scope.pokemonList.es = data.pokemonList.en;
         $scope.pokemonData = data.pokemonData;
         $scope.cpm = data.cpm;
         $scope.dustValues = data.dustValues;
@@ -16,15 +17,18 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
     });
 
     $scope.team = null;
+    $scope.pokemonName = '';
     $scope.poweredup = false;
     $scope.mouseOverDropdown = false;
     $scope.collapseHelp = true;
     $scope.collapseChangelog = true;
     $scope.collapseCredits = true;
+    $scope.orderParams = 'total';
+    $scope.reverse = true;
 
     $scope.calculateIV = function() {
         if ($scope.pokemon && $scope.cp && $scope.hp && $scope.stardust) {
-            $scope.results = [];
+            $scope.results = { minIV: 45, avgIV: 0, maxIV: 0, stats: [] };
             var factor = $scope.poweredup ? 0.5 : 1;
             var minLevel = $scope.stardust * 2;
             for (var i = minLevel; i <= minLevel + 1.5; i = i + factor) {
@@ -41,73 +45,73 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
                                 CP = CP < 10 ? 10 : CP;
                                 if (CP == $scope.cp) {
                                     var result = { level: LVL, HP: HP, ATK: ATK, DEF: DEF, total: HP+ATK+DEF };
-                                    $scope.results.push(result);
+                                    var accept = true;
+
+                                    //Check Leader Feedback
+                                    if ($scope.overall) {
+                                        if (($scope.overall.min <= result.total) && (result.total <= $scope.overall.max)) {
+                                            if ($scope.stats) {
+                                                if ($scope.highHP) {
+                                                    if ((result.HP < result.ATK) || (result.HP < result.DEF)) {
+                                                        accept = false;
+                                                    }
+                                                    if ((result.HP == result.ATK) && (!$scope.highATK)) {
+                                                        accept = false;
+                                                    }
+                                                    if ((result.HP == result.DEF) && (!$scope.highDEF)) {
+                                                        accept = false;
+                                                    }
+                                                    if ((result.HP < $scope.stats.min) || ($scope.stats.max < result.HP)) {
+                                                        accept = false;
+                                                    }
+                                                }
+                                                if ($scope.highATK) {
+                                                    if ((result.ATK < result.HP) || (result.ATK < result.DEF)) {
+                                                        accept = false;
+                                                    }
+                                                    if ((result.ATK == result.HP) && (!$scope.highHP)) {
+                                                        accept = false;
+                                                    }
+                                                    if ((result.ATK == result.DEF) && (!$scope.highDEF)) {
+                                                        accept = false;
+                                                    }
+                                                    if ((result.ATK < $scope.stats.min) || ($scope.stats.max < result.ATK)) {
+                                                        accept = false;
+                                                    }
+                                                }
+                                                if ($scope.highDEF) {
+                                                    if ((result.DEF < result.ATK) || (result.DEF < result.HP)) {
+                                                        accept = false;
+                                                    }
+                                                    if ((result.DEF == result.HP) && (!$scope.highHP)) {
+                                                        accept = false;
+                                                    }
+                                                    if ((result.DEF == result.ATK) && (!$scope.highATK)) {
+                                                        accept = false;
+                                                    }
+                                                    if ((result.DEF < $scope.stats.min) || ($scope.stats.max < result.DEF)) {
+                                                        accept = false;
+                                                    }
+                                                }
+                                            }
+                                        } else {
+                                            accept = false;
+                                        }
+                                    }
+
+                                    if (accept) {
+                                        if ($scope.results.minIV > result.total) {
+                                            $scope.results.minIV = result.total;
+                                        }
+                                        if ($scope.results.maxIV < result.total) {
+                                            $scope.results.maxIV = result.total;
+                                        }
+                                        $scope.results.avgIV = ($scope.results.minIV + $scope.results.maxIV) / 2;
+                                        $scope.results.stats.push(result);
+                                    }
                                 }
                             }
                         }
-                    }
-                }
-            }
-
-            if ($scope.overall) {
-                var i = 0;
-                while (i < $scope.results.length) {
-                    var result = $scope.results[i];
-                    var totalIV = result.HP + result.ATK + result.DEF;
-                    var accept = true;
-                    if (($scope.overall.min <= totalIV) && (totalIV <= $scope.overall.max)) {
-                        if ($scope.stats) {
-                            if ($scope.highHP) {
-                                if ((result.HP < result.ATK) || (result.HP < result.DEF)) {
-                                    accept = false;
-                                }
-                                if ((result.HP == result.ATK) && (!$scope.highATK)) {
-                                    accept = false;
-                                }
-                                if ((result.HP == result.DEF) && (!$scope.highDEF)) {
-                                    accept = false;
-                                }
-                                if ((result.HP < $scope.stats.min) || ($scope.stats.max < result.HP)) {
-                                    accept = false;
-                                }
-                            }
-                            if ($scope.highATK) {
-                                if ((result.ATK < result.HP) || (result.ATK < result.DEF)) {
-                                    accept = false;
-                                }
-                                if ((result.ATK == result.HP) && (!$scope.highHP)) {
-                                    accept = false;
-                                }
-                                if ((result.ATK == result.DEF) && (!$scope.highDEF)) {
-                                    accept = false;
-                                }
-                                if ((result.ATK < $scope.stats.min) || ($scope.stats.max < result.ATK)) {
-                                    accept = false;
-                                }
-                            }
-                            if ($scope.highDEF) {
-                                if ((result.DEF < result.ATK) || (result.DEF < result.HP)) {
-                                    accept = false;
-                                }
-                                if ((result.DEF == result.HP) && (!$scope.highHP)) {
-                                    accept = false;
-                                }
-                                if ((result.DEF == result.ATK) && (!$scope.highATK)) {
-                                    accept = false;
-                                }
-                                if ((result.DEF < $scope.stats.min) || ($scope.stats.max < result.DEF)) {
-                                    accept = false;
-                                }
-                            }
-                        }
-                    } else {
-                        accept = false;
-                    }
-
-                    if (accept) {
-                        i++;
-                    } else {
-                        $scope.results.splice(i, 1);
                     }
                 }
             }
@@ -150,11 +154,15 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
     };
 
     $scope.selectTeam = function(team) {
-        $scope.team = $scope.teams[$scope.language].entries[team];
+        if ($scope.team == $scope.teams[$scope.language][team]) {
+            $scope.team = null;
+        } else {
+            $scope.team = $scope.teams[$scope.language][team];
+        }
     };
 
     $scope.clearTeam = function() {
-        $scope.team = {};
+        $scope.team = null;
         $scope.overall = null;
         $scope.stats = null;
         $scope.highHP = false;
@@ -187,15 +195,62 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
         saveAs(file);
     };
 
-    $scope.startsWith = function(actual, expected) {
-        var lowerStr = (actual + "").toLowerCase();
-        return lowerStr.indexOf(expected.toLowerCase()) === 0;
-    };
-
     $scope.switchLanguage = function(language) {
         $scope.language = language;
         $scope.pokemon = null;
         $scope.pokemonName = '';
         $scope.team = null;
+    };
+
+    $scope.setOrderByParams = function(params) {
+        if (params == $scope.orderParams) {
+            $scope.reverse = !$scope.reverse;
+        } else {
+            $scope.orderParams = params;
+        }
+    };
+
+    $scope.filterList = function() {
+        $scope.filteredList = [];
+        for (var i = 0; i < $scope.pokemonList[$scope.language].length; i++) {
+            var name = $scope.pokemonList[$scope.language][i].name.toLowerCase();
+            if (name.indexOf($scope.pokemonName.toLowerCase()) != -1) {
+                $scope.filteredList.push($scope.pokemonList[$scope.language][i]);
+            }
+        }
+        $scope.pokemonInputChanged = true;
+    }
+
+    $scope.checkDropdownNavigation = function(event) {
+        if (event.key == "ArrowDown") {
+            $scope.focusedItem++;
+            if ($scope.focusedItem == $scope.filteredList.length) {
+                $scope.focusedItem = 0;
+            }
+            pokemonObj = $scope.filteredList[$scope.focusedItem];
+            $scope.pokemonName = pokemonObj.name;
+            event.preventDefault();
+        } else if (event.key == "ArrowUp") {
+            $scope.focusedItem--;
+            if ($scope.focusedItem == -1) {
+                $scope.focusedItem = $scope.filteredList.length - 1;
+            }
+            pokemonObj = $scope.filteredList[$scope.focusedItem];
+            $scope.pokemonName = pokemonObj.name;
+            event.preventDefault();
+        } else if (event.key == "Enter") {
+            if ($scope.focusedItem > -1) {
+                pokemonObj = $scope.filteredList[$scope.focusedItem];
+                $scope.pokemon = $scope.pokemonData[pokemonObj.number];
+                $scope.pokemonName = pokemonObj.name;
+                $scope.pokemonInputChanged = false;
+            }
+        }
+    };
+
+    $scope.focusItem = function(index) {
+        $scope.focusedItem = index;
+        pokemonObj = $scope.filteredList[$scope.focusedItem];
+        $scope.pokemonName = pokemonObj.name;
     }
 }]);
