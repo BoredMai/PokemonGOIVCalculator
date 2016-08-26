@@ -8,10 +8,13 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
         $scope.pokemonData = data.pokemonData;
         $scope.cpm = data.cpm;
         $scope.dustValues = data.dustValues;
-        $scope.teams = data.teams;
     });
 
-    $scope.team = {};
+    $http.get('data/teams.json').success(function(data) {
+        $scope.teams = data;
+    });
+
+    $scope.team = null;
     $scope.poweredup = false;
     $scope.mouseOverDropdown = false;
     $scope.collapseHelp = true;
@@ -143,7 +146,8 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
     };
 
     $scope.selectTeam = function(team) {
-        $scope.team = $scope.teams[team];
+        $scope.team = $scope.teams[$scope.language].entries[team];
+        console.log($scope.team);
     };
 
     $scope.clearTeam = function() {
@@ -189,5 +193,6 @@ angular.module('PoGOCtrl', []).controller('PoGOController', ['$scope', '$http', 
         $scope.language = language;
         $scope.pokemon = null;
         $scope.pokemonName = '';
+        $scope.team = null;
     }
 }]);

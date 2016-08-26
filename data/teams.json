@@ -1,0 +1,178 @@
+{
+    "en" :
+    {
+        "title": "Overall, your ",
+        "entries":
+        [
+            {
+                "name":"Valor",
+                "overall":
+                [
+                    {"text":"...simply amazes me. It can accomplish anything!", "min":"37", "max":"45"},
+                    {"text":"...is a strong Pokemon. You should be proud!", "min":"30", "max":"36"},
+                    {"text":"...is a decent Pokemon.", "min":"23", "max":"29"},
+                    {"text":"...may not be great in battle, but I still like it!", "min":"0", "max":"22"}
+                ],
+                "stats":
+                [
+                    {"text":"I'm blown away by its stats. WOW!", "min":"15", "max":"15"},
+                    {"text":"It's got excellent stats! How exciting!", "min":"13", "max":"14"},
+                    {"text":"Its stats indicate that in battle, it'll get the job done.", "min":"8", "max":"12"},
+                    {"text":"Its stats don't point to greatness in battle.", "min":"0", "max":"7"}
+                ]
+            },
+            {
+                "name": "Mystic",
+                "overall":
+                [
+                    {"text":"...is a wonder! What a breathtaking Pokemon!", "min":"37", "max":"45"},
+                    {"text":"...has certainly caught my attention.", "min":"30", "max":"36"},
+                    {"text":"...is above average.", "min":"23", "max":"29"},
+                    {"text":"...is not likely to make much headway in battle.", "min":"0", "max":"22"}
+                ],
+                "stats":
+                [
+                    {"text":"Its stats exceed my calculations. It's incredible!", "min":"15", "max":"15"},
+                    {"text":"I am certainly impressed by its stats, I must say.", "min":"13", "max":"14"},
+                    {"text":"Its stats are noticeably trending to the positive.", "min":"8", "max":"12"},
+                    {"text":"Its stats are not out of the norm, in my estimation.", "min":"0", "max":"7"}
+                ]
+            },
+            {
+                "name":"Instinct",
+                "overall":
+                [
+                    {"text":"...looks like it can really battle with the best of them!", "min":"37", "max":"45"},
+                    {"text":"...is really strong!", "min":"30", "max":"36"},
+                    {"text":"...is pretty decent!", "min":"23", "max":"29"},
+                    {"text":"...has room for improvement as far as battling goes.", "min":"0", "max":"22"}
+                ],
+                "stats":
+                [
+                    {"text":"Its stats are the best I've ever seen! No doubt about it!", "min":"15", "max":"15"},
+                    {"text":"Its stats are really strong! Impressive.", "min":"13", "max":"14"},
+                    {"text":"It's definitely got some good stats. Definitely!", "min":"8", "max":"12"},
+                    {"text":"Its stats are all right, but kinda basic, as far as I can see.", "min":"0", "max":"7"}
+                ]
+            }
+        ]
+    },
+
+    "de" :
+    {
+        "title": "(Von) Dein(em) ",
+        "entries":
+        [
+            {
+                "name":"Valor",
+                "overall":
+                [
+                    {"text":"...bin ich insgesamt total beeindruckt. Es kann einfach alles!", "min":"37", "max":"45"},
+                    {"text":"...ist insgesamt sehr stark. Du kannst stolz sein!", "min":"30", "max":"36"},
+                    {"text":"...ist insgesamt ganz gut!", "min":"23", "max":"29"},
+                    {"text":"...ist zwar insgesamt im Kampf nicht allzu beeindruckend, aber ich mag es trotzdem!", "min":"0", "max":"22"}
+                ],
+                "stats":
+                [
+                    {"text":"Seine Werte hauen mich um. WOW!", "min":"15", "max":"15"},
+                    {"text":"Er hat hervorragende Werte! Wie aufregend!", "min":"13", "max":"14"},
+                    {"text":"Seine Werte sind nicht von schlechten Eltern!", "min":"8", "max":"12"},
+                    {"text":"Seine Werte werden dir im Kampf nicht viel bringen.", "min":"0", "max":"7"}
+                ]
+            },
+            {
+                "name": "Mystic",
+                "overall":
+                [
+                    {"text":"...ist insgesamt einfach erstaunlich. Wirklich ein atemberaubendes Exemplar!", "min":"37", "max":"45"},
+                    {"text":"...ist mir insgesamt wirklich aufgefallen.", "min":"30", "max":"36"},
+                    {"text":"...ist insgesamt ein gutes Pokémon.", "min":"23", "max":"29"},
+                    {"text":"...wird im Kampf wahrscheinlich keine großen Fortschritte machen.", "min":"0", "max":"22"}
+                ],
+                "stats":
+                [
+                    {"text":"Seine Werte sind so hoch, dass ich sie gar nicht berechnen kann! Unglaublich!", "min":"15", "max":"15"},
+                    {"text":"Ich muss sagen, dass ich von seinen Werten sehr beeindruckt bin.", "min":"13", "max":"14"},
+                    {"text":"Seine Werte sind recht beeindruckend.", "min":"8", "max":"12"},
+                    {"text":"Seine Werte sind insgesamt ganz okay.", "min":"0", "max":"7"}
+                ]
+            },
+            {
+                "name":"Instinct",
+                "overall":
+                [
+                    {"text":"...kann es im Kampf mit allen aufnehmen!", "min":"37", "max":"45"},
+                    {"text":"...ist insgesamt wirklich stark!", "min":"30", "max":"36"},
+                    {"text":"...ist insgesamt ganz gut.", "min":"23", "max":"29"},
+                    {"text":"...kann sich im Kampf noch verbessern!", "min":"0", "max":"22"}
+                ],
+                "stats":
+                [
+                    {"text":"Seine Werte sind die besten, die ich je gesehen habe!", "min":"15", "max":"15"},
+                    {"text":"Seine Werte sind wirklich hoch! Hut ab!", "min":"13", "max":"14"},
+                    {"text":"Seine Werte können sich sehen lassen!", "min":"8", "max":"12"},
+                    {"text":"Seine Werte sind okay.", "min":"0", "max":"7"}
+                ]
+            }
+        ]
+    },
+
+    "fr" :
+    {
+        "title": "Dans l'ensemble, ton ",
+        "entries":
+        [
+            {
+                "name":"Valor",
+                "overall":
+                [
+                    {"text":"...m'étonne beaucoup. Il peut tout faire !", "min":"37", "max":"45"},
+                    {"text":"...est très fort. Tu dois être fier !", "min":"30", "max":"36"},
+                    {"text":"...est un Pokémon solide !", "min":"23", "max":"29"},
+                    {"text":"...n'est pas un combattant, mais je l'aime bien.", "min":"0", "max":"22"}
+                ],
+                "stats":
+                [
+                    {"text":"Je suis estomaquée par ses stats. Bravo !", "min":"15", "max":"15"},
+                    {"text":"Ses stats sont excellentes ! C'est super !", "min":"13", "max":"14"},
+                    {"text":"Ses stats indiquent qu'il va faire des dégâts au combat.", "min":"8", "max":"12"},
+                    {"text":"Ses stats ne t'aideront pas beaucoup au combat.", "min":"0", "max":"7"}
+                ]
+            },
+            {
+                "name": "Mystic",
+                "overall":
+                [
+                    {"text":"...est une merveille. Un Pokémon captivant !", "min":"37", "max":"45"},
+                    {"text":"...a retenu toute mon attention.", "min":"30", "max":"36"},
+                    {"text":"...est supérieur à la moyenne.", "min":"23", "max":"29"},
+                    {"text":"...ton Pokémon n'ira pas très loin au combat.", "min":"0", "max":"22"}
+                ],
+                "stats":
+                [
+                    {"text":"Ses stats dépassent tous mes calculs, c'est incroyable !", "min":"15", "max":"15"},
+                    {"text":"Je suis impressionnée par ses stats, à vrai dire.", "min":"13", "max":"14"},
+                    {"text":"Ses stats s'améliorent à vue d'œil.", "min":"8", "max":"12"},
+                    {"text":"Ses stats n'ont rien d'anormal, à priori.", "min":"0", "max":"7"}
+                ]
+            },
+            {
+                "name":"Instinct",
+                "overall":
+                [
+                    {"text":"...semble capable de tenir tête aux meilleurs !", "min":"37", "max":"45"},
+                    {"text":"...est vraiment fort !", "min":"30", "max":"36"},
+                    {"text":"...est plutôt bien !", "min":"23", "max":"29"},
+                    {"text":"...peut devenir un meilleur combattant.", "min":"0", "max":"22"}
+                ],
+                "stats":
+                [
+                    {"text":"Ses stats sont les meilleures que j'ai jamais vues ! Sans aucun doute !", "min":"15", "max":"15"},
+                    {"text":"Ses stats sont super élevées. Impressionnant !", "min":"13", "max":"14"},
+                    {"text":"Il a quelques bonnes stats, c'est sûr !", "min":"8", "max":"12"},
+                    {"text":"Ses stats ne sont pas mal, mais un peu basiques, il me semble.", "min":"0", "max":"7"}
+                ]
+            }
+        ]
+    }
+}

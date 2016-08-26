@@ -82,18 +82,18 @@
             </div>
             <div class="row">
                 <div class="col-sm-4 col-xs-4 text-center">
-                    <img src="./img/valor/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team.name != 'Valor'}" ng-click="selectTeam(0);" />
+                    <img src="./img/valor/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team != teams[language].entries[0]}" ng-click="selectTeam(0);" />
                 </div>
                 <div class="col-sm-4 col-xs-4 text-center">
-                    <img src="./img/mystic/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team.name != 'Mystic'}" ng-click="selectTeam(1);" />
+                    <img src="./img/mystic/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team != teams[language].entries[1]}" ng-click="selectTeam(1);" />
                 </div>
                 <div class="col-sm-4 col-xs-4 text-center">
-                    <img src="./img/instinct/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team.name != 'Instinct'}" ng-click="selectTeam(2);" />
+                    <img src="./img/instinct/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team != teams[language].entries[2]}" ng-click="selectTeam(2);" />
                 </div>
             </div>
-            <div class="row" ng-show="team.name && pokemonData">
+            <div class="row" ng-show="team && pokemon">
                 <div class="col-sm-6">
-                    <label>Overall, your<span ng-show="pokemonData"> {{pokemonName}}...</span><select class="form-control" ng-model="overall" ng-options="o.text for o in team.overall"></select></label>
+                    <label>{{teams[language].title}}<span ng-show="pokemonData"> {{pokemonName}}...</span><select class="form-control" ng-model="overall" ng-options="o.text for o in team.overall"></select></label>
                 </div>
                 <div class="col-sm-6">
                     <label>Stats Feedback<select class="form-control" ng-model="stats" ng-options="s.text for s in team.stats"></select></label>
