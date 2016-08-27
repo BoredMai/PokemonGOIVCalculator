@@ -238,53 +238,53 @@
             "title": "En su conjunto, tu ",
             "overall":
             [
-                {"text":"...simplesmente me fascina. Puede lograr cualquier cosa!", "min":"37", "max":"45"},
+                {"text":"...simplemente me fascina. ¡Puede lograr cualquier cosa!", "min":"37", "max":"45"},
                 {"text":"...es muy fuerte. ¡Qué orgullo debes sentir!", "min":"30", "max":"36"},
                 {"text":"...está bastante bien.", "min":"23", "max":"29"},
-                {"text":"...puede que no sea el mejor en combate, pero aún así me gusta!", "min":"0", "max":"22"}
+                {"text":"...puede que no sea el mejor en combate, pero aun así me gusta!", "min":"0", "max":"22"}
             ],
             "stats":
             [
                 {"text":"Estoy flipando con sus características. ¡GUAU!", "min":"15", "max":"15"},
                 {"text":"Cuenta con excelentes características. ¡Qué emocionante!", "min":"13", "max":"14"},
-                {"text":"Sus características te ayudarán a cumplir tu objetivo en combate.", "min":"8", "max":"12"},
+                {"text":"Sus características te ayudarán a cumplir su objetivo en combate.", "min":"8", "max":"12"},
                 {"text":"Sus características no te serán de mucha utilidad en combate.", "min":"0", "max":"7"}
             ]
         },
         {
             "name": "Mystic",
-            "title": "En general, tu ",
+            "title": "En su conjunto, tu ",
             "overall":
             [
-                {"text":"...es una maravilla! Tu Pok&eacute;mon es impresionante!", "min":"37", "max":"45"},
-                {"text":"...sin duda me ha llamado la atención.", "min":"30", "max":"36"},
-                {"text":"...es superior a la media.", "min":"23", "max":"29"},
-                {"text":"...no es probable que avance mucho en la batalla.", "min":"0", "max":"22"}
+                {"text":"...es una maravilla para la vista. ¡Qué espécimen tan impresionante!", "min":"37", "max":"45"},
+                {"text":"...me ha llamado ciertamente la atención.", "min":"30", "max":"36"},
+                {"text":"...está por encima de la media.", "min":"23", "max":"29"},
+                {"text":"...no parece que vaya a llegar muy lejos en combate.", "min":"0", "max":"22"}
             ],
             "stats":
             [
-                {"text":"Sus estadísticas exceden mis calculos.¡Es increible!", "min":"15", "max":"15"},
-                {"text":"Ciertamente estoy impresionada por sus estadísticas, hay que decir.", "min":"13", "max":"14"},
-                {"text":"Sus estadísticas muestran una tendencia notablemente positiva.", "min":"8", "max":"12"},
-                {"text":"Sus estadísticas no están fuera de la norma, en mi opinión.", "min":"0", "max":"7"}
+                {"text":"Sus características están fuera de todo cálculo. ¡Es increíble!", "min":"15", "max":"15"},
+                {"text":"Debo decir que sus características son realmente impresionantes.", "min":"13", "max":"14"},
+                {"text":"Sus características están bastante bien.", "min":"8", "max":"12"},
+                {"text":"Sus características dejan un poco que desear, yo diria.", "min":"0", "max":"7"}
             ]
         },
         {
             "name":"Instinct",
-            "title": "En general, tu ",
+            "title": "En su conjunto, tu ",
             "overall":
             [
-                {"text":"...parece que realmente puede luchar como uno de los mejores!", "min":"37", "max":"45"},
-                {"text":"...es muy fuerte!", "min":"30", "max":"36"},
-                {"text":"...está bastante bien!", "min":"23", "max":"29"},
-                {"text":"...tiene margen de mejora en cuanto a lucha se refiere.", "min":"0", "max":"22"}
+                {"text":"...puede enfrentarse a los mejores!", "min":"37", "max":"45"},
+                {"text":"...es realmente fuerte!", "min":"30", "max":"36"},
+                {"text":"...está bastante bien.", "min":"23", "max":"29"},
+                {"text":"...podría mejorar algo en lo que se refiere a combates.", "min":"0", "max":"22"}
             ],
             "stats":
             [
-                {"text":"Sus estadísticas son los mejores que he visto nunca! ¡No hay duda de eso!", "min":"15", "max":"15"},
-                {"text":"Sus estadísticas son muy fuertes! Impresionante.", "min":"13", "max":"14"},
-                {"text":"Definitivamente, tiene buenas estadísticas. ¡Seguro!", "min":"8", "max":"12"},
-                {"text":"Sus estadísticas están bien, pero un poco básico, por lo que yo puedo ver.", "min":"0", "max":"7"}
+                {"text":"Sus características son lo mejor que he visto nunca! ¡Qué pasada!", "min":"15", "max":"15"},
+                {"text":"¡Sus características son realmente fuertes! Es impresionante.", "min":"13", "max":"14"},
+                {"text":"Tiene buenas características, sin duda.", "min":"8", "max":"12"},
+                {"text":"Sus características están... bien, supongo.", "min":"0", "max":"7"}
             ]
         }
     ]
