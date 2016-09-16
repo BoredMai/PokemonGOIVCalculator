@@ -107,8 +107,13 @@ input[type="number"] {
 .results {
     margin: 15px 0px;
 }
+
 .table * {
     text-align: center;
+}
+
+.table th, .table td {
+  padding: 8px 0px !important;
 }
 
 .error-message {
