@@ -60,7 +60,7 @@
                         <a ng-click="switchLanguage('fr')"><img ng-class="{'not-selected' : language != 'fr'}" src="./img/blank.png" class="flag flag-fr" /></a>&nbsp;&nbsp;
                         <a ng-click="switchLanguage('it')"><img ng-class="{'not-selected' : language != 'it'}" src="./img/blank.png" class="flag flag-it" /></a>&nbsp;&nbsp;
                         <a ng-click="switchLanguage('es')"><img ng-class="{'not-selected' : language != 'es'}" src="./img/blank.png" class="flag flag-es" /></a>&nbsp;&nbsp;
-                        <!-- <a ng-click="switchLanguage('jp')"><img src="./img/blank.png" class="flag flag-jp" /></a>&nbsp;&nbsp; -->
+                        <a ng-click="switchLanguage('jp')"><img ng-class="{'not-selected' : language != 'jp'}" src="./img/blank.png" class="flag flag-jp" /></a>&nbsp;&nbsp;
                         <!-- <a ng-click="switchLanguage('kr')"><img src="./img/blank.png" class="flag flag-kr" /></a> -->
                         <input class="form-control" data-toggle="dropdown" ng-model="pokemonName" type="text" ng-change="filterList()" ng-focus="inputHasFocus = true; focusedItem = -1;" ng-blur="inputHasFocus = false; checkPokemonName()" ng-keydown="checkDropdownNavigation($event)" />
                         <ul class="dropdown-menu" ng-init="focusedItem = -1" ng-show="pokemonInputChanged && inputHasFocus">
