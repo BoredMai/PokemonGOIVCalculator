@@ -16,6 +16,7 @@
     vm.selectedTeam = null;
     vm.orderParams = 'total';
     vm.reverseResults = true;
+    vm.backgroundImg = '000';
     vm.refine = {}
 
     vm.gameData = gameData;
@@ -110,6 +111,7 @@
             vm.pokemonName = '';
             vm.pokemonInputChanged = false;
             vm.mouseOverDropdown = false;
+            vm.backgroundImg = '000';
         }
       }
     }
@@ -119,6 +121,7 @@
       vm.pokemonName = pokemon.name;
       vm.pokemonInputChanged = false;
       vm.mouseOverDropdown = false;
+      vm.backgroundImg = (pokemon.number < 10) ? '00' + (pokemon.number + 1) : ((pokemon.number < 100) ? '0' + (pokemon.number + 1) : (pokemon.number + 1));
 
       vm.refine.pokemonList = [];
       vm.addEvolutionsToRefineList(pokemon, vm.pokemon);
