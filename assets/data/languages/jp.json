@@ -1,0 +1,113 @@
+{
+  "pokemonList": [
+    { "name": "フシギダネ", "number": 0 }, { "name": "フシギソウ", "number": 1 }, { "name": "フシギバナ", "number": 2 },
+    { "name": "ヒトカゲ",   "number": 3 }, { "name": "リザード", "number": 4 }, { "name": "リザードン", "number": 5 },
+    { "name": "ゼニガメ",   "number": 6 }, { "name": "カメール", "number": 7 }, { "name": "カメックス", "number": 8 },
+    { "name": "キャタピー", "number": 9 }, { "name": "トランセル", "number": 10 }, { "name": "バタフリー", "number": 11 },
+    { "name": "ビードル",  "number": 12 }, { "name": "コクーン", "number": 13 }, { "name": "スピアー", "number": 14 },
+    { "name": "ポッポ", "number": 15 }, { "name": "ピジョン", "number": 16 }, { "name": "ピジョット", "number": 17 },
+    { "name": "コラッタ", "number": 18 }, { "name": "ラッタ", "number": 19 }, { "name": "オニスズメ", "number": 20 },
+    { "name": "オニドリル", "number": 21 }, { "name": "アーボ", "number": 22 }, { "name": "アーボック", "number": 23 },
+    { "name": "ピカチュウ", "number": 24 }, { "name": "ライチュウ", "number": 25 }, { "name": "サンド", "number": 26 },
+    { "name": "サンドパン", "number": 27 }, { "name": "ニドラン♀", "number": 28 }, { "name": "ニドリーナ", "number": 29 },
+    { "name": "ニドクイン", "number": 30 }, { "name": "ニドラン♂", "number": 31 }, { "name": "ニドリーノ", "number": 32 },
+    { "name": "ニドキング", "number": 33 }, { "name": "ピッピ", "number": 34 }, { "name": "ピクシー", "number": 35 },
+    { "name": "ロコン", "number": 36 }, { "name": "キュウコン", "number": 37 }, { "name": "プリン", "number": 38 },
+    { "name": "プクリン", "number": 39 }, { "name": "ズバット", "number": 40 }, { "name": "ゴルバット", "number": 41 },
+    { "name": "ナゾノクサ", "number": 42 }, { "name": "クサイハナ", "number": 43 }, { "name": "ラフレシア", "number": 44 },
+    { "name": "パラス", "number": 45 }, { "name": "パラセクト", "number": 46 }, { "name": "コンパン", "number": 47 },
+    { "name": "モルフォン", "number": 48 }, { "name": "ディグダ", "number": 49 }, { "name": "ダグトリオ", "number": 50 },
+    { "name": "ニャース", "number": 51 }, { "name": "ペルシアン", "number": 52 }, { "name": "コダック", "number": 53 },
+    { "name": "ゴルダック", "number": 54 }, { "name": "マンキー", "number": 55 }, { "name": "オコリザル", "number": 56 },
+    { "name": "ガーディ", "number": 57 }, { "name": "ウインディ", "number": 58 }, { "name": "ニョロモ", "number": 59 },
+    { "name": "ニョロゾ", "number": 60 }, { "name": "ニョロボン", "number": 61 }, { "name": "ケーシィ", "number": 62 },
+    { "name": "ユンゲラー", "number": 63 }, { "name": "フーディン", "number": 64 }, { "name": "ワンリキー", "number": 65 },
+    { "name": "ゴーリキー", "number": 66 }, { "name": "カイリキー", "number": 67 }, { "name": "マダツボミ", "number": 68 },
+    { "name": "ウツドン", "number": 69 }, { "name": "ウツボット", "number": 70 }, { "name": "メノクラゲ", "number": 71 },
+    { "name": "ドククラゲ", "number": 72 }, { "name": "イシツブテ", "number": 73 }, { "name": "ゴローン", "number": 74 },
+    { "name": "ゴローニャ", "number": 75 }, { "name": "ポニータ", "number": 76 }, { "name": "ギャロップ", "number": 77 },
+    { "name": "ヤドン", "number": 78 }, { "name": "ヤドラン", "number": 79 }, { "name": "コイル", "number": 80 },
+    { "name": "レアコイル", "number": 81 }, { "name": "カモネギ", "number": 82 }, { "name": "ドードー", "number": 83 },
+    { "name": "ドードリオ", "number": 84 }, { "name": "パウワウ", "number": 85 }, { "name": "ジュゴン", "number": 86 },
+    { "name": "ベトベター", "number": 87 }, { "name": "ベトベトン", "number": 88 }, { "name": "シェルダー", "number": 89 },
+    { "name": "パルシェン", "number": 90 }, { "name": "ゴース", "number": 91 }, { "name": "ゴースト", "number": 92 },
+    { "name": "ゲンガー", "number": 93 }, { "name": "イワーク", "number": 94 }, { "name": "スリープ", "number": 95 },
+    { "name": "スリーパー", "number": 96 }, { "name": "クラブ", "number": 97 }, { "name": "キングラー", "number": 98 },
+    { "name": "ビリリダマ", "number": 99 }, { "name": "マルマイン", "number": 100 }, { "name": "タマタマ", "number": 101 },
+    { "name": "ナッシー", "number": 102 }, { "name": "カラカラ", "number": 103 }, { "name": "ガラガラ", "number": 104 },
+    { "name": "サワムラー", "number": 105 }, { "name": "エビワラー", "number": 106 }, { "name": "ベロリンガ", "number": 107 },
+    { "name": "ドガース", "number": 108 }, { "name": "マタドガス", "number": 109 }, { "name": "サイホーン", "number": 110 },
+    { "name": "サイドン", "number": 111 }, { "name": "ラッキー", "number": 112 }, { "name": "モンジャラ", "number": 113 },
+    { "name": "ガルーラ", "number": 114 }, { "name": "タッツー", "number": 115 }, { "name": "シードラ", "number": 116 },
+    { "name": "トサキント", "number": 117 }, { "name": "アズマオウ", "number": 118 }, { "name": "ヒトデマン", "number": 119 },
+    { "name": "スターミー", "number": 120 }, { "name": "バリヤード", "number": 121 }, { "name": "ストライク", "number": 122 },
+    { "name": "ルージュラ", "number": 123 }, { "name": "エレブー", "number": 124 }, { "name": "ブーバー", "number": 125 },
+    { "name": "カイロス", "number": 126 }, { "name": "ケンタロス", "number": 127 }, { "name": "コイキング", "number": 128 },
+    { "name": "ギャラドス", "number": 129 }, { "name": "ラプラス", "number": 130 }, { "name": "メタモン", "number": 131 },
+    { "name": "イーブイ", "number": 132 }, { "name": "シャワーズ", "number": 133 }, { "name": "サンダース", "number": 134 },
+    { "name": "ブースター", "number": 135 }, { "name": "ポリゴン", "number": 136 }, { "name": "オムナイト", "number": 137 },
+    { "name": "オムスター", "number": 138 }, { "name": "カブト", "number": 139 }, { "name": "カブトプス", "number": 140 },
+    { "name": "プテラ", "number": 141 }, { "name": "カビゴン", "number": 142 }, { "name": "フリーザー", "number": 143 },
+    { "name": "サンダー", "number": 144 }, { "name": "ファイヤー", "number": 145 }, { "name": "ミニリュウ", "number": 146 },
+    { "name": "ハクリュー", "number": 147 }, { "name": "カイリュー", "number": 148 }, { "name": "ミュウツー", "number": 149 },
+    { "name": "ミュウ", "number": 150 }
+  ],
+
+  "teams":
+  {
+    "valor":
+    {
+      "title": "きみの ",
+      "overall":
+      [
+        {"text":"...は、全体的に言うことなしね。とっても頼もしいわ！", "min":"37", "max":"45"},
+        {"text":"...は、全体的にとても強い。自慢できるわね！", "min":"30", "max":"36"},
+        {"text":"...は、全体的に普通の強さだと思うわ！", "min":"23", "max":"29"},
+        {"text":"...は、全体的にバトル向きではないけれど、わたしは好きよ！", "min":"0", "max":"22"}
+      ],
+      "stats":
+      [
+        {"text":"ここに注目すると、最高ね！胸が熱くなる！", "min":"15", "max":"15"},
+        {"text":"ここに注目すると、素晴らしいわ！わくわくする！", "min":"13", "max":"14"},
+        {"text":"ここに注目すると、バトルで活躍してくれると思うわ！", "min":"8", "max":"12"},
+        {"text":"ここに注目すると、まあまあの強さね。", "min":"0", "max":"7"}
+      ]
+    },
+    "mystic":
+    {
+      "title": "きみの ",
+      "overall":
+      [
+        {"text":"...は、全体的に驚異的で、芸術的だ。", "min":"37", "max":"45"},
+        {"text":"...は、全体的に目を引くものがある。", "min":"30", "max":"36"},
+        {"text":"...は、全体的に普通以上。", "min":"23", "max":"29"},
+        {"text":"...は、全体的になかなか活躍が難しそうだ。", "min":"0", "max":"22"}
+      ],
+      "stats":
+      [
+        {"text":"測定できないほど高い。最高だ！", "min":"15", "max":"15"},
+        {"text":"素晴らしい。驚いているよ。", "min":"13", "max":"14"},
+        {"text":"この点において、かなりの強さといえるだろう。", "min":"8", "max":"12"},
+        {"text":"この点において、まあまあと言える。", "min":"0", "max":"7"}
+      ]
+    },
+    "instinct":
+    {
+      "title": "きみの ",
+      "overall":
+      [
+        {"text":"...は、全体的にトップレベルだぜ！", "min":"37", "max":"45"},
+        {"text":"...は、全体的にとっても強いぜ！", "min":"30", "max":"36"},
+        {"text":"...は、全体的に普通だと思うぜ。", "min":"23", "max":"29"},
+        {"text":"...は、全体的にまずまず、といったところだな。", "min":"0", "max":"22"}
+      ],
+      "stats":
+      [
+        {"text":"今まで見たなかでも、最高の部類だぜ！", "min":"15", "max":"15"},
+        {"text":"素晴らしいぜ！本当にな！", "min":"13", "max":"14"},
+        {"text":"かなりの強さだぜ！オレが保証する！", "min":"8", "max":"12"},
+        {"text":"まあまあ、といったところかな！", "min":"0", "max":"7"}
+      ]
+    }
+  }
+}

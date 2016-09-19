@@ -1,16 +1,19 @@
 <html>
     <head>
-        <script type="text/javascript" src="./js/Blob.js"></script>
-        <script type="text/javascript" src="./js/FileSaver.min.js"></script>
-        <script type="text/javascript" src="./js/angular.js"></script>
-        <script type="text/javascript" src="./js/angular-animate.min.js"></script>
-        <script type="text/javascript" src="./js/ui-bootstrap-2.1.3.min.js"></script>
-        <script type="text/javascript" src="./js/inputDropdown.js"></script>
-        <script type="text/javascript" src="./js/app.js"></script>
-        <link rel="stylesheet" href="./css/bootstrap.min.css" />
-        <link rel="stylesheet" href="./css/flags.css" />
-        <link rel="stylesheet" href="./css/inputDropdownStyles.css" />
-        <link rel="stylesheet" href="./css/app.css" />
+        <script type="text/javascript" src="/assets/libs/Blob.js"></script>
+        <script type="text/javascript" src="/assets/libs/FileSaver.min.js"></script>
+        <script type="text/javascript" src="/assets/libs/angular.js"></script>
+        <script type="text/javascript" src="/assets/libs/angular-route.min.js"></script>
+        <script type="text/javascript" src="/assets/libs/angular-animate.min.js"></script>
+        <script type="text/javascript" src="/assets/libs/ui-bootstrap-2.1.3.min.js"></script>
+        <script type="text/javascript" src="/assets/libs/js.cookie.js"></script>
+        <script type="text/javascript" src="/app/app.module.js"></script>
+        <script type="text/javascript" src="/app/app.routes.js"></script>
+        <script type="text/javascript" src="/app/components/calc/calc.controller.js"></script>
+        <script type="text/javascript" src="/app/factories/gameData.factory.js"></script>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/flags.css" />
+        <link rel="stylesheet" href="assets/css/app.css" />
         <link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
         <title>PoGOBin IV Calculator</title>
@@ -28,160 +31,15 @@
           ga('send', 'pageview');
         </script>
     </head>
-    <body>
+    <body ng-app="pogoApp">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="./img/pokeball.png" class="logo" />PoGOBin IV Calculator</a>
+                <a class="navbar-brand" href="#"><img src="assets/img/pokeball.png" class="logo" />PoGOBin IV Calculator</a>
             </div>
         </nav>
-        <div class="container" ng-app="PoGOApp" ng-controller="PoGOController" ng-focus="pokemonInputChanged = false">
-            <div class="row collapsible">
-                <label>
-                    <a ng-click="collapseHelp = !collapseHelp">Instructions
-                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true" ng-show="collapseHelp"></span>
-                    <span class="glyphicon glyphicon-menu-up" aria-hidden="true" ng-show="!collapseHelp"></span></a>
-                </label>
-                <div class="col-md-12 col-sm-12" uib-collapse="collapseHelp">
-                    <div class="card card-block">
-                        <ul>
-                            <li>Input your Pok&eacute;mon's name, CP and HP value.</li>
-                            <li>Input how much Stardust your Pok&eacute;mon needs to Power Up.</li>
-                            <li>If you already Powered Up your Pok&eacute;mon, check this to include half-levels.</li>
-                            <li>Optionally, you can click a Team Logo to add Appraisal data. Select the correct phrases and check the boxes that correspond to your Pok&eacute;mon's highest stats, based on leader feedback.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-12">
-                    <label>Pok&eacute;mon&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a ng-click="switchLanguage('en')"><img ng-class="{'not-selected' : language != 'en'}" src="./img/blank.png" class="flag flag-gb" /></a>&nbsp;&nbsp;
-                        <a ng-click="switchLanguage('de')"><img ng-class="{'not-selected' : language != 'de'}" src="./img/blank.png" class="flag flag-de" /></a>&nbsp;&nbsp;
-                        <a ng-click="switchLanguage('fr')"><img ng-class="{'not-selected' : language != 'fr'}" src="./img/blank.png" class="flag flag-fr" /></a>&nbsp;&nbsp;
-                        <a ng-click="switchLanguage('it')"><img ng-class="{'not-selected' : language != 'it'}" src="./img/blank.png" class="flag flag-it" /></a>&nbsp;&nbsp;
-                        <a ng-click="switchLanguage('es')"><img ng-class="{'not-selected' : language != 'es'}" src="./img/blank.png" class="flag flag-es" /></a>&nbsp;&nbsp;
-                        <a ng-click="switchLanguage('jp')"><img ng-class="{'not-selected' : language != 'jp'}" src="./img/blank.png" class="flag flag-jp" /></a>&nbsp;&nbsp;
-                        <!-- <a ng-click="switchLanguage('kr')"><img src="./img/blank.png" class="flag flag-kr" /></a> -->
-                        <input class="form-control" data-toggle="dropdown" ng-model="pokemonName" type="text" ng-change="filterList()" ng-focus="inputHasFocus = true; focusedItem = -1;" ng-blur="inputHasFocus = false; checkPokemonName()" ng-keydown="checkDropdownNavigation($event)" />
-                        <ul class="dropdown-menu" ng-init="focusedItem = -1" ng-show="pokemonInputChanged && inputHasFocus">
-                            <li ng-repeat="p in filteredList" ng-mouseover="focusItem($index)" ng-class="{'active-item': focusedItem == $index, 'inactive-item': focusedItem != $index}"><a ng-mousedown="selectPokemon(p)">{{p.name}}</a></li>
-                        </ul>
-                    </label>
-
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6">
-                    <label>CP<input class="form-control" ng-model="cp" type="number" placeholder="CP" /></label>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6">
-                    <label>HP<input class="form-control" ng-model="hp" type="number" placeholder="HP" /></label>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6">
-                    <label>Stardust
-                        <select class="form-control" ng-model="stardust">
-                            <option ng-repeat="d in dustValues" ng-value="$index">{{d}}</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6 text-center">
-                    <label>Powered Up<img class="check-img" src="./img/pokeball.png" ng-class="{'not-selected' : !poweredup}" ng-click="toggleCheck('poweredup')" /></label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-xs-4 text-center">
-                    <img src="./img/valor/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team != teams[language][0]}" ng-click="selectTeam(0);" />
-                </div>
-                <div class="col-sm-4 col-xs-4 text-center">
-                    <img src="./img/mystic/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team != teams[language][1]}" ng-click="selectTeam(1);" />
-                </div>
-                <div class="col-sm-4 col-xs-4 text-center">
-                    <img src="./img/instinct/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': team != teams[language][2]}" ng-click="selectTeam(2);" />
-                </div>
-            </div>
-            <div class="row" ng-show="team">
-                <div class="col-sm-6">
-                    <label>{{team.title}}<span ng-show="pokemonData"> {{pokemonName}}...</span><select class="form-control" ng-model="overall" ng-options="o.text for o in team.overall"></select></label>
-                </div>
-                <div class="col-sm-6">
-                    <label>Stats Feedback<select class="form-control" ng-model="stats" ng-options="s.text for s in team.stats"></select></label>
-                </div>
-                <div class="col-sm-4 col-sm-offset-4 stats-toggle">
-                    <div class="text-center">
-                        <label>HP
-                            <img class="check-img" src="./img/pokeball.png" ng-class="{'not-selected' : !highHP}" ng-click="toggleCheck('highHP')" />
-                        </label>
-                    </div>
-                    <div class="text-center">
-                        <label>ATK
-                            <img class="check-img" src="./img/pokeball.png" ng-class="{'not-selected' : !highATK}" ng-click="toggleCheck('highATK')" />
-                        </label>
-                    </div>
-                    <div class="text-center">
-                        <label>DEF
-                            <img class="check-img" src="./img/pokeball.png" ng-class="{'not-selected' : !highDEF}" ng-click="toggleCheck('highDEF')" />
-                        </label>
-                    </div>
-                </div>
-                <!-- <div class="col-sm-3 col-xs-6">
-                    <label class="clear-label">Clear Team<button class="btn btn-danger btn-block" ng-click="clearTeam()">Clear Team</button></label>
-                </div> -->
-            </div>
-            <div class="row">
-                <div class="col-sm-12 btn-container">
-                    <button class="btn btn-primary btn-lg btn-calc" ng-click="calculateIV()">Calculate</button>
-                </div>
-            </div>
-            <div class="error-message" ng-show="results && results.stats.length == 0"><big><b>Oops!</b></big>&nbsp;&nbsp;<small>There might be something wrong with your input.<span ng-show="!poweredup"> Try checking the "Powered Up" option to include half-level status.</span></small></div>
-            <div class="results" ng-show="results && results.stats.length > 0">
-                <div class="row">
-                    <div class="col-sm-4 col-xs-4 text-center">
-                        <label>Min IV <p class="form-control-static">{{results.minIV}}/45 ({{(results.minIV/0.45).toFixed(1)}}%)</p></label>
-                    </div>
-                    <div class="col-sm-4 col-xs-4 text-center">
-                        <label>Avg IV <p class="form-control-static">{{results.avgIV}}/45 ({{(results.avgIV/0.45).toFixed(1)}}%)</p></label>
-                    </div>
-                    <div class="col-sm-4 col-xs-4 text-center">
-                        <label>Max IV <p class="form-control-static">{{results.maxIV}}/45 ({{(results.maxIV/0.45).toFixed(1)}}%)</p></label>
-                    </div>
-                </div>
-                <table class="table table-hover">
-                    <tr>
-                        <th>
-                            <a ng-click="setOrderByParams('level')">Level</a>
-                            <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="orderParams == 'level' && reverse"></span>
-                            <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="orderParams == 'level' && !reverse"></span>
-                        </th>
-                        <th>
-                            <a ng-click="setOrderByParams('HP')">HP</a>
-                            <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="orderParams == 'HP' && reverse"></span>
-                            <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="orderParams == 'HP' && !reverse"></span>
-                        </th>
-                        <th>
-                            <a ng-click="setOrderByParams('ATK')">Attack</a>
-                            <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="orderParams == 'ATK' && reverse"></span>
-                            <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="orderParams == 'ATK' && !reverse"></span>
-                        </th>
-                        <th>
-                            <a ng-click="setOrderByParams('DEF')">Defence</a>
-                            <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="orderParams == 'DEF' && reverse"></span>
-                            <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="orderParams == 'DEF' && !reverse"></span>
-                        </th>
-                        <th>
-                            <a ng-click="setOrderByParams('total')">Total</a>
-                            <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="orderParams == 'total' && reverse"></span>
-                            <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="orderParams == 'total' && !reverse"></span>
-                        </th>
-                    </tr>
-                    <tr class="text-center" ng-repeat="r in results.stats | orderBy:orderParams:reverse">
-                        <td>{{r.level}}</td>
-                        <td>{{r.HP}}</td>
-                        <td>{{r.ATK}}</td>
-                        <td>{{r.DEF}}</td>
-                        <td>{{r.total}}/45 ({{(r.total/0.45).toFixed(1)}}%)</td>
-                    </tr>
-                </table>
-                <button class="btn btn-success btn-lg pull-right" ng-click="exportData()">Export Data</button>
-            </div>
-            <div class="row collapsible">
+        <div class="container">
+            <div ng-view></div>
+            <div class="row collapsible" ng-init="collapseChangelog = true">
                 <label>
                     <a ng-click="collapseChangelog = !collapseChangelog">Changelog
                     <span class="glyphicon glyphicon-menu-down" aria-hidden="true" ng-show="collapseChangelog"></span>
@@ -201,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row collapsible">
+            <div class="row collapsible" ng-init="collapseCredits = true">
                 <label>
                     <a ng-click="collapseCredits = !collapseCredits">Credits
                     <span class="glyphicon glyphicon-menu-down" aria-hidden="true" ng-show="collapseCredits"></span>

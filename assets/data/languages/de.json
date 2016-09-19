@@ -1,0 +1,113 @@
+{
+  "pokemonList": [
+    { "name": "Bisasam",    "number":   0 }, { "name": "Bisaknosp",  "number":   1 }, { "name": "Bisaflor",   "number":   2 },
+    { "name": "Glumanda",   "number":   3 }, { "name": "Glutexo",    "number":   4 }, { "name": "Glurak",     "number":   5 },
+    { "name": "Schiggy",    "number":   6 }, { "name": "Schillok",   "number":   7 }, { "name": "Turtok",     "number":   8 },
+    { "name": "Raupy",      "number":   9 }, { "name": "Safcon",     "number":  10 }, { "name": "Smettbo",    "number":  11 },
+    { "name": "Hornliu",    "number":  12 }, { "name": "Kokuna",     "number":  13 }, { "name": "Bibor",      "number":  14 },
+    { "name": "Taubsi",     "number":  15 }, { "name": "Tauboga",    "number":  16 }, { "name": "Tauboss",    "number":  17 },
+    { "name": "Rattfratz",  "number":  18 }, { "name": "Rattikarl",  "number":  19 }, { "name": "Habitak",    "number":  20 },
+    { "name": "Ibitak",     "number":  21 }, { "name": "Rettan",     "number":  22 }, { "name": "Arbok",      "number":  23 },
+    { "name": "Pikachu",    "number":  24 }, { "name": "Raichu",     "number":  25 }, { "name": "Sandan",     "number":  26 },
+    { "name": "Sandamer",   "number":  27 }, { "name": "Nidoran♀",   "number":  28 }, { "name": "Nidorina",   "number":  29 },
+    { "name": "Nidoqueen",  "number":  30 }, { "name": "Nidoran♂",   "number":  31 }, { "name": "Nidorino",   "number":  32 },
+    { "name": "Nidoking",   "number":  33 }, { "name": "Piepi",      "number":  34 }, { "name": "Pixi",       "number":  35 },
+    { "name": "Vulpix",     "number":  36 }, { "name": "Vulnona",    "number":  37 }, { "name": "Pummeluff",  "number":  38 },
+    { "name": "Knuddeluff", "number":  39 }, { "name": "Zubat",      "number":  40 }, { "name": "Golbat",     "number":  41 },
+    { "name": "Myrapla",    "number":  42 }, { "name": "Duflor",     "number":  43 }, { "name": "Giflor",     "number":  44 },
+    { "name": "Paras",      "number":  45 }, { "name": "Parasek",    "number":  46 }, { "name": "Bluzuk",     "number":  47 },
+    { "name": "Omot",       "number":  48 }, { "name": "Digda",      "number":  49 }, { "name": "Digdri",     "number":  50 },
+    { "name": "Mauzi",      "number":  51 }, { "name": "Snobilikat", "number":  52 }, { "name": "Enton",      "number":  53 },
+    { "name": "Entoron",    "number":  54 }, { "name": "Menki",      "number":  55 }, { "name": "Rasaff",     "number":  56 },
+    { "name": "Fukano",     "number":  57 }, { "name": "Arkani",     "number":  58 }, { "name": "Quapsel",    "number":  59 },
+    { "name": "Quaputzi",   "number":  60 }, { "name": "Quappo",     "number":  61 }, { "name": "Abra",       "number":  62 },
+    { "name": "Kadabra",    "number":  63 }, { "name": "Simsala",    "number":  64 }, { "name": "Machollo",   "number":  65 },
+    { "name": "Maschock",   "number":  66 }, { "name": "Machomei",   "number":  67 }, { "name": "Knofensa",   "number":  68 },
+    { "name": "Ultrigaria", "number":  69 }, { "name": "Sarzenia",   "number":  70 }, { "name": "Tentacha",   "number":  71 },
+    { "name": "Tentoxa",    "number":  72 }, { "name": "Kleinstein", "number":  73 }, { "name": "Georok",     "number":  74 },
+    { "name": "Geowaz",     "number":  75 }, { "name": "Ponita",     "number":  76 }, { "name": "Gallopa",    "number":  77 },
+    { "name": "Flegmon",    "number":  78 }, { "name": "Lahmus",     "number":  79 }, { "name": "Magnetilo",  "number":  80 },
+    { "name": "Magneton",   "number":  81 }, { "name": "Porenta",    "number":  82 }, { "name": "Dodu",       "number":  83 },
+    { "name": "Dodri",      "number":  84 }, { "name": "Jurob",      "number":  85 }, { "name": "Jugong",     "number":  86 },
+    { "name": "Sleima",     "number":  87 }, { "name": "Sleimok",    "number":  88 }, { "name": "Muschas",    "number":  89 },
+    { "name": "Austos",     "number":  90 }, { "name": "Nebulak",    "number":  91 }, { "name": "Alpollo",    "number":  92 },
+    { "name": "Gengar",     "number":  93 }, { "name": "Onix",       "number":  94 }, { "name": "Traumato",   "number":  95 },
+    { "name": "Hypno",      "number":  96 }, { "name": "Krabby",     "number":  97 }, { "name": "Kingler",    "number":  98 },
+    { "name": "Voltobal",   "number":  99 }, { "name": "Lektrobal",  "number": 100 }, { "name": "Owei",       "number": 101 },
+    { "name": "Kokowei",    "number": 102 }, { "name": "Tragosso",   "number": 103 }, { "name": "Knogga",     "number": 104 },
+    { "name": "Kicklee",    "number": 105 }, { "name": "Nockchan",   "number": 106 }, { "name": "Schlurp",    "number": 107 },
+    { "name": "Smogon",     "number": 108 }, { "name": "Smogmog",    "number": 109 }, { "name": "Rihorn",     "number": 110 },
+    { "name": "Rizeros",    "number": 111 }, { "name": "Chaneira",   "number": 112 }, { "name": "Tangela",    "number": 113 },
+    { "name": "Kangama",    "number": 114 }, { "name": "Seeper",     "number": 115 }, { "name": "Seemon",     "number": 116 },
+    { "name": "Goldini",    "number": 117 }, { "name": "Golking",    "number": 118 }, { "name": "Sterndu",    "number": 119 },
+    { "name": "Starmie",    "number": 120 }, { "name": "Pantimos",   "number": 121 }, { "name": "Sichlor",    "number": 122 },
+    { "name": "Rossana",    "number": 123 }, { "name": "Elektek",    "number": 124 }, { "name": "Magmar",     "number": 125 },
+    { "name": "Pinsir",     "number": 126 }, { "name": "Tauros",     "number": 127 }, { "name": "Karpador",   "number": 128 },
+    { "name": "Garados",    "number": 129 }, { "name": "Lapras",     "number": 130 }, { "name": "Ditto",      "number": 131 },
+    { "name": "Evoli",      "number": 132 }, { "name": "Aquana",     "number": 133 }, { "name": "Blitza",     "number": 134 },
+    { "name": "Flamara",    "number": 135 }, { "name": "Porygon",    "number": 136 }, { "name": "Amonitas",   "number": 137 },
+    { "name": "Amoroso",    "number": 138 }, { "name": "Kabuto",     "number": 139 }, { "name": "Kabutops",   "number": 140 },
+    { "name": "Aerodactyl", "number": 141 }, { "name": "Relaxo",     "number": 142 }, { "name": "Arktos",     "number": 143 },
+    { "name": "Zapdos",     "number": 144 }, { "name": "Lavados",    "number": 145 }, { "name": "Dratini",    "number": 146 },
+    { "name": "Dragonir",   "number": 147 }, { "name": "Dragoran",   "number": 148 }, { "name": "Mewtu",      "number": 149 },
+    { "name": "Mew",        "number": 150 }
+  ],
+
+  "teams":
+  {
+    "valor":
+    {
+      "title": "(Von) Dein(em) ",
+      "overall":
+      [
+        {"text":"...bin ich insgesamt total beeindruckt. Es kann einfach alles!", "min":"37", "max":"45"},
+        {"text":"...ist insgesamt sehr stark. Du kannst stolz sein!", "min":"30", "max":"36"},
+        {"text":"...ist insgesamt ganz gut!", "min":"23", "max":"29"},
+        {"text":"...ist zwar insgesamt im Kampf nicht allzu beeindruckend, aber ich mag es trotzdem!", "min":"0", "max":"22"}
+      ],
+      "stats":
+      [
+        {"text":"Seine Werte hauen mich um. WOW!", "min":"15", "max":"15"},
+        {"text":"Er hat hervorragende Werte! Wie aufregend!", "min":"13", "max":"14"},
+        {"text":"Seine Werte sind nicht von schlechten Eltern!", "min":"8", "max":"12"},
+        {"text":"Seine Werte werden dir im Kampf nicht viel bringen.", "min":"0", "max":"7"}
+      ]
+    },
+    "mystic":
+    {
+      "title": "(Von) Dein(em) ",
+      "overall":
+      [
+        {"text":"...ist insgesamt einfach erstaunlich. Wirklich ein atemberaubendes Exemplar!", "min":"37", "max":"45"},
+        {"text":"...ist mir insgesamt wirklich aufgefallen.", "min":"30", "max":"36"},
+        {"text":"...ist insgesamt ein gutes Pokémon.", "min":"23", "max":"29"},
+        {"text":"...wird im Kampf wahrscheinlich keine großen Fortschritte machen.", "min":"0", "max":"22"}
+      ],
+      "stats":
+      [
+        {"text":"Seine Werte sind so hoch, dass ich sie gar nicht berechnen kann! Unglaublich!", "min":"15", "max":"15"},
+        {"text":"Ich muss sagen, dass ich von seinen Werten sehr beeindruckt bin.", "min":"13", "max":"14"},
+        {"text":"Seine Werte sind recht beeindruckend.", "min":"8", "max":"12"},
+        {"text":"Seine Werte sind insgesamt ganz okay.", "min":"0", "max":"7"}
+      ]
+    },
+    "instinct":
+    {
+      "title": "(Von) Dein(em) ",
+      "overall":
+      [
+        {"text":"...kann es im Kampf mit allen aufnehmen!", "min":"37", "max":"45"},
+        {"text":"...ist insgesamt wirklich stark!", "min":"30", "max":"36"},
+        {"text":"...ist insgesamt ganz gut.", "min":"23", "max":"29"},
+        {"text":"...kann sich im Kampf noch verbessern!", "min":"0", "max":"22"}
+      ],
+      "stats":
+      [
+        {"text":"Seine Werte sind die besten, die ich je gesehen habe!", "min":"15", "max":"15"},
+        {"text":"Seine Werte sind wirklich hoch! Hut ab!", "min":"13", "max":"14"},
+        {"text":"Seine Werte können sich sehen lassen!", "min":"8", "max":"12"},
+        {"text":"Seine Werte sind okay.", "min":"0", "max":"7"}
+      ]
+    }
+  }
+}

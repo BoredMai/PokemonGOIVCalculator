@@ -1,0 +1,113 @@
+{
+  "pokemonList": [
+    { "name": "Bulbizarre",	  "number":   0 }, { "name": "Herbizarre", "number":   1 }, { "name": "Florizarre", "number":   2 },
+    { "name": "Salamèche",    "number":   3 }, { "name": "Reptincel",	 "number":   4 }, { "name": "Dracaufeu",  "number":   5 },
+    { "name": "Carapuce",     "number":   6 }, { "name": "Carabaffe",	 "number":   7 }, { "name": "Tortank",	  "number":   8 },
+    { "name": "Chenipan",	    "number":   9 }, { "name": "Chrysacier", "number":  10 }, { "name": "Papilusion", "number":  11 },
+    { "name": "Aspicot",	    "number":  12 }, { "name": "Coconfort",	 "number":  13 }, { "name": "Dardargnan", "number":  14 },
+    { "name": "Roucool",	    "number":  15 }, { "name": "Roucoups",	 "number":  16 }, { "name": "Roucarnage", "number":  17 },
+    { "name": "Rattata",	    "number":  18 }, { "name": "Rattatac",	 "number":  19 }, { "name": "Piafabec",   "number":  20 },
+    { "name": "Rapasdepic",	  "number":  21 }, { "name": "Abo",		     "number":  22 }, { "name": "Arbok",	    "number":  23 },
+    { "name": "Pikachu",	    "number":  24 }, { "name": "Raichu",	   "number":  25 }, { "name": "Sabelette",  "number":  26 },
+    { "name": "Sablaireau",	  "number":  27 }, { "name": "Nidoran♀",	 "number":  28 }, { "name": "Nidorina",   "number":  29 },
+    { "name": "Nidoqueen",	  "number":  30 }, { "name": "Nidoran♂",	 "number":  31 }, { "name": "Nidorino",   "number":  32 },
+    { "name": "Nidoking",	    "number":  33 }, { "name": "Mélofée",	   "number":  34 }, { "name": "Mélodelfe",  "number":  35 },
+    { "name": "Goupix",		    "number":  36 }, { "name": "Feunard",	   "number":  37 }, { "name": "Rondoudou",  "number":  38 },
+    { "name": "Grodoudou",	  "number":  39 }, { "name": "Nosferapti", "number":  40 }, { "name": "Nosferalto", "number":  41 },
+    { "name": "Mystherbe",	  "number":  42 }, { "name": "Ortide",	   "number":  43 }, { "name": "Rafflesia",  "number":  44 },
+    { "name": "Paras",		    "number":  45 }, { "name": "Parasect",	 "number":  46 }, { "name": "Mimitoss",   "number":  47 },
+    { "name": "Aéromite",	    "number":  48 }, { "name": "Taupiqueur", "number":  49 }, { "name": "Triopikeur", "number":  50 },
+    { "name": "Miaouss",	    "number":  51 }, { "name": "Persian",	   "number":  52 }, { "name": "Psykokwak",  "number":  53 },
+    { "name": "Akwakwak",	    "number":  54 }, { "name": "Férosinge",	 "number":  55 }, { "name": "Colossinge", "number":  56 },
+    { "name": "Caninos",	    "number":  57 }, { "name": "Arcanin",	   "number":  58 }, { "name": "Ptitard",	  "number":  59 },
+    { "name": "Têtarte",	    "number":  60 }, { "name": "Tartard",	   "number":  61 }, { "name": "Abra",	      "number":  62 },
+    { "name": "Kadabra",	    "number":  63 }, { "name": "Alakazam",	 "number":  64 }, { "name": "Machoc",	    "number":  65 },
+    { "name": "Machopeur",	  "number":  66 }, { "name": "Mackogneur", "number":  67 }, { "name": "Chétiflor",  "number":  68 },
+    { "name": "Boustiflor",	  "number":  69 }, { "name": "Empiflor",	 "number":  70 }, { "name": "Tentacool",  "number":  71 },
+    { "name": "Tentacruel",	  "number":  72 }, { "name": "Racaillou",	 "number":  73 }, { "name": "Gravalanch", "number":  74 },
+    { "name": "Grolem",		    "number":  75 }, { "name": "Ponyta",	   "number":  76 }, { "name": "Galopa",	    "number":  77 },
+    { "name": "Ramoloss",	    "number":  78 }, { "name": "Flagadoss",	 "number":  79 }, { "name": "Magnéti",	  "number":  80 },
+    { "name": "Magnéton",	    "number":  81 }, { "name": "Canarticho", "number":  82 }, { "name": "Doduo",	    "number":  83 },
+    { "name": "Dodrio",	  	  "number":  84 }, { "name": "Otaria",	   "number":  85 }, { "name": "Lamantine",  "number":  86 },
+    { "name": "Tadmorv",	    "number":  87 }, { "name": "Grotadmorv", "number":  88 }, { "name": "Kokiyas",	  "number":  89 },
+    { "name": "Crustabri",	  "number":  90 }, { "name": "Fantominus", "number":  91 }, { "name": "Spectrum",   "number":  92 },
+    { "name": "Ectoplasma",	  "number":  93 }, { "name": "Onix",		   "number":  94 }, { "name": "Soporifik",  "number":  95 },
+    { "name": "Hypnomade",	  "number":  96 }, { "name": "Krabby",	   "number":  97 }, { "name": "Krabboss",   "number":  98 },
+    { "name": "Voltorbe",	    "number":  99 }, { "name": "Électrode",	 "number": 100 }, { "name": "Nœunœuf",	  "number": 101 },
+    { "name": "Noadkoko",	    "number": 102 }, { "name": "Osselait",	 "number": 103 }, { "name": "Ossatueur",  "number": 104 },
+    { "name": "Kicklee",	    "number": 105 }, { "name": "Tygnon",	   "number": 106 }, { "name": "Excelangue", "number": 107 },
+    { "name": "Smogo",		    "number": 108 }, { "name": "Smogogo",	   "number": 109 }, { "name": "Rhinocorne", "number": 110 },
+    { "name": "Rhinoféros",	  "number": 111 }, { "name": "Leveinard",	 "number": 112 }, { "name": "Saquedeneu", "number": 113 },
+    { "name": "Kangourex",	  "number": 114 }, { "name": "Hypotrempe", "number": 115 }, { "name": "Hypocéan",   "number": 116 },
+    { "name": "Poissirène",	  "number": 117 }, { "name": "Poissoroy",	 "number": 118 }, { "name": "Stari",	    "number": 119 },
+    { "name": "Staross",	    "number": 120 }, { "name": "M.Mime",     "number": 121 }, { "name": "Insécateur", "number": 122 },
+    { "name": "Lippoutou",	  "number": 123 }, { "name": "Élektek",	   "number": 124 }, { "name": "Magmar",	    "number": 125 },
+    { "name": "Scarabrute",	  "number": 126 }, { "name": "Tauros",	   "number": 127 }, { "name": "Magicarpe",  "number": 128 },
+    { "name": "Léviator",	    "number": 129 }, { "name": "Lokhlass",	 "number": 130 }, { "name": "Métamorph",  "number": 131 },
+    { "name": "Évoli",		    "number": 132 }, { "name": "Aquali",	   "number": 133 }, { "name": "Voltali",	  "number": 134 },
+    { "name": "Pyroli",		    "number": 135 }, { "name": "Porygon",	   "number": 136 }, { "name": "Amonita",	  "number": 137 },
+    { "name": "Amonistar",	  "number": 138 }, { "name": "Kabuto",	   "number": 139 }, { "name": "Kabutops",   "number": 140 },
+    { "name": "Ptéra",		    "number": 141 }, { "name": "Ronflex",	   "number": 142 }, { "name": "Artikodin",  "number": 143 },
+    { "name": "Électhor",	    "number": 144 }, { "name": "Sulfura",	   "number": 145 }, { "name": "Minidraco",  "number": 146 },
+    { "name": "Draco",		    "number": 147 }, { "name": "Dracolosse", "number": 148 }, { "name": "Mewtwo",	    "number": 149 },
+    { "name": "Mew",		      "number": 150 }
+  ],
+
+  "teams":
+  {
+    "valor":
+    {
+      "title": "Dans l'ensemble, ton ",
+      "overall":
+      [
+        {"text":"...m'étonne beaucoup. Il peut tout faire !", "min":"37", "max":"45"},
+        {"text":"...est très fort. Tu dois être fier !", "min":"30", "max":"36"},
+        {"text":"...est un Pokémon solide !", "min":"23", "max":"29"},
+        {"text":"...n'est pas un combattant, mais je l'aime bien.", "min":"0", "max":"22"}
+      ],
+      "stats":
+      [
+        {"text":"Je suis estomaquée par ses stats. Bravo !", "min":"15", "max":"15"},
+        {"text":"Ses stats sont excellentes ! C'est super !", "min":"13", "max":"14"},
+        {"text":"Ses stats indiquent qu'il va faire des dégâts au combat.", "min":"8", "max":"12"},
+        {"text":"Ses stats ne t'aideront pas beaucoup au combat.", "min":"0", "max":"7"}
+      ]
+    },
+    "mystic":
+    {
+      "title": "Dans l'ensemble, ton ",
+      "overall":
+      [
+        {"text":"...est une merveille. Un Pokémon captivant !", "min":"37", "max":"45"},
+        {"text":"...a retenu toute mon attention.", "min":"30", "max":"36"},
+        {"text":"...est supérieur à la moyenne.", "min":"23", "max":"29"},
+        {"text":"...ton Pokémon n'ira pas très loin au combat.", "min":"0", "max":"22"}
+      ],
+      "stats":
+      [
+        {"text":"Ses stats dépassent tous mes calculs, c'est incroyable !", "min":"15", "max":"15"},
+        {"text":"Je suis impressionnée par ses stats, à vrai dire.", "min":"13", "max":"14"},
+        {"text":"Ses stats s'améliorent à vue d'œil.", "min":"8", "max":"12"},
+        {"text":"Ses stats n'ont rien d'anormal, à priori.", "min":"0", "max":"7"}
+      ]
+    },
+    "instinct":
+    {
+      "title": "Dans l'ensemble, ton ",
+      "overall":
+      [
+        {"text":"...semble capable de tenir tête aux meilleurs !", "min":"37", "max":"45"},
+        {"text":"...est vraiment fort !", "min":"30", "max":"36"},
+        {"text":"...est plutôt bien !", "min":"23", "max":"29"},
+        {"text":"...peut devenir un meilleur combattant.", "min":"0", "max":"22"}
+      ],
+      "stats":
+      [
+        {"text":"Ses stats sont les meilleures que j'ai jamais vues ! Sans aucun doute !", "min":"15", "max":"15"},
+        {"text":"Ses stats sont super élevées. Impressionnant !", "min":"13", "max":"14"},
+        {"text":"Il a quelques bonnes stats, c'est sûr !", "min":"8", "max":"12"},
+        {"text":"Ses stats ne sont pas mal, mais un peu basiques, il me semble.", "min":"0", "max":"7"}
+      ]
+    }
+  }
+}

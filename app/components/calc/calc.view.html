@@ -1,0 +1,190 @@
+<div id="calc-view" ng-controller="CalcController as vm">
+    <div class="row collapsible">
+        <label>
+            <a ng-click="vm.collapseInstructions = !vm.collapseInstructions">Instructions
+            <span class="glyphicon glyphicon-menu-down" aria-hidden="true" ng-show="vm.collapseInstructions"></span>
+            <span class="glyphicon glyphicon-menu-up" aria-hidden="true" ng-show="!vm.collapseInstructions"></span></a>
+        </label>
+        <div class="col-md-12 col-sm-12" uib-collapse="vm.collapseInstructions">
+            <div class="card card-block">
+                <ul>
+                    <li>Input your Pok&eacute;mon's name, CP and HP value.</li>
+                    <li>Input how much Stardust your Pok&eacute;mon needs to Power Up.</li>
+                    <li>If you already Powered Up your Pok&eacute;mon, check this to include half-levels.</li>
+                    <li>Optionally, you can click a Team Logo to add Appraisal data. Select the correct phrases and check the boxes that correspond to your Pok&eacute;mon's highest stats, based on leader feedback.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <label>Pok&eacute;mon&nbsp;&nbsp;&nbsp;&nbsp;
+                <a ng-click="vm.switchLanguage('en')"><img ng-class="{'not-selected' : vm.language != 'en'}" src="assets/img/blank.png" class="flag flag-gb" /></a>&nbsp;&nbsp;
+                <a ng-click="vm.switchLanguage('de')"><img ng-class="{'not-selected' : vm.language != 'de'}" src="assets/img/blank.png" class="flag flag-de" /></a>&nbsp;&nbsp;
+                <a ng-click="vm.switchLanguage('fr')"><img ng-class="{'not-selected' : vm.language != 'fr'}" src="assets/img/blank.png" class="flag flag-fr" /></a>&nbsp;&nbsp;
+                <a ng-click="vm.switchLanguage('it')"><img ng-class="{'not-selected' : vm.language != 'it'}" src="assets/img/blank.png" class="flag flag-it" /></a>&nbsp;&nbsp;
+                <a ng-click="vm.switchLanguage('es')"><img ng-class="{'not-selected' : vm.language != 'es'}" src="assets/img/blank.png" class="flag flag-es" /></a>&nbsp;&nbsp;
+                <a ng-click="vm.switchLanguage('jp')"><img ng-class="{'not-selected' : vm.language != 'jp'}" src="assets/img/blank.png" class="flag flag-jp" /></a>&nbsp;&nbsp;
+                <input class="form-control" data-toggle="dropdown" ng-model="vm.pokemonName" type="text" ng-change="vm.filterList()" ng-focus="vm.inputHasFocus = true; vm.focusedItem = -1;" ng-blur="vm.inputHasFocus = false; vm.checkPokemonName()" ng-keydown="vm.checkDropdownNavigation($event)" />
+                <ul class="dropdown-menu" ng-init="vm.focusedItem = -1" ng-show="vm.pokemonInputChanged && vm.inputHasFocus">
+                    <li ng-repeat="p in vm.filteredList" ng-mouseover="vm.focusItem($index)" ng-class="{'active-item': vm.focusedItem == $index, 'inactive-item': vm.focusedItem != $index}"><a ng-mousedown="vm.selectPokemon(p)">{{p.name}}</a></li>
+                </ul>
+            </label>
+
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <label>CP<input class="form-control" ng-model="vm.cp" type="number" placeholder="CP" /></label>
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <label>HP<input class="form-control" ng-model="vm.hp" type="number" placeholder="HP" /></label>
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <label>Stardust
+                <select class="form-control" ng-model="vm.stardust" ng-change="vm.setRefineDustValues()">
+                    <option ng-repeat="d in vm.gameData.dustValues" ng-value="$index">{{d}}</option>
+                </select>
+            </label>
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-6 text-center">
+            <label>Powered Up<img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.isPoweredUp}" ng-click="vm.toggleCheck('isPoweredUp')" /></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-xs-4 text-center">
+            <img src="assets/img/valor/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': vm.selectedTeam != vm.gameData.teams.valor}" ng-click="vm.selectTeam('valor');" />
+        </div>
+        <div class="col-sm-4 col-xs-4 text-center">
+            <img src="assets/img/mystic/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': vm.selectedTeam != vm.gameData.teams.mystic}" ng-click="vm.selectTeam('mystic');" />
+        </div>
+        <div class="col-sm-4 col-xs-4 text-center">
+            <img src="assets/img/instinct/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': vm.selectedTeam != vm.gameData.teams.instinct}" ng-click="vm.selectTeam('instinct');" />
+        </div>
+    </div>
+    <div class="row" ng-show="vm.selectedTeam">
+        <div class="col-sm-6">
+            <label>{{vm.selectedTeam.title}} <span ng-show="vm.pokemon">{{vm.pokemonName}}...</span><select class="form-control" ng-model="vm.overall" ng-options="o.text for o in vm.selectedTeam.overall"></select></label>
+        </div>
+        <div class="col-sm-6">
+            <label>Stats Feedback<select class="form-control" ng-model="vm.stats" ng-options="s.text for s in vm.selectedTeam.stats"></select></label>
+        </div>
+        <div class="col-sm-4 col-sm-offset-4 stats-toggle">
+            <div class="text-center">
+                <label>HP
+                    <img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.highHP}" ng-click="vm.toggleCheck('highHP')" />
+                </label>
+            </div>
+            <div class="text-center">
+                <label>ATK
+                    <img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.highATK}" ng-click="vm.toggleCheck('highATK')" />
+                </label>
+            </div>
+            <div class="text-center">
+                <label>DEF
+                    <img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.highDEF}" ng-click="vm.toggleCheck('highDEF')" />
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 btn-container">
+            <button class="btn btn-primary btn-lg btn-calc" ng-click="vm.calculateIV()" ng-disabled="vm.disableCalc()">Calculate</button>
+        </div>
+    </div>
+    <div class="refine">
+        <div class="row collapsible" ng-init="vm.collapseRefine = true" ng-show="vm.showRefine()">
+            <div class="row">
+                <div class="col-sm-12 btn-container">
+                    <button class="btn btn-success" ng-click="vm.collapseRefine = !vm.collapseRefine">Refine Results
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true" ng-show="vm.collapseRefine"></span>
+                    <span class="glyphicon glyphicon-menu-up" aria-hidden="true" ng-show="!vm.collapseRefine"></span></button>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12" uib-collapse="vm.collapseRefine">
+                <div class="card card-block">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <label>Pok&eacute;mon
+                                <select class="form-control" ng-model="vm.refine.number" ng-change="vm.selectRefinedPokemon()">
+                                    <option ng-repeat="p in vm.refine.pokemonList | orderBy:number:true" ng-value="p.number">{{p.name}}</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-xs-6">
+                            <label>CP<input class="form-control" ng-model="vm.refine.cp" type="number" placeholder="CP" /></label>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-xs-6">
+                            <label>HP<input class="form-control" ng-model="vm.refine.hp" type="number" placeholder="HP" /></label>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-xs-6">
+                            <label>Stardust
+                                <select class="form-control" ng-model="vm.refine.stardust">
+                                    <option ng-value="vm.refine.dustValues[0]">{{vm.gameData.dustValues[vm.refine.dustValues[0]]}}</option>
+                                    <option ng-value="vm.refine.dustValues[1]">{{vm.gameData.dustValues[vm.refine.dustValues[1]]}}</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-xs-6 text-center">
+                            <label>Powered Up<img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.refine.isPoweredUp}" ng-click="vm.refine.isPoweredUp = !vm.refine.isPoweredUp" /></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 btn-container">
+                            <button class="btn btn-success btn-lg btn-calc" ng-click="vm.refineIV()" ng-disabled="vm.disableRefine()">Refine</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="error-message" ng-show="vm.results && vm.results.stats.length == 0"><big><b>Oops!</b></big>&nbsp;&nbsp;<small>There might be something wrong with your input.<span ng-show="!vm.isPoweredUp"> Try checking the "Powered Up" option to include half-level status.</span><br />If everything was correct, please <a href="mailto:nannesribeiro@gmail.com">email me</a> with attached prints from the game and the calculator so I can see what's wrong.</small></div>
+    <div class="results" ng-show="vm.results && vm.results.stats.length > 0">
+        <div class="row">
+            <div class="col-sm-4 col-xs-4 text-center">
+                <label>Min IV <p class="form-control-static">{{vm.results.minIV}}/45 ({{(vm.results.minIV/0.45).toFixed(1)}}%)</p></label>
+            </div>
+            <div class="col-sm-4 col-xs-4 text-center">
+                <label>Avg IV <p class="form-control-static">{{vm.results.avgIV}}/45 ({{(vm.results.avgIV/0.45).toFixed(1)}}%)</p></label>
+            </div>
+            <div class="col-sm-4 col-xs-4 text-center">
+                <label>Max IV <p class="form-control-static">{{vm.results.maxIV}}/45 ({{(vm.results.maxIV/0.45).toFixed(1)}}%)</p></label>
+            </div>
+        </div>
+        <table class="table table-hover">
+            <tr>
+                <th>
+                    <a ng-click="vm.setOrderByParams('level')">Level</a>
+                    <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="vm.orderParams == 'level' && reverse"></span>
+                    <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'level' && !vm.reverseResults"></span>
+                </th>
+                <th>
+                    <a ng-click="vm.setOrderByParams('HP')">HP</a>
+                    <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="vm.orderParams == 'HP' && vm.reverseResults"></span>
+                    <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'HP' && !vm.reverseResults"></span>
+                </th>
+                <th>
+                    <a ng-click="vm.setOrderByParams('ATK')">Attack</a>
+                    <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="vm.orderParams == 'ATK' && vm.reverseResults"></span>
+                    <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'ATK' && !vm.reverseResults"></span>
+                </th>
+                <th>
+                    <a ng-click="setOrderByParams('DEF')">Defence</a>
+                    <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="vm.orderParams == 'DEF' && vm.reverseResults"></span>
+                    <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'DEF' && !vm.reverseResults"></span>
+                </th>
+                <th>
+                    <a ng-click="setOrderByParams('total')">Total</a>
+                    <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="vm.orderParams == 'total' && vm.reverseResults"></span>
+                    <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'total' && !vm.reverseResults"></span>
+                </th>
+            </tr>
+            <tr class="text-center" ng-repeat="r in vm.results.stats | orderBy:vm.orderParams:vm.reverseResults">
+                <td>{{r.level}}</td>
+                <td>{{r.HP}}</td>
+                <td>{{r.ATK}}</td>
+                <td>{{r.DEF}}</td>
+                <td>{{r.total}}/45 ({{(r.total/0.45).toFixed(1)}}%)</td>
+            </tr>
+        </table>
+        <button class="btn btn-success btn-lg pull-right" ng-click="vm.exportData()">Export Data</button>
+    </div>
+</div>
