@@ -127,7 +127,7 @@
       vm.pokemonName = pokemon.name;
       vm.pokemonInputChanged = false;
       vm.mouseOverDropdown = false;
-      vm.backgroundImg = (pokemon.number < 10) ? '00' + (pokemon.number + 1) : ((pokemon.number < 100) ? '0' + (pokemon.number + 1) : (pokemon.number + 1));
+      vm.backgroundImg = (pokemon.number < 9) ? '00' + (pokemon.number + 1) : ((pokemon.number < 99) ? '0' + (pokemon.number + 1) : (pokemon.number + 1));
 
       vm.refine.pokemonList = [];
       vm.addEvolutionsToRefineList(pokemon, vm.pokemon);
