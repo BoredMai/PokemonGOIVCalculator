@@ -97,9 +97,23 @@ input[type="number"] {
 .check-img {
   cursor: pointer;
   display: block;
-  width: 34px;
-  height: 34px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 19px;
+  width: 38px;
+  height: 38px;
+  position: relative;
+  bottom: 2px;
   margin: 4px auto 0px;
+}
+
+.check-img:focus {
+  outline: none;
+  border-color: rgba(51, 122, 183, 0.3);
+
+}
+
+.check-img.not-selected:focus {
+  border-color: #337ab7;
 }
 
 .logo {

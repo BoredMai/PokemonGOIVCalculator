@@ -21,12 +21,12 @@
     <div class="row">
         <div class="col-md-4 col-sm-12">
             <label>Pok&eacute;mon&nbsp;&nbsp;&nbsp;&nbsp;
-                <a ng-click="vm.switchLanguage('en')"><img ng-class="{'not-selected' : vm.language != 'en'}" src="assets/img/blank.png" class="flag flag-gb" /></a>&nbsp;&nbsp;
-                <a ng-click="vm.switchLanguage('de')"><img ng-class="{'not-selected' : vm.language != 'de'}" src="assets/img/blank.png" class="flag flag-de" /></a>&nbsp;&nbsp;
-                <a ng-click="vm.switchLanguage('fr')"><img ng-class="{'not-selected' : vm.language != 'fr'}" src="assets/img/blank.png" class="flag flag-fr" /></a>&nbsp;&nbsp;
-                <a ng-click="vm.switchLanguage('it')"><img ng-class="{'not-selected' : vm.language != 'it'}" src="assets/img/blank.png" class="flag flag-it" /></a>&nbsp;&nbsp;
-                <a ng-click="vm.switchLanguage('es')"><img ng-class="{'not-selected' : vm.language != 'es'}" src="assets/img/blank.png" class="flag flag-es" /></a>&nbsp;&nbsp;
-                <a ng-click="vm.switchLanguage('jp')"><img ng-class="{'not-selected' : vm.language != 'jp'}" src="assets/img/blank.png" class="flag flag-jp" /></a>&nbsp;&nbsp;
+                <a ng-click="vm.switchLanguage('en')"><img ng-class="{'not-selected' : vm.gameData.language != 'en'}" src="assets/img/blank.png" class="flag flag-gb" /></a>&nbsp;&nbsp;
+                <a ng-click="vm.switchLanguage('de')"><img ng-class="{'not-selected' : vm.gameData.language != 'de'}" src="assets/img/blank.png" class="flag flag-de" /></a>&nbsp;&nbsp;
+                <a ng-click="vm.switchLanguage('fr')"><img ng-class="{'not-selected' : vm.gameData.language != 'fr'}" src="assets/img/blank.png" class="flag flag-fr" /></a>&nbsp;&nbsp;
+                <a ng-click="vm.switchLanguage('it')"><img ng-class="{'not-selected' : vm.gameData.language != 'it'}" src="assets/img/blank.png" class="flag flag-it" /></a>&nbsp;&nbsp;
+                <a ng-click="vm.switchLanguage('es')"><img ng-class="{'not-selected' : vm.gameData.language != 'es'}" src="assets/img/blank.png" class="flag flag-es" /></a>&nbsp;&nbsp;
+                <a ng-click="vm.switchLanguage('jp')"><img ng-class="{'not-selected' : vm.gameData.language != 'jp'}" src="assets/img/blank.png" class="flag flag-jp" /></a>&nbsp;&nbsp;
                 <input class="form-control" data-toggle="dropdown" ng-style="{'background':'no-repeat 0px -4px', 'padding-left':'40px', 'background-image': 'url(./assets/img/sprites/'+vm.backgroundImg+'MS.png)'}" ng-model="vm.pokemonName" type="text" ng-change="vm.filterList()" ng-focus="vm.inputHasFocus = true; vm.focusedItem = -1;" ng-blur="vm.inputHasFocus = false; vm.checkPokemonName()" ng-keydown="vm.checkDropdownNavigation($event)" />
                 <ul class="dropdown-menu" ng-init="vm.focusedItem = -1" ng-show="vm.pokemonInputChanged && vm.inputHasFocus">
                     <li ng-repeat="p in vm.filteredList" ng-mouseover="vm.focusItem($index)" ng-class="{'active-item': vm.focusedItem == $index, 'inactive-item': vm.focusedItem != $index}"><a ng-mousedown="vm.selectPokemon(p)">{{p.name}}</a></li>
@@ -48,18 +48,18 @@
             </label>
         </div>
         <div class="col-md-2 col-sm-6 col-xs-6 text-center">
-            <label>Powered Up<img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.isPoweredUp}" ng-click="vm.toggleCheck('isPoweredUp')" /></label>
+            <label>Powered Up<img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.isPoweredUp}" ng-click="vm.toggleCheck('isPoweredUp')" ng-keypress="vm.checkKeyboard('isPoweredUp', $event)" tabindex="0" /></label>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-4 col-xs-4 text-center">
-            <img src="assets/img/valor/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': vm.selectedTeam != vm.gameData.teams.valor}" ng-click="vm.selectTeam('valor');" />
+            <img src="assets/img/valor/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': vm.selectedTeam != vm.gameData.teams.valor}" ng-click="vm.selectTeam('valor');" ng-keypress="vm.teamKeyboard('valor', $event)" tabindex="0" />
         </div>
         <div class="col-sm-4 col-xs-4 text-center">
-            <img src="assets/img/mystic/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': vm.selectedTeam != vm.gameData.teams.mystic}" ng-click="vm.selectTeam('mystic');" />
+            <img src="assets/img/mystic/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': vm.selectedTeam != vm.gameData.teams.mystic}" ng-click="vm.selectTeam('mystic');" ng-keypress="vm.teamKeyboard('mystic', $event)" tabindex="0" />
         </div>
         <div class="col-sm-4 col-xs-4 text-center">
-            <img src="assets/img/instinct/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': vm.selectedTeam != vm.gameData.teams.instinct}" ng-click="vm.selectTeam('instinct');" />
+            <img src="assets/img/instinct/logo_150x150.png" class="toggle-img" ng-class="{'not-selected': vm.selectedTeam != vm.gameData.teams.instinct}" ng-click="vm.selectTeam('instinct');" ng-keypress="vm.teamKeyboard('instinct', $event)" tabindex="0" />
         </div>
     </div>
     <div class="row" ng-show="vm.selectedTeam">
@@ -72,17 +72,17 @@
         <div class="col-sm-4 col-sm-offset-4 stats-toggle">
             <div class="text-center">
                 <label>HP
-                    <img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.highHP}" ng-click="vm.toggleCheck('highHP')" />
+                    <img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.highHP}" ng-click="vm.toggleCheck('highHP')" ng-keypress="vm.checkKeyboard('highHP', $event)" tabindex="0" />
                 </label>
             </div>
             <div class="text-center">
                 <label>ATK
-                    <img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.highATK}" ng-click="vm.toggleCheck('highATK')" />
+                    <img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.highATK}" ng-click="vm.toggleCheck('highATK')" ng-keypress="vm.checkKeyboard('highATK', $event)" tabindex="0" />
                 </label>
             </div>
             <div class="text-center">
                 <label>DEF
-                    <img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.highDEF}" ng-click="vm.toggleCheck('highDEF')" />
+                    <img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.highDEF}" ng-click="vm.toggleCheck('highDEF')" ng-keypress="vm.checkKeyboard('highDEF', $event)" tabindex="0" />
                 </label>
             </div>
         </div>
@@ -126,7 +126,7 @@
                             </label>
                         </div>
                         <div class="col-md-2 col-sm-6 col-xs-6 text-center">
-                            <label>Powered Up<img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.refine.isPoweredUp}" ng-click="vm.refine.isPoweredUp = !vm.refine.isPoweredUp" /></label>
+                            <label>Powered Up<img class="check-img" src="assets/img/pokeball.png" ng-class="{'not-selected' : !vm.refine.isPoweredUp}" ng-click="vm.refine.isPoweredUp = !vm.refine.isPoweredUp" ng-keypress="vm.refineKeyboard($event)" tabindex="0" /></label>
                         </div>
                     </div>
                     <div class="row">
@@ -138,17 +138,17 @@
             </div>
         </div>
     </div>
-    <div class="error-message" ng-show="vm.results && vm.results.stats.length == 0"><big><b>Oops!</b></big>&nbsp;&nbsp;<small>There might be something wrong with your input.<span ng-show="!vm.isPoweredUp"> Try checking the "Powered Up" option to include half-level status.</span><br />If everything was correct, please <a href="mailto:nannesribeiro@gmail.com">email me</a> with attached prints from the game and the calculator so I can see what's wrong.</small></div>
-    <div class="results" ng-show="vm.results && vm.results.stats.length > 0">
+    <div class="error-message" ng-show="vm.calcData.results && vm.calcData.results.stats.length == 0"><big><b>Oops!</b></big>&nbsp;&nbsp;<small>There might be something wrong with your input.<span ng-show="!vm.isPoweredUp"> Try checking the "Powered Up" option to include half-level status.</span><br />If everything was correct, please <a href="mailto:nannesribeiro@gmail.com">email me</a> with attached prints from the game and the calculator so I can see what's wrong.</small></div>
+    <div class="results" ng-show="vm.calcData.results && vm.calcData.results.stats.length > 0">
         <div class="row">
             <div class="col-sm-4 col-xs-4 text-center">
-                <label>Min IV <p class="form-control-static">{{vm.results.minIV}}/45 ({{(vm.results.minIV/0.45).toFixed(1)}}%)</p></label>
+                <label>Min IV <p class="form-control-static">{{vm.calcData.results.minIV}}/45 ({{(vm.calcData.results.minIV/0.45).toFixed(1)}}%)</p></label>
             </div>
             <div class="col-sm-4 col-xs-4 text-center">
-                <label>Avg IV <p class="form-control-static">{{vm.results.avgIV}}/45 ({{(vm.results.avgIV/0.45).toFixed(1)}}%)</p></label>
+                <label>Avg IV <p class="form-control-static">{{vm.calcData.results.avgIV}}/45 ({{(vm.calcData.results.avgIV/0.45).toFixed(1)}}%)</p></label>
             </div>
             <div class="col-sm-4 col-xs-4 text-center">
-                <label>Max IV <p class="form-control-static">{{vm.results.maxIV}}/45 ({{(vm.results.maxIV/0.45).toFixed(1)}}%)</p></label>
+                <label>Max IV <p class="form-control-static">{{vm.calcData.results.maxIV}}/45 ({{(vm.calcData.results.maxIV/0.45).toFixed(1)}}%)</p></label>
             </div>
         </div>
         <table class="table table-hover">
@@ -164,12 +164,14 @@
                     <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'HP' && !vm.reverseResults"></span>
                 </th>
                 <th>
-                    <a ng-click="vm.setOrderByParams('ATK')">Attack</a>
+                    <a class="visible-xs-inline" ng-click="vm.setOrderByParams('ATK')">ATK</a>
+                    <a class="hidden-xs" ng-click="vm.setOrderByParams('ATK')">Attack</a>
                     <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="vm.orderParams == 'ATK' && vm.reverseResults"></span>
                     <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'ATK' && !vm.reverseResults"></span>
                 </th>
                 <th>
-                    <a ng-click="setOrderByParams('DEF')">Defence</a>
+                    <a class="visible-xs-inline" ng-click="setOrderByParams('DEF')">DEF</a>
+                    <a class="hidden-xs" ng-click="setOrderByParams('DEF')">Defence</a>
                     <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="vm.orderParams == 'DEF' && vm.reverseResults"></span>
                     <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'DEF' && !vm.reverseResults"></span>
                 </th>
@@ -179,7 +181,7 @@
                     <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'total' && !vm.reverseResults"></span>
                 </th>
             </tr>
-            <tr class="text-center" ng-repeat="r in vm.results.stats | orderBy:vm.orderParams:vm.reverseResults">
+            <tr class="text-center" ng-repeat="r in vm.calcData.results.stats | orderBy:vm.orderParams:vm.reverseResults">
                 <td>{{r.level}}</td>
                 <td>{{r.HP}}</td>
                 <td>{{r.ATK}}</td>

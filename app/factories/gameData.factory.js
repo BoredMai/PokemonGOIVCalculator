@@ -14,7 +14,8 @@
       teams: {},
       fetchData: fetchData,
       fetchLanguage: fetchLanguage,
-      getECpM: getECpM
+      getECpM: getECpM,
+      language: undefined
     }
     return service;
 
@@ -29,11 +30,12 @@
     }
 
     function fetchLanguage() {
-      var language = Cookies.get('language');
-      if (language == undefined) {
-        language = 'en';
+      service.language = Cookies.get('language');
+      if (service.language == undefined) {
+        service.language = 'en';
+        Cookies.set('language', 'en');
       }
-      return $http.get('assets/data/languages/' + language + '.json').then(function(response) {
+      return $http.get('assets/data/languages/' + service.language + '.json').then(function(response) {
         if (response.status == 200) {
           service.teams = response.data.teams;
           service.pokemonList = response.data.pokemonList;
