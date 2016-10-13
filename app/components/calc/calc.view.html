@@ -155,7 +155,7 @@
             <tr>
                 <th>
                     <a ng-click="vm.setOrderByParams('level')">Level</a>
-                    <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="vm.orderParams == 'level' && reverse"></span>
+                    <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="vm.orderParams == 'level' && vm.reverseResults"></span>
                     <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'level' && !vm.reverseResults"></span>
                 </th>
                 <th>
@@ -170,13 +170,13 @@
                     <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'ATK' && !vm.reverseResults"></span>
                 </th>
                 <th>
-                    <a class="visible-xs-inline" ng-click="setOrderByParams('DEF')">DEF</a>
-                    <a class="hidden-xs" ng-click="setOrderByParams('DEF')">Defence</a>
+                    <a class="visible-xs-inline" ng-click="vm.setOrderByParams('DEF')">DEF</a>
+                    <a class="hidden-xs" ng-click="vm.setOrderByParams('DEF')">Defence</a>
                     <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="vm.orderParams == 'DEF' && vm.reverseResults"></span>
                     <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'DEF' && !vm.reverseResults"></span>
                 </th>
                 <th>
-                    <a ng-click="setOrderByParams('total')">Total</a>
+                    <a ng-click="vm.setOrderByParams('total')">Total</a>
                     <span class="orderby glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="vm.orderParams == 'total' && vm.reverseResults"></span>
                     <span class="orderby glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.orderParams == 'total' && !vm.reverseResults"></span>
                 </th>
