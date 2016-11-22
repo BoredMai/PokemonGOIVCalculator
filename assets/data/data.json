@@ -1,7 +1,7 @@
 {
   "pokemonData":
   [
-    { "BHP":  90, "BATK": 118, "BDEF": 118   , "EVO": [  1] },
+    { "BHP":  90, "BATK": 118, "BDEF": 118, "EVO": [  1] },
     { "BHP": 120, "BATK": 151, "BDEF": 151, "EVO": [  2] },
     { "BHP": 160, "BATK": 198, "BDEF": 198 },
     { "BHP":  78, "BATK": 116, "BDEF":  96, "EVO": [  4] },
@@ -98,7 +98,6 @@
     { "BHP":  70, "BATK":  85, "BDEF": 288 },
     { "BHP": 120, "BATK":  89, "BDEF": 158, "EVO": [ 96] },
     { "BHP": 170, "BATK": 144, "BDEF": 215 },
-
     { "BHP":  60, "BATK": 181, "BDEF": 156, "EVO": [ 98] },
     { "BHP": 110, "BATK": 240, "BDEF": 214 },
     { "BHP":  80, "BATK": 109, "BDEF": 114, "EVO": [100] },
