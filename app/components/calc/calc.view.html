@@ -89,7 +89,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12 btn-container">
-            <button class="btn btn-primary btn-lg btn-calc" ng-click="vm.calculateIV()" ng-disabled="vm.disableCalc()">Calculate</button>
+            <button class="btn btn-primary btn-lg btn-calc" href="#results" ng-click="vm.calculateIV()" ng-disabled="vm.disableCalc()">Calculate</button>
         </div>
     </div>
     <div class="refine">
@@ -139,7 +139,11 @@
         </div>
     </div>
     <div class="error-message" ng-show="vm.calcData.results && vm.calcData.results.stats.length == 0"><big><b>Oops!</b></big>&nbsp;&nbsp;<small>There might be something wrong with your input.<span ng-show="!vm.isPoweredUp"> Try checking the "Powered Up" option to include half-level status.</span><br />If everything was correct, please <a href="mailto:nannesribeiro@gmail.com">email me</a> with attached prints from the game and the calculator so I can see what's wrong.</small></div>
-    <div class="results" ng-show="vm.calcData.results && vm.calcData.results.stats.length > 0">
+    <div id="results" class="results" ng-show="vm.calcData.results && vm.calcData.results.stats.length > 0">
+        <div class="row text-center">
+            <h4>{{ vm.calcData.results.refine ? 'Refining' : 'Calculating' }} data for {{ vm.pokemonName }}</h4>
+            <p><b>CP</b> {{ vm.cp }} | <b>HP</b> {{ vm.hp }} | <b>Stardust</b> {{ vm.gameData.dustValues[vm.stardust] }}</p>
+        </div>
         <div class="row">
             <div class="col-sm-4 col-xs-4 text-center">
                 <label>Min IV <p class="form-control-static">{{vm.calcData.results.minIV}}/45 ({{(vm.calcData.results.minIV/0.45).toFixed(1)}}%)</p></label>
@@ -151,7 +155,7 @@
                 <label>Max IV <p class="form-control-static">{{vm.calcData.results.maxIV}}/45 ({{(vm.calcData.results.maxIV/0.45).toFixed(1)}}%)</p></label>
             </div>
         </div>
-        <table class="table table-hover">
+        <table class="table table-hover"">
             <tr>
                 <th>
                     <a ng-click="vm.setOrderByParams('level')">Level</a>

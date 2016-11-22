@@ -211,8 +211,6 @@
     }
 
     function refineIV() {
-      // vm.pokemon = gameData.pokemonData[vm.refine.number];
-      // vm.pokemonName = gameData.pokemonList[vm.refine.number].name;
       vm.selectPokemon(gameData.pokemonList[vm.refine.number]);
       vm.cp = vm.refine.cp;
       vm.hp = vm.refine.hp;

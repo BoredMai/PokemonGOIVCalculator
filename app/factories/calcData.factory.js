@@ -10,6 +10,7 @@
 
     var service = {
       results: {},
+      isCalculating: false,
 
       calculate: calculate,
       refine: refine
@@ -23,18 +24,19 @@
         cp: cp,
         hp: hp,
         isPoweredUp: isPoweredUp,
+        refine: false,
         minIV: 45,
         avgIV: 0,
         maxIV: 0,
         stats: []
       };
+      service.isCalculating = true;
       for (var i = minLevel; i <= minLevel + 1.5; i = i + factor) {
         var LVL = i + 1;
         var ECpM = gameData.getECpM(i);
         for (var HP = 0; HP < 16; HP++) {
           var THP = Math.floor(ECpM * (pokemon.BHP + HP));
           THP = THP < 10 ? 10 : THP;
-
           if (THP == hp) {
             for (var ATK = 0; ATK < 16; ATK++) {
               for (var DEF = 0; DEF < 16; DEF++) {
@@ -119,14 +121,15 @@
           }
         }
       }
+      service.isCalculating = false;
     }
 
     function refine(pokemonName, pokemon, refine) {
-      console.log(pokemonName, pokemon);
       var stats = service.results.stats;
       service.results = {
         name: pokemonName,
         data: pokemon,
+        refine: true,
         minIV: 45,
         avgIV: 0,
         maxIV: 0,
@@ -153,8 +156,7 @@
             service.results.stats.push(result);
           }
 
-          console.log('HP', Math.floor(ECpM * (pokemon.BHP + 15)), 'CP', Math.floor((pokemon.BATK + 15) * Math.pow(pokemon.BDEF + 15, 0.5) *
-                                                                         Math.pow(pokemon.BHP + 15, 0.5) * Math.pow(ECpM, 2) / 10));
+
         }
       }
     }
