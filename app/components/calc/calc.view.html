@@ -1,4 +1,8 @@
 <div id="calc-view" ng-controller="CalcController as vm">
+    <div class="disclaimer alert alert-danger" ng-show="vm.gameData.language === 'kr'">
+        Hi! If you're playing in korean, I would really appreciate if you sent me the translations for your leader's appraisal lines! You can mail me on <i>nannesribeiro at gmail.com</i>. Thanks in advance!<br />
+        <p style="text-align:right">- BoredMai</p>
+    </div>
     <div class="row collapsible">
         <label>
             <a ng-click="vm.collapseInstructions = !vm.collapseInstructions">Instructions
@@ -21,12 +25,13 @@
     <div class="row">
         <div class="col-md-4 col-sm-12">
             <label>Pok&eacute;mon&nbsp;&nbsp;&nbsp;&nbsp;
-                <a ng-click="vm.switchLanguage('en')"><img ng-class="{'not-selected' : vm.gameData.language != 'en'}" src="assets/img/blank.png" class="flag flag-gb" /></a>&nbsp;&nbsp;
-                <a ng-click="vm.switchLanguage('de')"><img ng-class="{'not-selected' : vm.gameData.language != 'de'}" src="assets/img/blank.png" class="flag flag-de" /></a>&nbsp;&nbsp;
-                <a ng-click="vm.switchLanguage('fr')"><img ng-class="{'not-selected' : vm.gameData.language != 'fr'}" src="assets/img/blank.png" class="flag flag-fr" /></a>&nbsp;&nbsp;
-                <a ng-click="vm.switchLanguage('it')"><img ng-class="{'not-selected' : vm.gameData.language != 'it'}" src="assets/img/blank.png" class="flag flag-it" /></a>&nbsp;&nbsp;
-                <a ng-click="vm.switchLanguage('es')"><img ng-class="{'not-selected' : vm.gameData.language != 'es'}" src="assets/img/blank.png" class="flag flag-es" /></a>&nbsp;&nbsp;
-                <a ng-click="vm.switchLanguage('jp')"><img ng-class="{'not-selected' : vm.gameData.language != 'jp'}" src="assets/img/blank.png" class="flag flag-jp" /></a>&nbsp;&nbsp;
+                <a class="flag-link" ng-click="vm.switchLanguage('en')"><img ng-class="{'not-selected' : vm.gameData.language != 'en'}" src="assets/img/blank.png" class="flag flag-gb" /></a>
+                <a class="flag-link" ng-click="vm.switchLanguage('de')"><img ng-class="{'not-selected' : vm.gameData.language != 'de'}" src="assets/img/blank.png" class="flag flag-de" /></a>
+                <a class="flag-link" ng-click="vm.switchLanguage('fr')"><img ng-class="{'not-selected' : vm.gameData.language != 'fr'}" src="assets/img/blank.png" class="flag flag-fr" /></a>
+                <a class="flag-link" ng-click="vm.switchLanguage('it')"><img ng-class="{'not-selected' : vm.gameData.language != 'it'}" src="assets/img/blank.png" class="flag flag-it" /></a>
+                <a class="flag-link" ng-click="vm.switchLanguage('es')"><img ng-class="{'not-selected' : vm.gameData.language != 'es'}" src="assets/img/blank.png" class="flag flag-es" /></a>
+                <a class="flag-link" ng-click="vm.switchLanguage('jp')"><img ng-class="{'not-selected' : vm.gameData.language != 'jp'}" src="assets/img/blank.png" class="flag flag-jp" /></a>
+                <a class="flag-link" ng-click="vm.switchLanguage('kr')"><img ng-class="{'not-selected' : vm.gameData.language != 'kr'}" src="assets/img/blank.png" class="flag flag-kr" /></a>
                 <input class="form-control" data-toggle="dropdown" ng-style="{'background':'no-repeat 0px -4px', 'padding-left':'40px', 'background-image': 'url(./assets/img/sprites/'+vm.backgroundImg+'MS.png)'}" ng-model="vm.pokemonName" type="text" ng-change="vm.filterList()" ng-focus="vm.inputHasFocus = true; vm.focusedItem = -1;" ng-blur="vm.inputHasFocus = false; vm.checkPokemonName()" ng-keydown="vm.checkDropdownNavigation($event)" />
                 <ul class="dropdown-menu" ng-init="vm.focusedItem = -1" ng-show="vm.pokemonInputChanged && vm.inputHasFocus">
                     <li ng-repeat="p in vm.filteredList" ng-mouseover="vm.focusItem($index)" ng-class="{'active-item': vm.focusedItem == $index, 'inactive-item': vm.focusedItem != $index}"><a ng-mousedown="vm.selectPokemon(p)">{{p.name}}</a></li>
@@ -155,7 +160,7 @@
                 <label>Max IV <p class="form-control-static">{{vm.calcData.results.maxIV}}/45 ({{(vm.calcData.results.maxIV/0.45).toFixed(1)}}%)</p></label>
             </div>
         </div>
-        <table class="table table-hover"">
+        <table class="table table-hover">
             <tr>
                 <th>
                     <a ng-click="vm.setOrderByParams('level')">Level</a>

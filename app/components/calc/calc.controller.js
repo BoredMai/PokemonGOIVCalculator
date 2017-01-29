@@ -194,7 +194,9 @@
       if (pokemonData.EVO) {
         for (var i = 0; i < pokemonData.EVO.length; i++) {
           var EVO = pokemonData.EVO[i];
-          vm.addEvolutionsToRefineList(gameData.pokemonList[EVO], gameData.pokemonData[EVO]);
+          if (gameData.pokemonData[EVO].ACTIVE) {
+            vm.addEvolutionsToRefineList(gameData.pokemonList[EVO], gameData.pokemonData[EVO]);
+          }
         }
       }
       if (vm.refine.pokemonList.indexOf(pokemonInfo) == -1) {

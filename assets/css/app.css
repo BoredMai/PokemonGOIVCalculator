@@ -58,6 +58,10 @@ body {
   box-shadow: none;
 }
 
+.flag-link:not(:last-of-type) {
+  padding-right: 5px;
+}
+
 .centered {
   display: flex;
   justify-content: space-around;
@@ -159,9 +163,9 @@ ul {
   overflow: auto;
 }
 
-.dropdown-menu li a {
+/*.dropdown-menu li a {*/
   /*padding: 0px;*/
-}
+/*}*/
 
 .collapsible {
   margin: 10px 0px;

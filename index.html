@@ -42,10 +42,6 @@
             </div>
         </nav>
         <div class="container">
-            <div class="disclaimer alert alert-success">
-                Data has been updated (thanks, <a href="https://github.com/sbryan">sbryan</a>!), calculator is operational again! If for some reason it doesn't work, try cleaning your cache and/or force-reloading with Ctrl+Shift+R to refresh the data.<br />
-                <p style="text-align:right">- BoredMai</p>
-            </div>
             <div ng-view></div>
             <div class="row collapsible" ng-init="collapseChangelog = true">
                 <label>
@@ -56,7 +52,8 @@
                 <div class="col-md-12 col-sm-12" uib-collapse="collapseChangelog">
                     <div class="card card-block">
                         <ul>
-                            <li>1.8 - Changed base stats, added some text to make calculation clearer.</li>
+                            <li> 1.9 - Added Gen2 data (only babies show on the list for now, but all the data is there!), added partial KR translation - help with the leaders' feedback lines would be very welcome</li>
+                            <li> 1.8 - Changed base stats, added some text to make calculation clearer.</li>
                             <li> 1.7.1 - Refine now updates main form data to allow refinement refines(yo, I heard...), added tabindex to all checks, minor text fixes </li>
                             <li> 1.7 - Added Refine IV option, and sprites on the Pok&eacute;mon name input </li>
                             <li> 1.6 - Added ES translations to leaders' feedback, removed the dreaded "Clear Team" button, adjusted spacing to fit thinner screens, added dropdown navigation with up/down arrows, accept name on tab and enter, added min/average/max IV </li>
