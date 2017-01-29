@@ -1,6 +1,5 @@
 {
   "pokemonList": [
-    // Gen 1
     { "name": "フシギダネ", "number": 0 }, { "name": "フシギソウ", "number": 1 }, { "name": "フシギバナ", "number": 2 },
     { "name": "ヒトカゲ",   "number": 3 }, { "name": "リザード", "number": 4 }, { "name": "リザードン", "number": 5 },
     { "name": "ゼニガメ",   "number": 6 }, { "name": "カメール", "number": 7 }, { "name": "カメックス", "number": 8 },
@@ -53,7 +52,6 @@
     { "name": "ハクリュー", "number": 147 }, { "name": "カイリュー", "number": 148 }, { "name": "ミュウツー", "number": 149 },
     { "name": "ミュウ", "number": 150 },
 
-    // Gen 2
                                             { "name": "チコリータ",  "number": 151 }, { "name": "ベイリーフ",  "number": 152 },
     { "name": "メガニウム",  "number": 153 }, { "name": "ヒノアラシ",  "number": 154 }, { "name": "マグマラシ",    "number": 155 },
     { "name": "バクフーン",  "number": 156 }, { "name": "ワニノコ", "number": 157 }, { "name": "アリゲイツ",  "number": 158 },

@@ -57,9 +57,11 @@
     function filterList() {
       vm.filteredList = [];
       for (var i = 0; i < gameData.pokemonList.length; i++) {
-        var name = gameData.pokemonList[i].name.toLowerCase();
-        if (name.indexOf(vm.pokemonName.toLowerCase()) != -1) {
-          vm.filteredList.push(gameData.pokemonList[i]);
+        if (gameData.pokemonData[i].ACTIVE) {
+          var name = gameData.pokemonList[i].name.toLowerCase();
+          if (name.indexOf(vm.pokemonName.toLowerCase()) != -1) {
+            vm.filteredList.push(gameData.pokemonList[i]);
+          }
         }
       }
       vm.pokemonInputChanged = true;

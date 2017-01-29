@@ -1,6 +1,5 @@
 {
   "pokemonList": [
-    // Gen 1
     { "name": "이상해씨", "number":   0 }, { "name": "이상해풀",   "number":   1 }, { "name": "이상해꽃",  "number":   2 },
     { "name": "파이리",   "number":   3 }, { "name": "리자드",    "number":   4 }, { "name": "리자몽",    "number":   5 },
     { "name": "꼬부기",   "number":   6 }, { "name": "어니부기",   "number":   7 }, { "name": "거북왕", "number":   8 },
@@ -53,7 +52,6 @@
     { "name": "신뇽", "number": 147 }, { "name": "망나뇽", "number": 148 }, { "name": "뮤츠",    "number": 149 },
     { "name": "뮤",       "number": 150 },
 
-    // Gen 2
                                           { "name": "치코리타", "number": 151 }, { "name": "베이리프",   "number": 152 },
     { "name": "메가니움",  "number": 153 }, { "name": "브케인", "number": 154 }, { "name": "마그케인",   "number": 155 },
     { "name": "블레이범", "number": 156 }, { "name": "리아코", "number": 157 }, { "name": "엘리게이", "number": 158 },

@@ -1,9 +1,6 @@
 {
   "pokemonData":
   [
-    // Note: EVO number counts from 0
-    // [Gen 1]
-    // #001 - #020
     { "BHP":  90, "BATK": 118, "BDEF": 118,
       "TYPE": ["GRASS", "POISON"],"EVO": [  1], "ACTIVE": true },
 
@@ -64,7 +61,8 @@
     { "BHP": 110, "BATK": 161, "BDEF": 144,
       "TYPE": ["NORMAL"], "ACTIVE": true },
 
-    // #021 - #040
+
+
     { "BHP":  80, "BATK": 112, "BDEF":  61,
       "TYPE": ["NORMAL", "FLYING"], "EVO": [ 21], "ACTIVE": true },
     
@@ -125,7 +123,8 @@
     { "BHP": 280, "BATK": 156, "BDEF":  93,
       "TYPE": ["NORMAL", "FAIRY"], "ACTIVE": true },
 
-    // #041 - #060
+
+
     { "BHP":  80, "BATK":  83, "BDEF":  76,
       "TYPE": ["POISON", "FLYING"], "EVO": [ 41], "ACTIVE": true },
     
@@ -186,7 +185,8 @@
     { "BHP":  80, "BATK": 101, "BDEF":  82,
       "TYPE": ["WATER"], "EVO": [ 60], "ACTIVE": true },
 
-    //  #061 - #080
+
+
     { "BHP": 130, "BATK": 130, "BDEF": 130,
       "TYPE": ["WATER"], "EVO": [ 61, 185], "ACTIVE": true },
     
@@ -247,7 +247,8 @@
     { "BHP": 190, "BATK": 177, "BDEF": 194,
       "TYPE": ["WATER", "PSYCHIC"], "ACTIVE": true },
 
-    // #081 - #100
+
+
     { "BHP":  50, "BATK": 165, "BDEF": 128,
       "TYPE": ["ELECTRIC", "STEEL"], "EVO": [ 81], "ACTIVE": true },
     
@@ -308,7 +309,8 @@
     { "BHP":  80, "BATK": 109, "BDEF": 114,
       "TYPE": ["ELECTRIC"], "EVO": [100], "ACTIVE": true },
 
-    // #101 - #120
+
+
     { "BHP": 120, "BATK": 173, "BDEF": 179,
       "TYPE": ["ELECTRIC"], "ACTIVE": true },
     
@@ -369,7 +371,8 @@
     { "BHP":  60, "BATK": 137, "BDEF": 112,
       "TYPE": ["WATER"], "EVO": [120], "ACTIVE": true },
 
-    // #121 - #140
+
+
     { "BHP": 120, "BATK": 210, "BDEF": 184,
     "TYPE": ["WATER", "PSYCHIC"], "ACTIVE": true },
     
@@ -430,7 +433,6 @@
     { "BHP":  60, "BATK": 148, "BDEF": 162,
       "TYPE": ["ROCK", "WATER"], "EVO": [140], "ACTIVE": true },
 
-    // #141 - #160
     { "BHP": 120, "BATK": 220, "BDEF": 203,
       "TYPE": ["ROCK", "WATER"], "ACTIVE": true },
     
@@ -464,7 +466,8 @@
     { "BHP": 200, "BATK": 210, "BDEF": 210,
       "TYPE": ["PSYCHIC"], "ACTIVE": true },
 
-    // [Gen 2]
+
+
     { "BHP":  90, "BATK":  92, "BDEF": 122,
       "TYPE": ["GRASS"], "EVO": [152], "ACTIVE": false },
     
@@ -492,8 +495,8 @@
     { "BHP": 170, "BATK": 205, "BDEF": 197,
       "TYPE": ["WATER"], "ACTIVE": false },
 
-    // #161 - #180
-    
+
+
     { "BHP":  70, "BATK":  79, "BDEF":  77,
       "TYPE": ["NORMAL"], "EVO": [161], "ACTIVE": false },
     
@@ -554,7 +557,8 @@
     { "BHP": 140, "BATK": 145, "BDEF": 112,
       "TYPE": ["ELECTRIC"], "EVO": [180], "ACTIVE": false },
 
-    // #181 - #201
+
+
     { "BHP": 180, "BATK": 211, "BDEF": 172,
       "TYPE": ["ELECTRIC"], "ACTIVE": false },
     
@@ -615,7 +619,8 @@
     { "BHP": 120, "BATK": 167, "BDEF": 167,
       "TYPE": ["GHOST"], "ACTIVE": false },
 
-    // #201 - 220
+
+
     { "BHP":  96, "BATK": 136, "BDEF":  91,
       "TYPE": ["PSYCHIC"], "ACTIVE": false },
     
@@ -676,7 +681,8 @@
     { "BHP": 100, "BATK":  90, "BDEF":  74,
       "TYPE": ["ICE", "GROUND"], "EVO": [220], "ACTIVE": false },
     
-    // #221 - #240
+
+
     { "BHP": 200, "BATK": 181, "BDEF": 147,
       "TYPE": ["ICE", "GROUND"], "ACTIVE": false },
     
@@ -737,7 +743,8 @@
     { "BHP":  90, "BATK": 151, "BDEF": 108,
       "TYPE": ["FIRE"], "EVO": [125], "ACTIVE": true },
 
-    // #241 - #260
+
+
     { "BHP": 190, "BATK": 157, "BDEF": 211,
       "TYPE": ["NORMAL"], "ACTIVE": false },
 

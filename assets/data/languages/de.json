@@ -1,6 +1,5 @@
 {
   "pokemonList": [
-    // Gen 1
     { "name": "Bisasam",    "number":   0 }, { "name": "Bisaknosp",  "number":   1 }, { "name": "Bisaflor",   "number":   2 },
     { "name": "Glumanda",   "number":   3 }, { "name": "Glutexo",    "number":   4 }, { "name": "Glurak",     "number":   5 },
     { "name": "Schiggy",    "number":   6 }, { "name": "Schillok",   "number":   7 }, { "name": "Turtok",     "number":   8 },
@@ -53,7 +52,6 @@
     { "name": "Dragonir",   "number": 147 }, { "name": "Dragoran",   "number": 148 }, { "name": "Mewtu",      "number": 149 },
     { "name": "Mew",        "number": 150 },
 
-    // Gen 2
                                              { "name": "Endivie",    "number": 151 }, { "name": "Lorblatt",   "number": 152 },
     { "name": "Meganie",    "number": 153 }, { "name": "Feurigel",   "number": 154 }, { "name": "Igelavar",   "number": 155 },
     { "name": "Tornupto",   "number": 156 }, { "name": "Karnimani",  "number": 157 }, { "name": "Tyracroc",   "number": 158 },

@@ -1,6 +1,5 @@
 {
   "pokemonList": [
-    // Gen 1
     { "name": "Bulbizarre",	  "number":   0 }, { "name": "Herbizarre", "number":   1 }, { "name": "Florizarre", "number":   2 },
     { "name": "Salamèche",    "number":   3 }, { "name": "Reptincel",	 "number":   4 }, { "name": "Dracaufeu",  "number":   5 },
     { "name": "Carapuce",     "number":   6 }, { "name": "Carabaffe",	 "number":   7 }, { "name": "Tortank",	  "number":   8 },
@@ -53,7 +52,6 @@
     { "name": "Draco",		    "number": 147 }, { "name": "Dracolosse", "number": 148 }, { "name": "Mewtwo",	    "number": 149 },
     { "name": "Mew",		      "number": 150 },
 
-    // Gen 2
                                                { "name": "Germignon",  "number": 151 }, { "name": "Macronium",  "number": 152 },
     { "name": "Méganium",     "number": 153 }, { "name": "Héricendre", "number": 154 }, { "name": "Feurisson",  "number": 155 },
     { "name": "Typhlosion",   "number": 156 }, { "name": "Kaiminus",   "number": 157 }, { "name": "Crocrodil",  "number": 158 },
