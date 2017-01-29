@@ -1,0 +1,150 @@
+{
+  "pokemonList": [
+    // Gen 1
+    { "name": "이상해씨", "number":   0 }, { "name": "이상해풀",   "number":   1 }, { "name": "이상해꽃",  "number":   2 },
+    { "name": "파이리",   "number":   3 }, { "name": "리자드",    "number":   4 }, { "name": "리자몽",    "number":   5 },
+    { "name": "꼬부기",   "number":   6 }, { "name": "어니부기",   "number":   7 }, { "name": "거북왕", "number":   8 },
+    { "name": "캐터피",   "number":   9 }, { "name": "단데기",   "number":  10 }, { "name": "버터플", "number":  11 },
+    { "name": "뿔충이",   "number":  12 }, { "name": "딱충이",    "number":  13 }, { "name": "독침붕",  "number":  14 },
+    { "name": "구구",     "number":  15 }, { "name": "피죤",     "number":  16 }, { "name": "피죤투",   "number":  17 },
+    { "name": "꼬렛",     "number":  18 }, { "name": "레트라",  "number":  19 }, { "name": "깨비참",   "number":  20 },
+    { "name": "깨비드릴조","number":  21 }, { "name": "아보",     "number":  22 }, { "name": "아보크",     "number":  23 },
+    { "name": "피카츄",   "number":  24 }, { "name": "라이츄",    "number":  25 }, { "name": "모래두지", "number":  26 },
+    { "name": "고지",     "number":  27 }, { "name": "니드런♀",  "number":  28 }, { "name": "니드리나",  "number":  29 },
+    { "name": "니드퀸",   "number":  30 }, { "name": "니드런♂",  "number":  31 }, { "name": "니드리노",  "number":  32 },
+    { "name": "니드킹",   "number":  33 }, { "name": "삐삐",     "number":  34 }, { "name": "픽시",  "number":  35 },
+    { "name": "식스테일",  "number":  36 }, { "name": "나인테일", "number":  37 }, { "name": "푸린", "number":  38 },
+    { "name": "푸크린",   "number":  39 }, { "name": "주뱃",     "number":  40 }, { "name": "골뱃",    "number":  41 },
+    { "name": "뚜벅쵸",    "number":  42 }, { "name": "냄새꼬",     "number":  43 }, { "name": "라플레시아", "number":  44 },
+    { "name": "파라스",     "number":  45 }, { "name": "파라섹트",  "number":  46 }, { "name": "콘팡",   "number":  47 },
+    { "name": "도나리",  "number":  48 }, { "name": "디그다",   "number":  49 }, { "name": "닥트리오",   "number":  50 },
+    { "name": "나옹",    "number":  51 }, { "name": "페르시온",   "number":  52 }, { "name": "고라파덕",   "number":  53 },
+    { "name": "골덕",   "number":  54 }, { "name": "망키",    "number":  55 }, { "name": "성원숭",  "number":  56 },
+    { "name": "가디", "number":  57 }, { "name": "윈디",  "number":  58 }, { "name": "발챙이",   "number":  59 },
+    { "name": "슈륙챙이", "number":  60 }, { "name": "강챙이", "number":  61 }, { "name": "캐이시",      "number":  62 },
+    { "name": "윤겔라",   "number":  63 }, { "name": "후딘",  "number":  64 }, { "name": "알통몬",    "number":  65 },
+    { "name": "근육몬",   "number":  66 }, { "name": "괴력몬",   "number":  67 }, { "name": "모다피", "number":  68 },
+    { "name": "우츠동", "number":  69 }, { "name": "우츠보트", "number":  70 }, { "name": "왕눈해", "number":  71 },
+    { "name": "독파리", "number":  72 }, { "name": "꼬마돌",   "number":  73 }, { "name": "데구리",  "number":  74 },
+    { "name": "딱구리",     "number":  75 }, { "name": "포니타",    "number":  76 }, { "name": "날쌩마",  "number":  77 },
+    { "name": "야돈",  "number":  78 }, { "name": "야도란",   "number":  79 }, { "name": "코일", "number":  80 },
+    { "name": "레어코일",  "number":  81 }, { "name": "파오리", "number":  82 }, { "name": "두두",     "number":  83 },
+    { "name": "두트리오",    "number":  84 }, { "name": "쥬쥬",      "number":  85 }, { "name": "쥬레곤",   "number":  86 },
+    { "name": "질퍽이",    "number":  87 }, { "name": "질뻐기",       "number":  88 }, { "name": "셀러",  "number":  89 },
+    { "name": "파르셀",  "number":  90 }, { "name": "고오스",    "number":  91 }, { "name": "고우스트",   "number":  92 },
+    { "name": "팬텀",    "number":  93 }, { "name": "롱스톤",      "number":  94 }, { "name": "슬리프",   "number":  95 },
+    { "name": "슬리퍼",     "number":  96 }, { "name": "크랩",    "number":  97 }, { "name": "킹크랩",   "number":  98 },
+    { "name": "찌리리공",   "number":  99 }, { "name": "붐볼", "number": 100 }, { "name": "아라리", "number": 101 },
+    { "name": "나시", "number": 102 }, { "name": "탕구리",    "number": 103 }, { "name": "텅구리",   "number": 104 },
+    { "name": "시라소몬", "number": 105 }, { "name": "홍수몬", "number": 106 }, { "name": "내루미", "number": 107 },
+    { "name": "또가스",   "number": 108 }, { "name": "또도가스",   "number": 109 }, { "name": "뿔카노",   "number": 110 },
+    { "name": "코뿌리",    "number": 111 }, { "name": "럭키",   "number": 112 }, { "name": "덩쿠리",   "number": 113 },
+    { "name": "캥카", "number": 114 }, { "name": "쏘드라",    "number": 115 }, { "name": "시드라",    "number": 116 },
+    { "name": "콘치",   "number": 117 }, { "name": "왕콘치",   "number": 118 }, { "name": "별가사리",    "number": 119 },
+    { "name": "아쿠스타",   "number": 120 }, { "name": "마임맨",  "number": 121 }, { "name": "스라크",   "number": 122 },
+    { "name": "루주라",      "number": 123 }, { "name": "에레브", "number": 124 }, { "name": "마그마",    "number": 125 },
+    { "name": "쁘사이저",    "number": 126 }, { "name": "켄타로스",    "number": 127 }, { "name": "잉어킹",  "number": 128 },
+    { "name": "갸라도스",  "number": 129 }, { "name": "라프라스",    "number": 130 }, { "name": "메타몽",     "number": 131 },
+    { "name": "이브이",     "number": 132 }, { "name": "샤미드",  "number": 133 }, { "name": "쥬피썬더",   "number": 134 },
+    { "name": "부스터",   "number": 135 }, { "name": "폴리곤",   "number": 136 }, { "name": "암나이트",   "number": 137 },
+    { "name": "암스타",   "number": 138 }, { "name": "투구",    "number": 139 }, { "name": "투구푸스",  "number": 140 },
+    { "name": "프테라", "number": 141 }, { "name": "잠만보",   "number": 142 }, { "name": "프리져",  "number": 143 },
+    { "name": "썬더",    "number": 144 }, { "name": "파이어",   "number": 145 }, { "name": "미뇽",   "number": 146 },
+    { "name": "신뇽", "number": 147 }, { "name": "망나뇽", "number": 148 }, { "name": "뮤츠",    "number": 149 },
+    { "name": "뮤",       "number": 150 },
+
+    // Gen 2
+                                          { "name": "치코리타", "number": 151 }, { "name": "베이리프",   "number": 152 },
+    { "name": "메가니움",  "number": 153 }, { "name": "브케인", "number": 154 }, { "name": "마그케인",   "number": 155 },
+    { "name": "블레이범", "number": 156 }, { "name": "리아코", "number": 157 }, { "name": "엘리게이", "number": 158 },
+    { "name": "장크로다일",   "number": 159 }, { "name": "꼬리선",   "number": 160 }, { "name": "다꼬리",   "number": 161 },
+    { "name": "부우부",    "number": 162 }, { "name": "야부엉",   "number": 163 }, { "name": "레디바",   "number": 164 },
+    { "name": "레디안", "number": 165 }, { "name": "페이검",    "number": 166 }, { "name": "아리아도스",    "number": 167 },
+    { "name": "크로뱃",   "number": 168 }, { "name": "초라기",   "number": 169 }, { "name": "랜턴",    "number": 170 },
+    { "name": "피츄",   "number": 171 }, { "name": "삐",  "number": 172 }, { "name": "푸푸린",   "number": 173 },
+    { "name": "토게피",      "number": 174 }, { "name": "토게틱", "number": 175 }, { "name": "네이티",    "number": 176 },
+    { "name": "네이티오",    "number": 177 }, { "name": "메리프",    "number": 178 }, { "name": "보송송",  "number": 179 },
+    { "name": "전룡",  "number": 180 }, { "name": "아르코",    "number": 181 }, { "name": "마릴",     "number": 182 },
+    { "name": "마릴리",     "number": 183 }, { "name": "꼬지모",  "number": 184 }, { "name": "왕구리",   "number": 185 },
+    { "name": "통통코",   "number": 186 }, { "name": "두코",   "number": 187 }, { "name": "솜솜코",   "number": 188 },
+    { "name": "에이팜",   "number": 189 }, { "name": "해너츠",    "number": 190 }, { "name": "해루미",  "number": 191 },
+    { "name": "왕자리", "number": 192 }, { "name": "우파",   "number": 193 }, { "name": "누오",  "number": 194 },
+    { "name": "에브이",    "number": 195 }, { "name": "블래키",   "number": 196 }, { "name": "니로우",   "number": 197 },
+    { "name": "야도킹", "number": 198 }, { "name": "무우마", "number": 199 }, { "name": "안농",    "number": 200 },
+    { "name": "마자용",       "number": 201 }, { "name": "키링키", "number": 202 }, { "name": "피콘", "number": 203 },
+    { "name": "쏘콘", "number": 204 }, { "name": "노고치",    "number": 205 }, { "name": "글라이거",   "number": 206 },
+    { "name": "강철톤", "number": 207 }, { "name": "블루", "number": 208 }, { "name": "그랑블루", "number": 209 },
+    { "name": "침바루",   "number": 210 }, { "name": "핫삼",   "number": 211 }, { "name": "단단지",   "number": 212 },
+    { "name": "헤라크로스",    "number": 213 }, { "name": "포푸니",   "number": 214 }, { "name": "깜지곰",   "number": 215 },
+    { "name": "링곰", "number": 216 }, { "name": "마그마그",    "number": 217 }, { "name": "마그카르고",    "number": 218 },
+    { "name": "꾸꾸리",   "number": 219 }, { "name": "메꾸리",   "number": 220 }, { "name": "코산호",    "number": 221 },
+    { "name": "총어",   "number": 222 }, { "name": "대포무노",  "number": 223 }, { "name": "딜리버드",   "number": 224 },
+    { "name": "만타인",      "number": 225 }, { "name": "무장조", "number": 226 }, { "name": "델빌",    "number": 227 },
+    { "name": "헬가",    "number": 228 }, { "name": "킹드라",    "number": 229 }, { "name": "코코리",  "number": 230 },
+    { "name": "코리갑",  "number": 231 }, { "name": "폴리곤2",    "number": 232 }, { "name": "노라키",     "number": 233 },
+    { "name": "루브도",     "number": 234 }, { "name": "배루키",  "number": 235 }, { "name": "카포에라",   "number": 236 },
+    { "name": "뽀뽀라",   "number": 237 }, { "name": "에레키드",   "number": 238 }, { "name": "마그비",   "number": 239 },
+    { "name": "밀탱크",   "number": 240 }, { "name": "해피너스",    "number": 241 }, { "name": "라이코",  "number": 242 },
+    { "name": "앤테이", "number": 243 }, { "name": "스이쿤",   "number": 244 }, { "name": "애버라스",  "number": 245 },
+    { "name": "데기라스",    "number": 246 }, { "name": "마기라스",   "number": 247 }, { "name": "루기아",   "number": 248 },
+    { "name": "칠색조", "number": 249 }, { "name": "세레비",   "number": 250 }
+  ],
+
+  "teams":
+  {
+    "valor":
+    {
+      "title": "Overall, your ",
+      "overall":
+      [
+        {"text":"...simply amazes me. It can accomplish anything!", "min":"37", "max":"45"},
+        {"text":"...is a strong Pokemon. You should be proud!", "min":"30", "max":"36"},
+        {"text":"...is a decent Pokemon.", "min":"23", "max":"29"},
+        {"text":"...may not be great in battle, but I still like it!", "min":"0", "max":"22"}
+      ],
+      "stats":
+      [
+        {"text":"I'm blown away by its stats. WOW!", "min":"15", "max":"15"},
+        {"text":"It's got excellent stats! How exciting!", "min":"13", "max":"14"},
+        {"text":"Its stats indicate that in battle, it'll get the job done.", "min":"8", "max":"12"},
+        {"text":"Its stats don't point to greatness in battle.", "min":"0", "max":"7"}
+      ]
+    },
+    "mystic":
+    {
+      "title": "Overall, your ",
+      "overall":
+      [
+        {"text":"...is a wonder! What a breathtaking Pokemon!", "min":"37", "max":"45"},
+        {"text":"...has certainly caught my attention.", "min":"30", "max":"36"},
+        {"text":"...is above average.", "min":"23", "max":"29"},
+        {"text":"...is not likely to make much headway in battle.", "min":"0", "max":"22"}
+      ],
+      "stats":
+      [
+        {"text":"Its stats exceed my calculations. It's incredible!", "min":"15", "max":"15"},
+        {"text":"I am certainly impressed by its stats, I must say.", "min":"13", "max":"14"},
+        {"text":"Its stats are noticeably trending to the positive.", "min":"8", "max":"12"},
+        {"text":"Its stats are not out of the norm, in my estimation.", "min":"0", "max":"7"}
+      ]
+    },
+    "instinct":
+    {
+      "title": "Overall, your ",
+      "overall":
+      [
+        {"text":"...looks like it can really battle with the best of them!", "min":"37", "max":"45"},
+        {"text":"...is really strong!", "min":"30", "max":"36"},
+        {"text":"...is pretty decent!", "min":"23", "max":"29"},
+        {"text":"...has room for improvement as far as battling goes.", "min":"0", "max":"22"}
+      ],
+      "stats":
+      [
+        {"text":"Its stats are the best I've ever seen! No doubt about it!", "min":"15", "max":"15"},
+        {"text":"Its stats are really strong! Impressive.", "min":"13", "max":"14"},
+        {"text":"It's definitely got some good stats. Definitely!", "min":"8", "max":"12"},
+        {"text":"Its stats are all right, but kinda basic, as far as I can see.", "min":"0", "max":"7"}
+      ]
+    }
+  }
+}

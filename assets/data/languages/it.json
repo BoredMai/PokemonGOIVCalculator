@@ -1,5 +1,6 @@
 {
   "pokemonList": [
+    // Gen 1
     { "name": "Bulbasaur",  "number":   0 }, { "name": "Ivysaur",    "number":   1 }, { "name": "Venusaur",   "number":   2 },
     { "name": "Charmander", "number":   3 }, { "name": "Charmeleon", "number":   4 }, { "name": "Charizard",  "number":   5 },
     { "name": "Squirtle",   "number":   6 }, { "name": "Wartortle",  "number":   7 }, { "name": "Blastoise",  "number":   8 },
@@ -50,7 +51,43 @@
     { "name": "Aerodactyl", "number": 141 }, { "name": "Snorlax",    "number": 142 }, { "name": "Articuno",   "number": 143 },
     { "name": "Zapdos",     "number": 144 }, { "name": "Moltres",    "number": 145 }, { "name": "Dratini",    "number": 146 },
     { "name": "Dragonair",  "number": 147 }, { "name": "Dragonite",  "number": 148 }, { "name": "Mewtwo",     "number": 149 },
-    { "name": "Mew",        "number": 150 }
+    { "name": "Mew",        "number": 150 },
+    
+    // Gen 2
+                                             { "name": "Chikorita",  "number": 151 }, { "name": "Bayleef",    "number": 152 },
+    { "name": "Meganium",   "number": 153 }, { "name": "Cyndaquil",  "number": 154 }, { "name": "Quilava",    "number": 155 },
+    { "name": "Typhlosion", "number": 156 }, { "name": "Totodile",   "number": 157 }, { "name": "Croconaw",   "number": 158 },
+    { "name": "Feraligatr", "number": 159 }, { "name": "Sentret",    "number": 160 }, { "name": "Furret",     "number": 161 },
+    { "name": "Hoothoot",   "number": 162 }, { "name": "Noctowl",    "number": 163 }, { "name": "Ledyba",     "number": 164 },
+    { "name": "Ledian",     "number": 165 }, { "name": "Spinarak",   "number": 166 }, { "name": "Ariados",    "number": 167 },
+    { "name": "Crobat",     "number": 168 }, { "name": "Chinchou",   "number": 169 }, { "name": "Lanturn",    "number": 170 },
+    { "name": "Pichu",      "number": 171 }, { "name": "Cleffa",     "number": 172 }, { "name": "Igglybuff",  "number": 173 },
+    { "name": "Togepi",     "number": 174 }, { "name": "Togetic",    "number": 175 }, { "name": "Natu",       "number": 176 },
+    { "name": "Xatu",       "number": 177 }, { "name": "Mareep",     "number": 178 }, { "name": "Flaaffy",    "number": 179 },
+    { "name": "Ampharos",   "number": 180 }, { "name": "Bellossom",  "number": 181 }, { "name": "Marill",     "number": 182 },
+    { "name": "Azumarill",  "number": 183 }, { "name": "Sudowoodo",  "number": 184 }, { "name": "Politoed",   "number": 185 },
+    { "name": "Hoppip",     "number": 186 }, { "name": "Skiploom",   "number": 187 }, { "name": "Jumpluff",   "number": 188 },
+    { "name": "Aipom",      "number": 189 }, { "name": "Sunkern",    "number": 190 }, { "name": "Sunflora",   "number": 191 },
+    { "name": "Yanma",      "number": 192 }, { "name": "Wooper",     "number": 193 }, { "name": "Quagsire",   "number": 194 },
+    { "name": "Espeon",     "number": 195 }, { "name": "Umbreon",    "number": 196 }, { "name": "Murkrow",    "number": 197 },
+    { "name": "Slowking",   "number": 198 }, { "name": "Misdreavus", "number": 199 }, { "name": "Unown",      "number": 200 },
+    { "name": "Wobbuffet",  "number": 201 }, { "name": "Girafarig",  "number": 202 }, { "name": "Pineco",     "number": 203 },
+    { "name": "Forretress", "number": 204 }, { "name": "Dunsparce",  "number": 205 }, { "name": "Gligar",     "number": 206 },
+    { "name": "Steelix",    "number": 207 }, { "name": "Snubbull",   "number": 208 }, { "name": "Granbull",   "number": 209 },
+    { "name": "Qwilfish",   "number": 210 }, { "name": "Scizor",     "number": 211 }, { "name": "Shuckle",    "number": 212 },
+    { "name": "Heracross",  "number": 213 }, { "name": "Sneasel",    "number": 214 }, { "name": "Teddiursa",  "number": 215 },
+    { "name": "Ursaring",   "number": 216 }, { "name": "Slugma",     "number": 217 }, { "name": "Magcargo",   "number": 218 },
+    { "name": "Swinub",     "number": 219 }, { "name": "Piloswine",  "number": 220 }, { "name": "Corsola",    "number": 221 },
+    { "name": "Remoraid",   "number": 222 }, { "name": "Octillery",  "number": 223 }, { "name": "Delibird",   "number": 224 },
+    { "name": "Mantine",    "number": 225 }, { "name": "Skarmory",   "number": 226 }, { "name": "Houndour",   "number": 227 },
+    { "name": "Houndoom",   "number": 228 }, { "name": "Kingdra",    "number": 229 }, { "name": "Phanpy",     "number": 230 },
+    { "name": "Donphan",    "number": 231 }, { "name": "Porygon2",   "number": 232 }, { "name": "Stantler",   "number": 233 },
+    { "name": "Smeargle",   "number": 234 }, { "name": "Tyrogue",    "number": 235 }, { "name": "Hitmontop",  "number": 236 },
+    { "name": "Smoochum",   "number": 237 }, { "name": "Elekid",     "number": 238 }, { "name": "Magby",      "number": 239 },
+    { "name": "Miltank",    "number": 240 }, { "name": "Blissey",    "number": 241 }, { "name": "Raikou",      "number": 242 },
+    { "name": "Entei",      "number": 243 }, { "name": "Suicune",    "number": 244 }, { "name": "Larvitar",   "number": 245 },
+    { "name": "Pupitar",    "number": 246 }, { "name": "Tyranitar",  "number": 247 }, { "name": "Lugia",      "number": 248 },
+    { "name": "Ho-Oh",      "number": 249 }, { "name": "Celebi",     "number": 250 }
   ],
 
   "teams":

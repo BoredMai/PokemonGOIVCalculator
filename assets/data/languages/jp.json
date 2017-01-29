@@ -1,5 +1,6 @@
 {
   "pokemonList": [
+    // Gen 1
     { "name": "フシギダネ", "number": 0 }, { "name": "フシギソウ", "number": 1 }, { "name": "フシギバナ", "number": 2 },
     { "name": "ヒトカゲ",   "number": 3 }, { "name": "リザード", "number": 4 }, { "name": "リザードン", "number": 5 },
     { "name": "ゼニガメ",   "number": 6 }, { "name": "カメール", "number": 7 }, { "name": "カメックス", "number": 8 },
@@ -50,7 +51,46 @@
     { "name": "プテラ", "number": 141 }, { "name": "カビゴン", "number": 142 }, { "name": "フリーザー", "number": 143 },
     { "name": "サンダー", "number": 144 }, { "name": "ファイヤー", "number": 145 }, { "name": "ミニリュウ", "number": 146 },
     { "name": "ハクリュー", "number": 147 }, { "name": "カイリュー", "number": 148 }, { "name": "ミュウツー", "number": 149 },
-    { "name": "ミュウ", "number": 150 }
+    { "name": "ミュウ", "number": 150 },
+
+    // Gen 2
+                                            { "name": "チコリータ",  "number": 151 }, { "name": "ベイリーフ",  "number": 152 },
+    { "name": "メガニウム",  "number": 153 }, { "name": "ヒノアラシ",  "number": 154 }, { "name": "マグマラシ",    "number": 155 },
+    { "name": "バクフーン",  "number": 156 }, { "name": "ワニノコ", "number": 157 }, { "name": "アリゲイツ",  "number": 158 },
+    { "name": "オーダイル",    "number": 159 }, { "name": "オタチ",    "number": 160 }, { "name": "オオタチ",    "number": 161 },
+    { "name": "ホーホー",     "number": 162 }, { "name": "ヨルノズク",    "number": 163 }, { "name": "レディバ",    "number": 164 },
+    { "name": "レディアン", "number": 165 }, { "name": "イトマル",     "number": 166 }, { "name": "アリアドス",     "number": 167 },
+    { "name": "クロバット",    "number": 168 }, { "name": "チョンチー",    "number": 169 }, { "name": "ランターン",     "number": 170 },
+    { "name": "ピチュウ",    "number": 171 }, { "name": "ピィ",     "number": 172 }, { "name": "ププリン",    "number": 173 },
+    { "name": "トゲピー",       "number": 174 }, { "name": "トゲチック", "number": 175 }, { "name": "ネイティ",     "number": 176 },
+    { "name": "ネイティオ",     "number": 177 }, { "name": "メリープ",     "number": 178 }, { "name": "モココ",   "number": 179 },
+    { "name": "デンリュウ",   "number": 180 }, { "name": "キレイハナ",     "number": 181 }, { "name": "マリル",      "number": 182 },
+    { "name": "マリルリ",      "number": 183 }, { "name": "ウソッキー",   "number": 184 }, { "name": "ニョロトノ",    "number": 185 },
+    { "name": "ハネッコ",    "number": 186 }, { "name": "ポポッコ",    "number": 187 }, { "name": "ワタッコ",    "number": 188 },
+    { "name": "エイパム",    "number": 189 }, { "name": "ヒマナッツ",     "number": 190 }, { "name": "キマワリ",   "number": 191 },
+    { "name": "ヤンヤンマ", "number": 192 }, { "name": "ウパー",    "number": 193 }, { "name": "ヌオー",   "number": 194 },
+    { "name": "エーフィ",     "number": 195 }, { "name": "ブラッキー",    "number": 196 }, { "name": "ヤミカラス",    "number": 197 },
+    { "name": "ヤドキング",  "number": 198 }, { "name": "ムウマ",  "number": 199 }, { "name": "アンノーン",     "number": 200 },
+    { "name": "ソーナンス",        "number": 201 }, { "name": "キリンリキ",  "number": 202 }, { "name": "クヌギダマ",  "number": 203 },
+    { "name": "フォレトス",  "number": 204 }, { "name": "ノコッチ",     "number": 205 }, { "name": "グライガー",    "number": 206 },
+    { "name": "ハガネール",  "number": 207 }, { "name": "ブルー", "number": 208 }, { "name": "グランブル",  "number": 209 },
+    { "name": "ハリーセン",    "number": 210 }, { "name": "ハッサム",    "number": 211 }, { "name": "ツボツボ",    "number": 212 },
+    { "name": "ヘラクロス",     "number": 213 }, { "name": "ニューラ",    "number": 214 }, { "name": "ヒメグマ",    "number": 215 },
+    { "name": "リングマ", "number": 216 }, { "name": "マグマッグ",     "number": 217 }, { "name": "マグカルゴ",     "number": 218 },
+    { "name": "ウリムー",    "number": 219 }, { "name": "イノムー",    "number": 220 }, { "name": "サニーゴ",     "number": 221 },
+    { "name": "テッポウオ",    "number": 222 }, { "name": "オクタン",     "number": 223 }, { "name": "デリバード",    "number": 224 },
+    { "name": "マンタイン",       "number": 225 }, { "name": "エアームド", "number": 226 }, { "name": "デルビル",     "number": 227 },
+    { "name": "ヘルガー",     "number": 228 }, { "name": "キングドラ",     "number": 229 }, { "name": "ゴマゾウ",   "number": 230 },
+    { "name": "ドンファン",   "number": 231 }, { "name": "ポリゴン２",     "number": 232 }, { "name": "オドシシ",      "number": 233 },
+    { "name": "ドーブル",      "number": 234 }, { "name": "バルキー",   "number": 235 }, { "name": "カポエラー",    "number": 236 },
+    { "name": "ムチュール",    "number": 237 }, { "name": "エレキッド",    "number": 238 }, { "name": "ブビィ",    "number": 239 },
+    { "name": "ミルタンク",    "number": 240 }, { "name": "ハピナス",     "number": 241 }, { "name": "ライコウ",   "number": 242 },
+    { "name": "エンテイ", "number": 243 }, { "name": "スイクン",    "number": 244 }, { "name": "ヨーギラス",   "number": 245 },
+    { "name": "サナギラス",     "number": 246 }, { "name": "バンギラス",    "number": 247 }, { "name": "ルギア",    "number": 248 },
+    { "name": "ホウオウ",  "number": 249 }, { "name": "セレビィ",    "number": 250 }
+
+    
+
   ],
 
   "teams":

@@ -1,5 +1,6 @@
 {
   "pokemonList": [
+    // Gen 1
     { "name": "Bisasam",    "number":   0 }, { "name": "Bisaknosp",  "number":   1 }, { "name": "Bisaflor",   "number":   2 },
     { "name": "Glumanda",   "number":   3 }, { "name": "Glutexo",    "number":   4 }, { "name": "Glurak",     "number":   5 },
     { "name": "Schiggy",    "number":   6 }, { "name": "Schillok",   "number":   7 }, { "name": "Turtok",     "number":   8 },
@@ -50,7 +51,43 @@
     { "name": "Aerodactyl", "number": 141 }, { "name": "Relaxo",     "number": 142 }, { "name": "Arktos",     "number": 143 },
     { "name": "Zapdos",     "number": 144 }, { "name": "Lavados",    "number": 145 }, { "name": "Dratini",    "number": 146 },
     { "name": "Dragonir",   "number": 147 }, { "name": "Dragoran",   "number": 148 }, { "name": "Mewtu",      "number": 149 },
-    { "name": "Mew",        "number": 150 }
+    { "name": "Mew",        "number": 150 },
+
+    // Gen 2
+                                             { "name": "Endivie",    "number": 151 }, { "name": "Lorblatt",   "number": 152 },
+    { "name": "Meganie",    "number": 153 }, { "name": "Feurigel",   "number": 154 }, { "name": "Igelavar",   "number": 155 },
+    { "name": "Tornupto",   "number": 156 }, { "name": "Karnimani",  "number": 157 }, { "name": "Tyracroc",   "number": 158 },
+    { "name": "Impergator", "number": 159 }, { "name": "Wiesor",     "number": 160 }, { "name": "Wiesenior",  "number": 161 },
+    { "name": "Hoothoot",   "number": 162 }, { "name": "Noctuh",     "number": 163 }, { "name": "Ledyba",     "number": 164 },
+    { "name": "Ledian",     "number": 165 }, { "name": "Webarak",    "number": 166 }, { "name": "Ariados",    "number": 167 },
+    { "name": "Iksbat",     "number": 168 }, { "name": "Lampi",      "number": 169 }, { "name": "Lanturn",    "number": 170 },
+    { "name": "Pichu",      "number": 171 }, { "name": "Pii",        "number": 172 }, { "name": "Fluffeluff", "number": 173 },
+    { "name": "Togepi",     "number": 174 }, { "name": "Togetic",    "number": 175 }, { "name": "Natu",       "number": 176 },
+    { "name": "Xatu",       "number": 177 }, { "name": "Voltilamm",  "number": 178 }, { "name": "Waaty",      "number": 179 },
+    { "name": "Ampharos",   "number": 180 }, { "name": "Blubella",   "number": 181 }, { "name": "Marill",     "number": 182 },
+    { "name": "Azumarill",  "number": 183 }, { "name": "Mogelbaum",  "number": 184 }, { "name": "Quaxo",      "number": 185 },
+    { "name": "Hoppspross", "number": 186 }, { "name": "Hubelupf",   "number": 187 }, { "name": "Papungha",   "number": 188 },
+    { "name": "Griffel",    "number": 189 }, { "name": "Sonnkern",   "number": 190 }, { "name": "Sonnflora",  "number": 191 },
+    { "name": "Yanma",      "number": 192 }, { "name": "Felino",     "number": 193 }, { "name": "Morlord",    "number": 194 },
+    { "name": "Psiana",     "number": 195 }, { "name": "Nachtara",   "number": 196 }, { "name": "Kramurx",    "number": 197 },
+    { "name": "Laschoking", "number": 198 }, { "name": "Traunfugil", "number": 199 }, { "name": "Icognito",   "number": 200 },
+    { "name": "Woingenau",  "number": 201 }, { "name": "Girafarig",  "number": 202 }, { "name": "Tannza",     "number": 203 },
+    { "name": "Forstellka", "number": 204 }, { "name": "Dummisel",   "number": 205 }, { "name": "Skorgla",    "number": 206 },
+    { "name": "Stahlos",    "number": 207 }, { "name": "Snubbull",   "number": 208 }, { "name": "Granbull",   "number": 209 },
+    { "name": "Baldorfish", "number": 210 }, { "name": "Scherox",    "number": 211 }, { "name": "Pottrott",   "number": 212 },
+    { "name": "Skaraborn",  "number": 213 }, { "name": "Sniebel",    "number": 214 }, { "name": "Teddiursa",  "number": 215 },
+    { "name": "Ursaring",   "number": 216 }, { "name": "Schneckmag", "number": 217 }, { "name": "Magcargo",   "number": 218 },
+    { "name": "Quiekel",    "number": 219 }, { "name": "Keifel",     "number": 220 }, { "name": "Corasonn",   "number": 221 },
+    { "name": "Remoraid",   "number": 222 }, { "name": "Octillery",  "number": 223 }, { "name": "Botogel",    "number": 224 },
+    { "name": "Mantax",     "number": 225 }, { "name": "Panzaeron",  "number": 226 }, { "name": "Hunduster",  "number": 227 },
+    { "name": "Hundemon",   "number": 228 }, { "name": "Seedraking", "number": 229 }, { "name": "Phanpy",     "number": 230 },
+    { "name": "Donphan",    "number": 231 }, { "name": "Porygon2",   "number": 232 }, { "name": "Damhirplex", "number": 233 },
+    { "name": "Farbeagle",  "number": 234 }, { "name": "Rabauz",     "number": 235 }, { "name": "Kapoera",    "number": 236 },
+    { "name": "Kussilla",   "number": 237 }, { "name": "Elekid",     "number": 238 }, { "name": "Magby",      "number": 239 },
+    { "name": "Miltank",    "number": 240 }, { "name": "Heiteira",   "number": 241 }, { "name": "Raikou",     "number": 242 },
+    { "name": "Entei",      "number": 243 }, { "name": "Suicune",    "number": 244 }, { "name": "Larvitar",   "number": 245 },
+    { "name": "Pupitar",    "number": 246 }, { "name": "Despotar",   "number": 247 }, { "name": "Lugia",      "number": 248 },
+    { "name": "Ho-Oh",      "number": 249 }, { "name": "Celebi",     "number": 250 }
   ],
 
   "teams":
