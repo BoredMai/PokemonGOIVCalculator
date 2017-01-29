@@ -259,11 +259,11 @@
     };
 
     function toggleRowAdvanced(index) {
-      // if (vm.showAdvancedIndex === index) {
-      //   vm.showAdvancedIndex = -1;
-      // } else {
-      //   vm.showAdvancedIndex = index;
-      // }
+      if (vm.showAdvancedIndex === index) {
+        vm.showAdvancedIndex = -1;
+      } else {
+        vm.showAdvancedIndex = index;
+      }
     }
 
     function showAdvanced(index) {

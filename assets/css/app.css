@@ -36,6 +36,10 @@ body {
 }
 
 .navbar .navbar-text, .navbar .navbar-link {
+  color: white;
+}
+
+.navbar .navbar-brand:hover, .navbar .navbar-link:hover {
   color: whitesmoke;
 }
 
