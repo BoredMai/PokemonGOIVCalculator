@@ -16,7 +16,7 @@
             <div class="name-col grey-border">
                 <p class="big-text">{{vm.pokemonData.name}}</p>
                 <div class="img-wrapper">
-                    <img class="type-img" ng-repeat="type in vm.pokemonData.TYPE" ng-src="{{'./assets/img/types/' + type + '.png'}}"></img>
+                    <img class="type-img" ng-repeat="type in vm.pokemonData.TYPE" ng-src="{{'./assets/img/types/' + type.toLowerCase() + '.png'}}"></img>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
             <div class="col-md-6 col-xs-12">
                 <p class="label-text">Basic Moves</p>
                 <div class="move-info grey-border {{vm.pokemonData.TYPE.indexOf(basic.TYPE) !== -1 ? 'stab' : ''}}" ng-repeat="basic in vm.pokemonData.MOVESET.BASIC">
-                    <img class="move-type-img" ng-src="{{'./assets/img/types/' + basic.TYPE + '.png'}}"></img> <span class="capitalize-text"><b>{{basic.NAME.toLowerCase()}}</b></span><br/>
+                    <img class="move-type-img" ng-src="{{'./assets/img/types/' + basic.TYPE.toLowerCase() + '.png'}}"></img> <span class="capitalize-text"><b>{{basic.NAME.toLowerCase()}}</b></span><br/>
                     <div class="move-data text-center">
                         <div class="col-xs-4"><b>Power</b><br/>{{basic.POWER}}</div>
                         <div class="col-xs-4"><b>Duration(ms)</b><br/>{{basic.DURATION}}</div>
@@ -89,7 +89,7 @@
             <div class="col-md-6 col-xs-12">
                 <p class="label-text">Charge Moves</p>
                 <div class="move-info grey-border {{vm.pokemonData.TYPE.indexOf(charge.TYPE) !== -1 ? 'stab' : ''}}" ng-repeat="charge in vm.pokemonData.MOVESET.CHARGE">
-                    <img class="move-type-img" ng-src="{{'./assets/img/types/' + charge.TYPE + '.png'}}"></img><span class="capitalize-text"><b>{{charge.NAME.toLowerCase()}}</b></span><br/>
+                    <img class="move-type-img" ng-src="{{'./assets/img/types/' + charge.TYPE.toLowerCase() + '.png'}}"></img><span class="capitalize-text"><b>{{charge.NAME.toLowerCase()}}</b></span><br/>
                     <div class="move-data text-center">
                         <div class="col-xs-4"><b>Power</b><br/>{{charge.POWER}}</div>
                         <div class="col-xs-4"><b>Duration(ms)</b><br/>{{charge.DURATION}}</div>
