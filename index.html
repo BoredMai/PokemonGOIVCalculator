@@ -10,8 +10,10 @@
         <script type="text/javascript" src="app/app.module.js"></script>
         <script type="text/javascript" src="app/app.routes.js"></script>
         <script type="text/javascript" src="app/components/calc/calc.controller.js"></script>
+        <script type="text/javascript" src="app/components/advanced/advanced.controller.js"></script>
         <script type="text/javascript" src="app/factories/gameData.factory.js"></script>
         <script type="text/javascript" src="app/factories/calcData.factory.js"></script>
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/flags.css" />
         <link rel="stylesheet" href="assets/css/app.css" />
@@ -52,6 +54,7 @@
                 <div class="col-md-12 col-sm-12" uib-collapse="collapseChangelog">
                     <div class="card card-block">
                         <ul>
+                            <li> 2.0 - Added Advanced Data page, with extra information like Max HP/CP, Max Evolved HP/CP and Moveset info.</li>
                             <li> 1.9 - Added Gen2 data (only babies show on the list for now, but all the data is there!), added partial KR translation - help with the leaders' feedback lines would be very welcome</li>
                             <li> 1.8 - Changed base stats, added some text to make calculation clearer.</li>
                             <li> 1.7.1 - Refine now updates main form data to allow refinement refines(yo, I heard...), added tabindex to all checks, minor text fixes </li>
@@ -76,7 +79,7 @@
                 <div class="col-md-12 col-sm-12" uib-collapse="collapseCredits">
                     <div class="card card-block">
                         <ul>
-                            <li><a href="https://thesilphroad.com/research">TheSilphRoad</a> for the Base Stats data;</li>
+                            <li><a href="https://thesilphroad.com/research">TheSilphRoad</a> for Base Stats and Moveset data;</li>
                             <li><a href="http://pokemongo.gamepress.gg/">Pok&eacute;mon GO Game Press</a> for the Stardust table and Leaders' Appraisal Lines;</li>
                             <li><a href="https://www.reddit.com/r/pokemongodev/comments/4t7xb4/exact_cp_formula_from_stats_and_cpm_and_an_update/">/r/__isitin__</a> for CP formula and CPM table;</li>
                             <li><a href="https://www.reddit.com/r/pokemongodev/comments/4t59t1/decoded_game_master_protobuf_file_v01_all_pokemon/d5f2y91">/u/a1k0n</a> for the formatted CPM array.</li>

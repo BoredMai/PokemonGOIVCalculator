@@ -7,12 +7,14 @@
 
   function gameData($http, $location) {
     var service = {
-      pokemonList: {},
-      pokemonData: {},
+      pokemonList: [],
+      pokemonData: [],
+      moveList: {},
       cpm: {},
       dustValues: {},
       teams: {},
       fetchData: fetchData,
+      fetchMoves: fetchMoves,
       fetchLanguage: fetchLanguage,
       getECpM: getECpM,
       language: undefined
@@ -20,11 +22,21 @@
     return service;
 
     function fetchData() {
-      $http.get('assets/data/data.json').then(function(response) {
+      return $http.get('assets/data/data.json').then(response => {
         if (response.status == 200) {
           service.cpm = response.data.cpm;
           service.dustValues = response.data.dustValues;
           service.pokemonData = response.data.pokemonData;
+        }
+        return service;
+      });
+    }
+
+    function fetchMoves() {
+      return $http.get('assets/data/moves.json').then(response => {
+        if (response.status == 200) {
+          service.moveList = response.data;
+        return service;
         }
       });
     }
@@ -35,11 +47,12 @@
         service.language = 'en';
         Cookies.set('language', 'en');
       }
-      return $http.get('assets/data/languages/' + service.language + '.json').then(function(response) {
+      return $http.get('assets/data/languages/' + service.language + '.json').then(response => {
         if (response.status == 200) {
           service.teams = response.data.teams;
           service.pokemonList = response.data.pokemonList;
         }
+        return service;
       });
     }
 

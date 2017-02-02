@@ -1,4 +1,11 @@
 <div id="calc-view" ng-controller="CalcController as vm">
+    <div class="loader" ng-show="vm.showLoader">
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+    </div>
+    <div class="disclaimer alert alert-success">
+        <h4>New update is here!</h4>
+        Data for baby Pokémon was added, and also an Advanced Data page: just tap/click one of the results after calculating and then tap/click "Advanced Data" to get information about max CP, max evolved CP and moves.
+    </div>
     <div class="disclaimer alert alert-danger" ng-show="vm.gameData.language === 'kr'">
         Hi! If you're playing in korean, I would really appreciate if you sent me the translations for your leader's appraisal lines! You can mail me on <i>nannesribeiro at gmail.com</i>. Thanks in advance!<br />
         <p style="text-align:right">- BoredMai</p>
@@ -18,6 +25,7 @@
                     <li>Optionally, you can click a Team Logo to add Appraisal data. Select the correct phrases and check the boxes that correspond to your Pok&eacute;mon's highest stats based on your leader's appraisal.</li>
                     <hr />
                     <li>After calculating, you can refine your results by filling the extra fields that appear under the Calculate button with new data - either after an evolution, or powerup, or both - and then clicking Refine.</li>
+                    <li>Also, you can tap/click a result to access advanced data about your Pok&eacute;mon.</li>
                 </ul>
             </div>
         </div>
@@ -202,11 +210,11 @@
                     <td>{{r.DEF}}</td>
                     <td>{{r.total}}/45 ({{(r.total/0.45).toFixed(1)}}%)</td>
                 </tr>
-                <!--<tr class="text-center" ng-show="vm.showAdvancedIndex === $index">
+                <tr class="text-center" ng-show="vm.showAdvancedIndex === $index">
                     <td colspan="5">
                         <button class="btn btn-link" ng-click="vm.showAdvanced($index)">Advanced Data <span class="glyphicon glyphicon-triangle-right"></span></button>
                     </td>
-                </tr>-->
+                </tr>
             </tbody>
         </table>
         <button class="btn btn-success btn-lg pull-right" ng-click="vm.exportData()">Export Data</button>

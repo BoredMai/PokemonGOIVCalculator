@@ -3,12 +3,12 @@
 
   angular.module('pogoApp').controller('CalcController', CalcController);
 
-  CalcController.$inject = ['$http', '$interpolate', '$route', 'gameData', 'calcData'];
-
-  function CalcController($http, $interpolate, $route, gameData, calcData) {
+  CalcController.$inject = ['$http', '$route', '$location', 'gameData', 'calcData'];
+function CalcController($http, $route, $location, gameData, calcData) {
     var vm = this;
 
     vm.collapseInstructions = true;
+    vm.pokemonIndex = -1;
     vm.pokemonName = '';
     vm.mouseOverDropdown = false;
     vm.isPoweredUp = false;
@@ -19,6 +19,7 @@
     vm.refine = {}
     vm.filteredList = [];
     vm.showAdvancedIndex = -1;
+    vm.showLoader = true;
 
     vm.gameData = gameData;
     vm.calcData = calcData;
@@ -48,8 +49,17 @@
     activate();
 
     function activate() {
-      gameData.fetchData();
-      gameData.fetchLanguage();
+      vm.gameData.fetchData()
+      .then(() => {
+        vm.gameData.fetchMoves()
+        .then(() => {
+          vm.gameData.fetchLanguage();
+        }).then(() => {
+          vm.calcData.results = {};
+          vm.calcData.isCalculating = false;
+          vm.showLoader = false
+        });
+      });
     }
 
     function switchLanguage(language) {
@@ -59,11 +69,11 @@
 
     function filterList() {
       vm.filteredList = [];
-      for (var i = 0; i < gameData.pokemonList.length; i++) {
-        if (gameData.pokemonData[i].ACTIVE) {
-          var name = gameData.pokemonList[i].name.toLowerCase();
+      for (var i = 0; i < vm.gameData.pokemonList.length; i++) {
+        if (vm.gameData.pokemonData[i].ACTIVE) {
+          var name = vm.gameData.pokemonList[i].name.toLowerCase();
           if (name.indexOf(vm.pokemonName.toLowerCase()) != -1) {
-            vm.filteredList.push(gameData.pokemonList[i]);
+            vm.filteredList.push(vm.gameData.pokemonList[i]);
           }
         }
       }
@@ -128,7 +138,8 @@
     }
 
     function selectPokemon(pokemon) {
-      vm.pokemon = gameData.pokemonData[pokemon.number];
+      vm.pokemonIndex = pokemon.number;
+      vm.pokemon = gameData.pokemonData[vm.pokemonIndex];
       vm.pokemonName = pokemon.name;
       vm.pokemonInputChanged = false;
       vm.mouseOverDropdown = false;
@@ -243,7 +254,7 @@
             }
         }
         data.results = vm.calcData.results;
-        var json = JSON.stringify(data);
+        var json = angular.toJson(data);
         var file = new File([json], vm.pokemonName + ".json", {
             type: "application/json"
         });
@@ -259,15 +270,20 @@
     };
 
     function toggleRowAdvanced(index) {
-      // if (vm.showAdvancedIndex === index) {
-      //   vm.showAdvancedIndex = -1;
-      // } else {
-      //   vm.showAdvancedIndex = index;
-      // }
+      if (vm.showAdvancedIndex === index) {
+        vm.showAdvancedIndex = -1;
+      } else {
+        vm.showAdvancedIndex = index;
+      }
     }
 
     function showAdvanced(index) {
-      console.log("Index", index);
+      // Pass minimal data to ensure small base64 string
+      var baseDataObj = [vm.pokemonIndex, vm.calcData.results.cp, vm.calcData.results.hp,
+                         vm.calcData.results.stats[index].ATK, vm.calcData.results.stats[index].DEF,
+                         vm.calcData.results.stats[index].HP, vm.calcData.results.stats[index].level];
+      var baseData = btoa(angular.toJson(baseDataObj));
+      $location.path('/advanced/' + encodeURIComponent(baseData));
     }
 
   }
