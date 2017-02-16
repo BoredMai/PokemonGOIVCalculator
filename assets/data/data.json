@@ -773,104 +773,104 @@
 
 
     { "BHP":  90, "BATK":  92, "BDEF": 122,
-      "TYPE": ["GRASS"], "EVO": [152], "ACTIVE": false,
+      "TYPE": ["GRASS"], "EVO": [152], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 120, "BATK": 122, "BDEF": 155,
-      "TYPE": ["GRASS"], "EVO": [153], "ACTIVE": false,
+      "TYPE": ["GRASS"], "EVO": [153], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 160, "BATK": 168, "BDEF": 202,
-      "TYPE": ["GRASS"], "ACTIVE": false,
+      "TYPE": ["GRASS"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP":  78, "BATK": 116, "BDEF":  96,
-      "TYPE": ["FIRE"], "EVO": [155], "ACTIVE": false,
+      "TYPE": ["FIRE"], "EVO": [155], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 116, "BATK": 158, "BDEF": 129,
-      "TYPE": ["FIRE"], "EVO": [156], "ACTIVE": false,
+      "TYPE": ["FIRE"], "EVO": [156], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 156, "BATK": 223, "BDEF": 176,
-      "TYPE": ["FIRE"], "ACTIVE": false,
+      "TYPE": ["FIRE"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 100, "BATK": 117, "BDEF": 116,
-      "TYPE": ["WATER"], "EVO": [158], "ACTIVE": false,
+      "TYPE": ["WATER"], "EVO": [158], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 130, "BATK": 150, "BDEF": 151,
-      "TYPE": ["WATER"], "EVO": [159], "ACTIVE": false,
+      "TYPE": ["WATER"], "EVO": [159], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 170, "BATK": 205, "BDEF": 197,
-      "TYPE": ["WATER"], "ACTIVE": false,
+      "TYPE": ["WATER"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
 
 
     { "BHP":  70, "BATK":  79, "BDEF":  77,
-      "TYPE": ["NORMAL"], "EVO": [161], "ACTIVE": false,
+      "TYPE": ["NORMAL"], "EVO": [161], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 170, "BATK": 148, "BDEF": 130,
-      "TYPE": ["NORMAL"], "ACTIVE": false,
+      "TYPE": ["NORMAL"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 120, "BATK":  67, "BDEF": 101,
-      "TYPE": ["NORMAL", "FLYING"], "EVO": [163], "ACTIVE": false,
+      "TYPE": ["NORMAL", "FLYING"], "EVO": [163], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 200, "BATK": 145, "BDEF": 179,
-      "TYPE": ["NORMAL", "FLYING"], "ACTIVE": false,
+      "TYPE": ["NORMAL", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP":  80, "BATK":  72, "BDEF": 142,
-      "TYPE": ["BUG", "FLYING"], "EVO": [165], "ACTIVE": false,
+      "TYPE": ["BUG", "FLYING"], "EVO": [165], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 110, "BATK": 107, "BDEF": 209,
-      "TYPE": ["BUG", "FLYING"], "ACTIVE": false,
+      "TYPE": ["BUG", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP":  80, "BATK": 105, "BDEF":  73,
-      "TYPE": ["BUG", "POISON"], "EVO": [167], "ACTIVE": false,
+      "TYPE": ["BUG", "POISON"], "EVO": [167], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 140, "BATK": 161, "BDEF": 128,
-      "TYPE": ["BUG", "POISON"], "ACTIVE": false,
+      "TYPE": ["BUG", "POISON"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 170, "BATK": 194, "BDEF": 178,
-      "TYPE": ["POISON", "FLYING"], "ACTIVE": false,
+      "TYPE": ["POISON", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 150, "BATK": 106, "BDEF": 106,
-      "TYPE": ["WATER", "ELECTRIC"], "EVO": [170], "ACTIVE": false,
+      "TYPE": ["WATER", "ELECTRIC"], "EVO": [170], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 250, "BATK": 146, "BDEF": 146,
-      "TYPE": ["WATER", "ELECTRIC"], "ACTIVE": false,
+      "TYPE": ["WATER", "ELECTRIC"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
@@ -900,313 +900,313 @@
      },
     
     { "BHP":  80, "BATK": 134, "BDEF":  89,
-      "TYPE": ["PSYCHIC", "FLYING"], "EVO": [177], "ACTIVE": false,
+      "TYPE": ["PSYCHIC", "FLYING"], "EVO": [177], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 130, "BATK": 192, "BDEF": 146,
-      "TYPE": ["PSYCHIC", "FLYING"], "ACTIVE": false,
+      "TYPE": ["PSYCHIC", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 110, "BATK": 114, "BDEF":  82,
-      "TYPE": ["ELECTRIC"], "EVO": [179], "ACTIVE": false,
+      "TYPE": ["ELECTRIC"], "EVO": [179], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 140, "BATK": 145, "BDEF": 112,
-      "TYPE": ["ELECTRIC"], "EVO": [180], "ACTIVE": false,
+      "TYPE": ["ELECTRIC"], "EVO": [180], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
 
 
     { "BHP": 180, "BATK": 211, "BDEF": 172,
-      "TYPE": ["ELECTRIC"], "ACTIVE": false,
+      "TYPE": ["ELECTRIC"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 150, "BATK": 169, "BDEF": 189,
-      "TYPE": ["GRASS"], "ACTIVE": false,
+      "TYPE": ["GRASS"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 140, "BATK":  37, "BDEF":  93,
-      "TYPE": ["WATER", "FAIRY"], "EVO": [183], "ACTIVE": false,
+      "TYPE": ["WATER", "FAIRY"], "EVO": [183], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 200, "BATK": 112, "BDEF": 152,
-      "TYPE": ["WATER", "FAIRY"], "ACTIVE": false,
+      "TYPE": ["WATER", "FAIRY"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 140, "BATK": 167, "BDEF": 198,
-      "TYPE": ["ROCK"], "ACTIVE": false,
+      "TYPE": ["ROCK"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 180, "BATK": 174, "BDEF": 192,
-      "TYPE": ["WATER"], "ACTIVE": false,
+      "TYPE": ["WATER"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP":  70, "BATK":  67, "BDEF": 101,
-      "TYPE": ["GRASS", "FLYING"], "EVO": [187], "ACTIVE": false,
+      "TYPE": ["GRASS", "FLYING"], "EVO": [187], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 110, "BATK":  91, "BDEF": 127,
-      "TYPE": ["GRASS", "FLYING"], "EVO": [188], "ACTIVE": false,
+      "TYPE": ["GRASS", "FLYING"], "EVO": [188], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 150, "BATK": 197, "BDEF": 118,
-      "TYPE": ["GRASS", "FLYING"], "ACTIVE": false,
+      "TYPE": ["GRASS", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 110, "BATK": 136, "BDEF": 112,
-      "TYPE": ["NORMAL"], "ACTIVE": false,
+      "TYPE": ["NORMAL"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP":  60, "BATK":  55, "BDEF":  55,
-      "TYPE": ["GRASS"], "EVO": [191], "ACTIVE": false,
+      "TYPE": ["GRASS"], "EVO": [191], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 150, "BATK": 185, "BDEF": 148,
-      "TYPE": ["GRASS"], "ACTIVE": false,
+      "TYPE": ["GRASS"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 130, "BATK": 154, "BDEF":  94,
-      "TYPE": ["BUG", "FLYING"], "ACTIVE": false,
+      "TYPE": ["BUG", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 110, "BATK":  75, "BDEF":  75,
-      "TYPE": ["WATER", "GROUND"], "EVO": [194], "ACTIVE": false,
+      "TYPE": ["WATER", "GROUND"], "EVO": [194], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 190, "BATK": 152, "BDEF": 152,
-      "TYPE": ["WATER", "GROUND"], "ACTIVE": false,
+      "TYPE": ["WATER", "GROUND"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 130, "BATK": 261, "BDEF": 194,
-      "TYPE": ["PSYCHIC"], "ACTIVE": false,
+      "TYPE": ["PSYCHIC"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 190, "BATK": 126, "BDEF": 250,
-      "TYPE": ["DARK"], "ACTIVE": false,
+      "TYPE": ["DARK"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 120, "BATK": 175, "BDEF":  87,
-      "TYPE": ["DARK", "FLYING"], "ACTIVE": false,
+      "TYPE": ["DARK", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 190, "BATK": 177, "BDEF": 194,
-      "TYPE": ["WATER", "PSYCHIC"], "ACTIVE": false,
+      "TYPE": ["WATER", "PSYCHIC"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 120, "BATK": 167, "BDEF": 167,
-      "TYPE": ["GHOST"], "ACTIVE": false,
+      "TYPE": ["GHOST"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
 
 
     { "BHP":  96, "BATK": 136, "BDEF":  91,
-      "TYPE": ["PSYCHIC"], "ACTIVE": false,
+      "TYPE": ["PSYCHIC"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 380, "BATK":  60, "BDEF": 106,
-      "TYPE": ["PSYCHIC"], "ACTIVE": false,
+      "TYPE": ["PSYCHIC"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 140, "BATK": 182, "BDEF": 133,
-      "TYPE": ["NORMAL", "PSYCHIC"], "ACTIVE": false,
+      "TYPE": ["NORMAL", "PSYCHIC"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 100, "BATK": 108, "BDEF": 146,
-      "TYPE": ["BUG"], "EVO": [204], "ACTIVE": false,
+      "TYPE": ["BUG"], "EVO": [204], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 150, "BATK": 161, "BDEF": 242,
-      "TYPE": ["BUG", "STEEL"], "ACTIVE": false,
+      "TYPE": ["BUG", "STEEL"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 200, "BATK": 131, "BDEF": 131,
-      "TYPE": ["NORMAL"], "ACTIVE": false,
+      "TYPE": ["NORMAL"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 130, "BATK": 143, "BDEF": 204,
-      "TYPE": ["GROUND", "FLYING"], "ACTIVE": false,
+      "TYPE": ["GROUND", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 150, "BATK": 148, "BDEF": 333,
-      "TYPE": ["STEEL", "GROUND"], "ACTIVE": false,
+      "TYPE": ["STEEL", "GROUND"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 120, "BATK": 137, "BDEF":  89,
-      "TYPE": ["FAIRY"], "EVO": [209], "ACTIVE": false,
+      "TYPE": ["FAIRY"], "EVO": [209], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 180, "BATK": 212, "BDEF": 137,
-      "TYPE": ["FAIRY"], "ACTIVE": false,
+      "TYPE": ["FAIRY"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 130, "BATK": 184, "BDEF": 148,
-      "TYPE": ["WATER", "POISON"], "ACTIVE": false,
+      "TYPE": ["WATER", "POISON"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 140, "BATK": 236, "BDEF": 191,
-      "TYPE": ["BUG", "STEEL"], "ACTIVE": false,
+      "TYPE": ["BUG", "STEEL"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP":  40, "BATK":  17, "BDEF": 396,
-      "TYPE": ["BUG", "ROCK"], "ACTIVE": false,
+      "TYPE": ["BUG", "ROCK"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 160, "BATK": 234, "BDEF": 189,
-      "TYPE": ["BUG", "FIGHTING"], "ACTIVE": false,
+      "TYPE": ["BUG", "FIGHTING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 110, "BATK": 189, "BDEF": 157,
-      "TYPE": ["DARK", "ICE"], "ACTIVE": false,
+      "TYPE": ["DARK", "ICE"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 120, "BATK": 142, "BDEF":  93,
-      "TYPE": ["NORMAL"], "EVO": [216], "ACTIVE": false,
+      "TYPE": ["NORMAL"], "EVO": [216], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 180, "BATK": 236, "BDEF": 144,
-      "TYPE": ["NORMAL"], "ACTIVE": false,
+      "TYPE": ["NORMAL"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP":  80, "BATK": 118, "BDEF":  71,
-      "TYPE": ["FIRE"], "EVO": [218], "ACTIVE": false,
+      "TYPE": ["FIRE"], "EVO": [218], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 100, "BATK": 139, "BDEF": 209,
-      "TYPE": ["FIRE", "ROCK"], "ACTIVE": false,
+      "TYPE": ["FIRE", "ROCK"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 100, "BATK":  90, "BDEF":  74,
-      "TYPE": ["ICE", "GROUND"], "EVO": [220], "ACTIVE": false,
+      "TYPE": ["ICE", "GROUND"], "EVO": [220], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
 
 
     { "BHP": 200, "BATK": 181, "BDEF": 147,
-      "TYPE": ["ICE", "GROUND"], "ACTIVE": false,
+      "TYPE": ["ICE", "GROUND"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
     
     { "BHP": 110, "BATK": 118, "BDEF": 156,
-      "TYPE": ["WATER", "ROCK"], "ACTIVE": false,
+      "TYPE": ["WATER", "ROCK"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP":  70, "BATK": 127, "BDEF":  69,
-      "TYPE": ["WATER"], "EVO": [223], "ACTIVE": false,
+      "TYPE": ["WATER"], "EVO": [223], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 150, "BATK": 197, "BDEF": 141,
-      "TYPE": ["WATER"], "ACTIVE": false,
+      "TYPE": ["WATER"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP":  90, "BATK":  90, "BDEF": 128,
-      "TYPE": ["ICE", "FLYING"], "ACTIVE": false,
+      "TYPE": ["ICE", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 130, "BATK": 148, "BDEF": 260,
-      "TYPE": ["WATER", "FLYING"], "ACTIVE": false,
+      "TYPE": ["WATER", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 130, "BATK": 148, "BDEF": 260,
-      "TYPE": ["STEEL", "FLYING"], "ACTIVE": false,
+      "TYPE": ["STEEL", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP":  90, "BATK": 152, "BDEF":  93,
-      "TYPE": ["DARK", "FIRE"], "EVO": [228], "ACTIVE": false,
+      "TYPE": ["DARK", "FIRE"], "EVO": [228], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 150, "BATK": 224, "BDEF": 159,
-      "TYPE": ["DARK", "FIRE"], "ACTIVE": false,
+      "TYPE": ["DARK", "FIRE"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 150, "BATK": 194, "BDEF": 194,
-      "TYPE": ["WATER", "DRAGON"], "ACTIVE": false,
+      "TYPE": ["WATER", "DRAGON"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 180, "BATK": 107, "BDEF": 107,
-      "TYPE": ["GROUND"], "EVO": [231], "ACTIVE": false,
+      "TYPE": ["GROUND"], "EVO": [231], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 180, "BATK": 214, "BDEF": 214,
-      "TYPE": ["GROUND"], "ACTIVE": false,
+      "TYPE": ["GROUND"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 170, "BATK": 198, "BDEF": 183,
-      "TYPE": ["NORMAL"], "ACTIVE": false,
+      "TYPE": ["NORMAL"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 146, "BATK": 192, "BDEF": 132,
-      "TYPE": ["NORMAL"], "ACTIVE": false,
+      "TYPE": ["NORMAL"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 110, "BATK":  40, "BDEF":  88,
-      "TYPE": ["NORMAL"], "ACTIVE": false,
+      "TYPE": ["NORMAL"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP":  70, "BATK":  64, "BDEF":  64,
-      "TYPE": ["FIGHTING"], "EVO": [105, 106, 236], "ACTIVE": false,
+      "TYPE": ["FIGHTING"], "EVO": [105, 106, 236], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 100, "BATK": 173, "BDEF": 214,
-      "TYPE": ["FIGHTING"], "ACTIVE": false,
+      "TYPE": ["FIGHTING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
@@ -1228,57 +1228,57 @@
 
 
     { "BHP": 190, "BATK": 157, "BDEF": 211,
-      "TYPE": ["NORMAL"], "ACTIVE": false,
+      "TYPE": ["NORMAL"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 510, "BATK": 129, "BDEF": 229,
-      "TYPE": ["NORMAL"], "ACTIVE": false,
+      "TYPE": ["NORMAL"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 180, "BATK": 241, "BDEF": 210,
-      "TYPE": ["ELECTRIC"], "ACTIVE": false,
+      "TYPE": ["ELECTRIC"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 230, "BATK": 235, "BDEF": 176,
-      "TYPE": ["FIRE"], "ACTIVE": false,
+      "TYPE": ["FIRE"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 200, "BATK": 180, "BDEF": 235,
-      "TYPE": ["WATER"], "ACTIVE": false,
+      "TYPE": ["WATER"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 100, "BATK": 115, "BDEF":  93,
-      "TYPE": ["ROCK", "GROUND"], "EVO": [246], "ACTIVE": false,
+      "TYPE": ["ROCK", "GROUND"], "EVO": [246], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 140, "BATK": 155, "BDEF": 133,
-      "TYPE": ["ROCK", "GROUND"], "EVO": [247], "ACTIVE": false,
+      "TYPE": ["ROCK", "GROUND"], "EVO": [247], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 200, "BATK": 251, "BDEF": 212,
-      "TYPE": ["ROCK", "DARK"], "ACTIVE": false,
+      "TYPE": ["ROCK", "DARK"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 212, "BATK": 193, "BDEF": 323,
-      "TYPE": ["PSYCHIC", "FLYING"], "ACTIVE": false,
+      "TYPE": ["PSYCHIC", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 212, "BATK": 263, "BDEF": 301,
-      "TYPE": ["FIRE", "FLYING"], "ACTIVE": false,
+      "TYPE": ["FIRE", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      },
 
     { "BHP": 200, "BATK": 210, "BDEF": 210,
-      "TYPE": ["PSYCHIC", "GRASS"], "ACTIVE": false,
+      "TYPE": ["PSYCHIC", "GRASS"], "ACTIVE": true,
       "MOVESET": { "BASIC": [], "CHARGE": [] }
      }
     
