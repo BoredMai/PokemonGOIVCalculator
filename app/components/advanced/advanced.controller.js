@@ -65,7 +65,7 @@
       
 
       // Prepare EvoData (if EVO)
-      if (vm.pokemonData.EVO.length > 0) {
+      if ((vm.pokemonData.EVO) && (vm.pokemonData.EVO.length > 0)) {
         var evoNumber = vm.pokemonData.EVO[vm.pokemonData.EVO.length - 1];
         vm.evoData = vm.gameData.pokemonData[evoNumber];
         vm.evoData.name = vm.gameData.pokemonList[evoNumber].name;
