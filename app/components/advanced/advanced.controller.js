@@ -109,7 +109,7 @@
     }
 
     function getEvoMaxCP() {
-      if ((vm.gameData) && (vm.pokemonData)) {
+      if ((vm.gameData) && (vm.evoData)) {
         var ECpM = vm.gameData.getECpM(39);
         return Math.floor((vm.evoData.BATK + vm.baseData.ATK_IV) * Math.pow(vm.evoData.BDEF + vm.baseData.DEF_IV, 0.5) *
                Math.pow(vm.evoData.BHP + vm.baseData.HP_IV, 0.5) * Math.pow(ECpM, 2) / 10);
