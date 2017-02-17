@@ -78,8 +78,9 @@
           var charge = vm.evoData.MOVESET.CHARGE[i];
           vm.evoData.MOVESET.CHARGE[i] = vm.gameData.moveList.CHARGE[charge];
         }
+      } else {
+        vm.evoData = null;
       }
-      
     }
 
     function getMaxHP() {
