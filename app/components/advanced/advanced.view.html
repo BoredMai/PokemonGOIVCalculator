@@ -77,7 +77,10 @@
         <div class="move-list">
             <div class="col-md-6 col-xs-12">
                 <p class="label-text">Basic Moves</p>
-                <div class="move-info grey-border {{vm.pokemonData.TYPE.indexOf(basic.TYPE) !== -1 ? 'stab' : ''}}" ng-repeat="basic in vm.pokemonData.MOVESET.BASIC">
+                <div class="move-info grey-border" ng-show="vm.pokemonData.MOVESET.BASIC.length === 0">
+                    <div class="move-data text-center">No data available</div>
+                </div>
+                <div class="move-info grey-border {{vm.pokemonData.TYPE.indexOf(basic.TYPE) !== -1 ? 'stab' : ''}}" ng-repeat="basic in vm.pokemonData.MOVESET.BASIC" ng-show="vm.pokemonData.MOVESET.BASIC.length > 0">
                     <img class="move-type-img" ng-src="{{'./assets/img/types/' + basic.TYPE.toLowerCase() + '.png'}}"></img> <span class="capitalize-text"><b>{{basic.NAME.toLowerCase()}}</b></span><br/>
                     <div class="move-data text-center">
                         <div class="col-xs-4"><b>Power</b><br/>{{basic.POWER}}</div>
@@ -88,7 +91,10 @@
             </div>
             <div class="col-md-6 col-xs-12">
                 <p class="label-text">Charge Moves</p>
-                <div class="move-info grey-border {{vm.pokemonData.TYPE.indexOf(charge.TYPE) !== -1 ? 'stab' : ''}}" ng-repeat="charge in vm.pokemonData.MOVESET.CHARGE">
+                <div class="move-info grey-border" ng-show="vm.pokemonData.MOVESET.CHARGE.length === 0">
+                    <div class="move-data text-center">No data available</div>
+                </div>
+                <div class="move-info grey-border {{vm.pokemonData.TYPE.indexOf(charge.TYPE) !== -1 ? 'stab' : ''}}" ng-repeat="charge in vm.pokemonData.MOVESET.CHARGE" ng-show="vm.pokemonData.MOVESET.CHARGE.length > 0">
                     <img class="move-type-img" ng-src="{{'./assets/img/types/' + charge.TYPE.toLowerCase() + '.png'}}"></img><span class="capitalize-text"><b>{{charge.NAME.toLowerCase()}}</b></span><br/>
                     <div class="move-data text-center">
                         <div class="col-xs-4"><b>Power</b><br/>{{charge.POWER}}</div>
