@@ -45,6 +45,7 @@ function CalcController($http, $route, $location, gameData, calcData) {
     vm.exportData = exportData;
     vm.toggleRowAdvanced = toggleRowAdvanced;
     vm.showAdvanced = showAdvanced;
+    vm.moreInfo = moreInfo;
 
     activate();
 
@@ -284,6 +285,10 @@ function CalcController($http, $route, $location, gameData, calcData) {
                          vm.calcData.results.stats[index].HP, vm.calcData.results.stats[index].level];
       var baseData = btoa(angular.toJson(baseDataObj));
       $location.path('/advanced/' + encodeURIComponent(baseData));
+    }
+
+    function moreInfo() {
+      $location.path('/advanced/' + parseInt(vm.backgroundImg));
     }
 
   }

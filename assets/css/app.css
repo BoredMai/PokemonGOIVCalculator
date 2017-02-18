@@ -279,6 +279,12 @@ th, td {
   padding: 10px;
 }
 
+.btn-more-info {
+  padding: 0;
+  margin-top: -5px !important;
+  width: 100%;
+}
+
 #advanced-view .data-container {
   display: flex;
   flex-direction: column;

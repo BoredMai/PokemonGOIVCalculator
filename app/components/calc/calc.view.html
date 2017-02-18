@@ -4,7 +4,7 @@
     </div>
     <div class="disclaimer alert alert-success">
         <h4>Updated movesets!</h4>
-        Movesets have been updated with thew new post-Gen2 data! Also, the Advanced Data page now has info about the amount of energy awarded by a Fast Attack, and how many bars a Special Attack has.
+        Movesets have been updated with thew new post-Gen2 data! Also, The Advanced Data page now has info about the amount of energy awarded by a Fast Attack, and how many bars a Special Attack has.
     </div>
     <div class="disclaimer alert alert-danger" ng-show="vm.gameData.language === 'kr'">
         Hi! If you're playing in korean, I would really appreciate if you sent me the translations for your leader's appraisal lines! You can mail me on <i>nannesribeiro at gmail.com</i>. Thanks in advance!<br />
@@ -45,6 +45,7 @@
                     <li ng-repeat="p in vm.filteredList" ng-mouseover="vm.focusItem($index)" ng-class="{'active-item': vm.focusedItem == $index, 'inactive-item': vm.focusedItem != $index}"><a ng-mousedown="vm.selectPokemon(p)">{{p.name}}</a></li>
                 </ul>
             </label>
+            <button class="btn btn-link btn-more-info" ng-show="vm.pokemonName" ng-click="vm.moreInfo()" tabindex="-1">More information on {{vm.pokemonName}}</button>
 
         </div>
         <div class="col-md-2 col-sm-6 col-xs-6">
