@@ -305,7 +305,8 @@ th, td {
 
 #advanced-view .move-info {
   text-align: center;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
+  padding: 10px 0px;  
 }
 
 #advanced-view .move-data {
@@ -315,8 +316,27 @@ th, td {
   justify-content: space-between;
 }
 
+#advanced-view .move-data .col-xs-3 {
+  padding: 0px 0px;
+}
+
 #advanced-view .stab {
   background-color: rgba(152, 234, 152, 0.4);
+}
+
+#advanced-view .energy-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 10px auto 0px;
+}
+
+#advanced-view .energy-bar {
+  background-image: url('../img/energybar.png');
+  height: 20px;
+  flex-grow: 1;
+  margin: 0px 2px;
+  border-radius: 3px;
 }
 
 

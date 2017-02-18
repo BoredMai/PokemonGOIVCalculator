@@ -21,7 +21,7 @@
             </div>
         </div>
         
-        <div class="grey-border">
+        <div class="grey-border" ng-show="vm.baseData.level">
             <div class="col-xs-4">
                 <p class="label-text">Level</p>
                 <p>{{vm.baseData.level}}</p>
@@ -36,8 +36,8 @@
             </div>
         </div>
 
-        <p class="label-text">IVs</p>
-        <div class="grey-border">
+        <p class="label-text" ng-show="vm.baseData.level">IVs</p>
+        <div class="grey-border" ng-show="vm.baseData.level">
             <div class="col-xs-4">
                 <p class="label-text">HP</p>
                 <p>{{vm.baseData.HP_IV}}</p>
@@ -83,9 +83,19 @@
                 <div class="move-info grey-border {{vm.pokemonData.TYPE.indexOf(basic.TYPE) !== -1 ? 'stab' : ''}}" ng-repeat="basic in vm.pokemonData.MOVESET.BASIC" ng-show="vm.pokemonData.MOVESET.BASIC.length > 0">
                     <img class="move-type-img" ng-src="{{'./assets/img/types/' + basic.TYPE.toLowerCase() + '.png'}}"></img> <span class="capitalize-text"><b>{{basic.NAME.toLowerCase()}}</b></span><br/>
                     <div class="move-data text-center">
-                        <div class="col-xs-4"><b>Power</b><br/>{{basic.POWER}}</div>
-                        <div class="col-xs-4"><b>Duration(ms)</b><br/>{{basic.DURATION}}</div>
-                        <div class="col-xs-4"><b>DPS</b><br/>{{(basic.POWER * 1000 / basic.DURATION).toFixed(2)}}</div>
+                        <div class="col-xs-3"><b>Power</b><br/>{{basic.POWER}}</div>
+                        <div class="col-xs-3"><b>Duration(ms)</b><br/>{{basic.DURATION}}</div>
+                        <div class="col-xs-3"><b>DPS</b><br/>{{(basic.POWER * 1000 / basic.DURATION).toFixed(2)}}</div>
+                        <div class="col-xs-3"><b>Energy</b><br/>{{basic.ENERGY}}</div>
+                    </div>
+                </div>
+                <div class="move-info grey-border {{vm.pokemonData.TYPE.indexOf(basic.TYPE) !== -1 ? 'stab' : ''}}" ng-repeat="basic in vm.pokemonData.LEGACY.BASIC" ng-show="vm.pokemonData.LEGACY.BASIC.length > 0">
+                    <img class="move-type-img" ng-src="{{'./assets/img/types/' + basic.TYPE.toLowerCase() + '.png'}}"></img> <span class="capitalize-text"><b>{{basic.NAME.toLowerCase()}} [LEGACY]</b></span><br/>
+                    <div class="move-data text-center">
+                        <div class="col-xs-3"><b>Power</b><br/>{{basic.POWER}}</div>
+                        <div class="col-xs-3"><b>Duration(ms)</b><br/>{{basic.DURATION}}</div>
+                        <div class="col-xs-3"><b>DPS</b><br/>{{(basic.POWER * 1000 / basic.DURATION).toFixed(2)}}</div>
+                        <div class="col-xs-3"><b>Energy</b><br/>{{basic.ENERGY}}</div>
                     </div>
                 </div>
             </div>
@@ -100,6 +110,20 @@
                         <div class="col-xs-4"><b>Power</b><br/>{{charge.POWER}}</div>
                         <div class="col-xs-4"><b>Duration(ms)</b><br/>{{charge.DURATION}}</div>
                         <div class="col-xs-4"><b>DPS</b><br/>{{(charge.POWER * 1000 / charge.DURATION).toFixed(2)}}</div>
+                    </div>
+                    <div class="energy-container">
+                        <div class="energy-bar" ng-repeat="i in vm.getNumBars(charge.ENERGY) track by $index"></div>
+                    </div>
+                </div>
+                <div class="move-info grey-border {{vm.pokemonData.TYPE.indexOf(charge.TYPE) !== -1 ? 'stab' : ''}}" ng-repeat="charge in vm.pokemonData.LEGACY.CHARGE" ng-show="vm.pokemonData.LEGACY.CHARGE.length > 0">
+                    <img class="move-type-img" ng-src="{{'./assets/img/types/' + charge.TYPE.toLowerCase() + '.png'}}"></img><span class="capitalize-text"><b>{{charge.NAME.toLowerCase()}} [LEGACY]</b></span><br/>
+                    <div class="move-data text-center">
+                        <div class="col-xs-4"><b>Power</b><br/>{{charge.POWER}}</div>
+                        <div class="col-xs-4"><b>Duration(ms)</b><br/>{{charge.DURATION}}</div>
+                        <div class="col-xs-4"><b>DPS</b><br/>{{(charge.POWER * 1000 / charge.DURATION).toFixed(2)}}</div>
+                    </div>
+                    <div class="energy-container">
+                        <div class="energy-bar" ng-repeat="i in vm.getNumBars(charge.ENERGY) track by $index"></div>
                     </div>
                 </div>
             </div>

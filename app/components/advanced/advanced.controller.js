@@ -18,6 +18,7 @@
     vm.getMaxCP = getMaxCP;
     vm.getEvoMaxHP = getEvoMaxHP;
     vm.getEvoMaxCP = getEvoMaxCP;
+    vm.getNumBars = getNumBars;
 
     activate();
 
@@ -36,18 +37,29 @@
 
     function prepareData() {
       var uriData = $route.current.params.baseData;
-      var arrayData = JSON.parse(atob(decodeURIComponent(uriData)));
+      if (isNaN(parseInt(uriData))) {
+        var arrayData = JSON.parse(atob(decodeURIComponent(uriData)));
 
-      vm.baseData = {
-        number: arrayData[0],
-        cp: arrayData[1],
-        hp: arrayData[2],
-        ATK_IV: arrayData[3],
-        DEF_IV: arrayData[4],
-        HP_IV: arrayData[5],
-        level: arrayData[6],
-        imgIndex: (arrayData[0] < 9) ? '00' + (arrayData[0] + 1) : ((arrayData[0] < 99) ? '0' + (arrayData[0] + 1) : (arrayData[0] + 1))
-      };
+        vm.baseData = {
+          number: arrayData[0],
+          cp: arrayData[1],
+          hp: arrayData[2],
+          ATK_IV: arrayData[3],
+          DEF_IV: arrayData[4],
+          HP_IV: arrayData[5],
+          level: arrayData[6],
+          imgIndex: (arrayData[0] < 9) ? '00' + (arrayData[0] + 1) : ((arrayData[0] < 99) ? '0' + (arrayData[0] + 1) : (arrayData[0] + 1))
+        };
+      } else {
+        var num = parseInt(uriData) - 1;
+        vm.baseData = {
+          number: num,
+          ATK_IV: 15,
+          DEF_IV: 15,
+          HP_IV: 15,
+          imgIndex: (num < 9) ? '00' + (num + 1) : ((num < 99) ? '0' + (num + 1) : (num + 1))
+        };
+      }        
 
       // Prepare PokemonData
       vm.pokemonData = vm.gameData.pokemonData[vm.baseData.number];
@@ -60,6 +72,15 @@
       for (var i = 0; i < vm.pokemonData.MOVESET.CHARGE.length; i++) {
         var charge = vm.pokemonData.MOVESET.CHARGE[i];
         vm.pokemonData.MOVESET.CHARGE[i] = vm.gameData.moveList.CHARGE[charge];
+      }
+
+      for (var i = 0; i < vm.pokemonData.LEGACY.BASIC.length; i++) {
+        var basic = vm.pokemonData.LEGACY.BASIC[i];
+        vm.pokemonData.LEGACY.BASIC[i] = vm.gameData.moveList.BASIC[basic];
+      }
+      for (var i = 0; i < vm.pokemonData.LEGACY.CHARGE.length; i++) {
+        var charge = vm.pokemonData.LEGACY.CHARGE[i];
+        vm.pokemonData.LEGACY.CHARGE[i] = vm.gameData.moveList.CHARGE[charge];
       }
 
       
@@ -77,6 +98,15 @@
         for (var i = 0; i < vm.evoData.MOVESET.CHARGE.length; i++) {
           var charge = vm.evoData.MOVESET.CHARGE[i];
           vm.evoData.MOVESET.CHARGE[i] = vm.gameData.moveList.CHARGE[charge];
+        }
+
+        for (var i = 0; i < vm.evoData.LEGACY.BASIC.length; i++) {
+          var basic = vm.evoData.LEGACY.BASIC[i];
+          vm.evoData.LEGACY.BASIC[i] = vm.gameData.moveList.BASIC[basic];
+        }
+        for (var i = 0; i < vm.evoData.LEGACY.CHARGE.length; i++) {
+          var charge = vm.evoData.LEGACY.CHARGE[i];
+          vm.evoData.LEGACY.CHARGE[i] = vm.gameData.moveList.CHARGE[charge];
         }
       } else {
         vm.evoData = null;
@@ -115,6 +145,11 @@
                Math.pow(vm.evoData.BHP + vm.baseData.HP_IV, 0.5) * Math.pow(ECpM, 2) / 10);
       }
       return '';
+    }
+
+    function getNumBars(ENERGY) {
+      var a = new Array(Math.floor(100 / ENERGY));
+      return a;
     }
   }
 })();
