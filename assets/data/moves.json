@@ -40,7 +40,7 @@
     {"ID":  36, "NAME":    "THUNDER SHOCK", "TYPE": "ELECTRIC", "POWER":  5, "DURATION":  600, "ENERGY":  8 },
     {"ID":  37, "NAME":        "TRANSFORM", "TYPE":   "NORMAL", "POWER":  0, "DURATION": 2230, "ENERGY":  0 },
     {"ID":  38, "NAME":        "VINE WHIP", "TYPE":    "GRASS", "POWER":  7, "DURATION":  600, "ENERGY":  6 },
-    {"ID":  39, "NAME":        "WATER GUN", "TYPE":    "WATER", "POWER":  5, "DURATION":  500, "ENERGY":  6 },
+    {"ID":  39, "NAME":        "WATER GUN", "TYPE":    "WATER", "POWER":  5, "DURATION":  500, "ENERGY":  5 },
     {"ID":  40, "NAME":      "WING ATTACK", "TYPE":   "FLYING", "POWER":  8, "DURATION":  800, "ENERGY":  9 },
     {"ID":  41, "NAME":     "ZEN HEADBUTT", "TYPE":  "PSYCHIC", "POWER": 12, "DURATION": 1100, "ENERGY": 10 },
 
