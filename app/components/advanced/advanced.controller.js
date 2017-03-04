@@ -125,7 +125,7 @@
             description += 'Evolved (' + vm.evoData[i].name + ') HP ' + vm.getEvoHP(i) + ' | CP ' + vm.getEvoCP(i) + '\n';
           }
         }
-        description += 'Max HP ' + vm.getMaxHP + ' | Max CP ' + vm.getMaxCP + '\n';
+        description += 'Max HP ' + vm.getMaxHP()+ ' | Max CP ' + vm.getMaxCP() + '\n';
         for (var i = 0; i < vm.evoData.length; i++) {
           description += 'Evolved (' + vm.evoData[i].name + ') Max HP ' + vm.getEvoMaxHP(i) + ' | Max CP ' + vm.getEvoMaxCP(i) + '\n';
         }

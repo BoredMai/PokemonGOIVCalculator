@@ -1,4 +1,4 @@
-angular.module('pogoApp').config(function($routeProvider, $locationProvider) {
+angular.module('pogoApp').config(function($routeProvider, $locationProvider, ngMetaProvider) {
   $routeProvider
     .when('/calculator', {
       templateUrl: 'app/components/calc/calc.view.html',
@@ -21,4 +21,6 @@ angular.module('pogoApp').config(function($routeProvider, $locationProvider) {
       }
     })
     .otherwise({ redirectTo: '/calculator'});
-})
+}).run(['ngMeta', function(ngMeta) {
+    ngMeta.init();
+}]);
