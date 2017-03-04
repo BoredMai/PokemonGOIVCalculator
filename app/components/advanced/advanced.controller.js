@@ -3,9 +3,9 @@
 
   angular.module('pogoApp').controller('AdvancedController', AdvancedController);
 
-  AdvancedController.$inject = ['$http', '$route', 'gameData'];
+  AdvancedController.$inject = ['$http', '$route', 'gameData', 'ngMeta'];
 
-  function AdvancedController($http, $route, gameData) {
+  function AdvancedController($http, $route, gameData, ngMeta) {
     var vm = this;
 
     vm.baseData = { imgIndex: '000' };
@@ -114,6 +114,22 @@
         } else {
           vm.evoData = null;
         }
+
+        ngMeta.setTag('og:title', 'PoGOBin - Advanced Data for ' + vm.pokemonData.name);
+        ngMeta.setTag('og:image', './assets/img/sprites/' + vm.baseData.imgIndex + 'MS.png');
+        var description = '';
+        if (vm.fullData) {
+          description += 'HP ' + vm.baseData.hp + ' | CP ' + vm.baseData.cp + '\n';
+          description += 'IVs[HP-ATK-DEF] ' + vm.baseData.HP_IV + ' ' + vm.baseData.ATK_IV + ' ' + vm.baseData.DEF_IV + ' ' + '\n';
+          for (var i = 0; i < vm.evoData.length; i++) {
+            description += 'Evolved (' + vm.evoData[i].name + ') HP ' + vm.getEvoHP(i) + ' | CP ' + vm.getEvoCP(i) + '\n';
+          }
+        }
+        description += 'Max HP ' + vm.getMaxHP + ' | Max CP ' + vm.getMaxCP + '\n';
+        for (var i = 0; i < vm.evoData.length; i++) {
+          description += 'Evolved (' + vm.evoData[i].name + ') Max HP ' + vm.getEvoMaxHP(i) + ' | Max CP ' + vm.getEvoMaxCP(i) + '\n';
+        }
+        ngMeta.setTag('og:description', description);
       }
     }
 
