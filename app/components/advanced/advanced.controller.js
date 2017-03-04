@@ -118,7 +118,6 @@
     }
 
     function getEvoData(EVO) {
-      console.log(EVO);
       for (var i = 0; i < EVO.length; i++) {
           var evoNumber = EVO[i];
           var evoData = vm.gameData.pokemonData[evoNumber];
