@@ -42,7 +42,7 @@
                 <a class="flag-link" ng-click="vm.switchLanguage('kr')"><img ng-class="{'not-selected' : vm.gameData.language != 'kr'}" src="assets/img/blank.png" class="flag flag-kr" /></a>
                 <input class="form-control" data-toggle="dropdown" ng-style="{'background':'no-repeat 0px -4px', 'padding-left':'40px', 'background-image': 'url(./assets/img/sprites/'+vm.backgroundImg+'MS.png)'}" ng-model="vm.pokemonName" type="text" ng-change="vm.filterList()" ng-focus="vm.inputHasFocus = true; vm.focusedItem = -1;" ng-blur="vm.inputHasFocus = false; vm.checkPokemonName()" ng-keydown="vm.checkDropdownNavigation($event)" />
                 <ul class="dropdown-menu" ng-init="vm.focusedItem = -1" ng-show="vm.pokemonInputChanged && vm.inputHasFocus">
-                    <li ng-repeat="p in vm.filteredList" ng-mouseover="vm.focusItem($index)" ng-class="{'active-item': vm.focusedItem == $index, 'inactive-item': vm.focusedItem != $index}"><a ng-mousedown="vm.selectPokemon(p)">{{p.name}}</a></li>
+                    <li ng-repeat="p in vm.filteredList" ng-mouseover="vm.focusItem($index)" ng-class="{'active-item': vm.focusedItem == $index, 'inactive-item': vm.focusedItem != $index}"><a>{{p.name}}</a></li>
                 </ul>
             </label>
             <button class="btn btn-link btn-more-info" ng-show="vm.pokemonName" ng-click="vm.moreInfo()" tabindex="-1">More information on {{vm.pokemonName}}</button>

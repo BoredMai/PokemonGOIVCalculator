@@ -8,7 +8,7 @@
     </div>
     <h2>Advanced Data</h2>
     <br/>
-    <div class="data-container">
+    <div class="data-container" ng-show="vm.baseData.imgIndex != '000'">
         <div class="basic-info">
             <div class="grey-border">
                 <img class="pokemon-img" ng-src="{{'./assets/img/sprites/' + vm.baseData.imgIndex + 'MS.png'}}"></img>
@@ -33,6 +33,24 @@
             <div class="col-xs-4">
                 <p class="label-text">CP</p>
                 <p>{{vm.baseData.cp}}</p>
+            </div>
+        </div>
+
+        <div class="evolved-status" ng-show="vm.baseData.fullData" ng-repeat="evoData in vm.evoData">
+            <p class="label-text">Evolved Status ({{evoData.name}})</p>
+            <div class="grey-border">
+                <div class="col-xs-4">
+                    <p class="label-text">Level</p>
+                    <p>{{vm.baseData.level}}</p>
+                </div>
+                <div class="col-xs-4">
+                    <p class="label-text">HP</p>
+                    <p>{{vm.getEvoHP($index)}}</p>
+                </div>
+                <div class="col-xs-4">
+                    <p class="label-text">CP</p>
+                    <p>{{vm.getEvoCP($index)}}</p>
+                </div>
             </div>
         </div>
 
@@ -63,14 +81,14 @@
             </div>
         </div>
 
-        <div class="grey-border" ng-show="vm.evoData">
+        <div class="grey-border" ng-show="vm.evoData" ng-repeat="evoData in vm.evoData">
             <div class="col-xs-6">
-                <p class="label-text">MAX HP ({{vm.evoData.name}})</p>
-                <p>{{vm.getEvoMaxHP()}}</p>
+                <p class="label-text">MAX HP ({{evoData.name}})</p>
+                <p>{{vm.getEvoMaxHP($index)}}</p>
             </div>
             <div class="col-xs-6">
-                <p class="label-text">MAX CP ({{vm.evoData.name}})</p>
-                <p>{{vm.getEvoMaxCP()}}</p>
+                <p class="label-text">MAX CP ({{evoData.name}})</p>
+                <p>{{vm.getEvoMaxCP($index)}}</p>
             </div>
         </div>
 
@@ -126,6 +144,17 @@
                         <div class="energy-bar" ng-repeat="i in vm.getNumBars(charge.ENERGY) track by $index"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="data-container" ng-show="vm.baseData.imgIndex === '000'">
+        <div class="basic-info">
+            <div class="grey-border">
+                <img class="pokemon-img" ng-src="{{'./assets/img/sprites/' + vm.baseData.imgIndex + 'MS.png'}}"></img>
+            </div>
+            <div class="name-col grey-border">
+                <p class="big-text">Pokémon not found!</p>
+                Check the number or spelling and try again.
             </div>
         </div>
     </div>

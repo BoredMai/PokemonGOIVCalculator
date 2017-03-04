@@ -14,6 +14,8 @@
 
     vm.gameData = gameData;
     vm.prepareData = prepareData;
+    vm.getEvoHP = getEvoHP;
+    vm.getEvoCP = getEvoCP;
     vm.getMaxHP = getMaxHP;
     vm.getMaxCP = getMaxCP;
     vm.getEvoMaxHP = getEvoMaxHP;
@@ -38,79 +40,129 @@
     function prepareData() {
       var uriData = $route.current.params.baseData;
       if (isNaN(parseInt(uriData))) {
-        var arrayData = JSON.parse(atob(decodeURIComponent(uriData)));
+        try {
+            var arrayData = JSON.parse(atob(decodeURIComponent(uriData)));
 
-        vm.baseData = {
-          number: arrayData[0],
-          cp: arrayData[1],
-          hp: arrayData[2],
-          ATK_IV: arrayData[3],
-          DEF_IV: arrayData[4],
-          HP_IV: arrayData[5],
-          level: arrayData[6],
-          imgIndex: (arrayData[0] < 9) ? '00' + (arrayData[0] + 1) : ((arrayData[0] < 99) ? '0' + (arrayData[0] + 1) : (arrayData[0] + 1))
-        };
+            vm.baseData = {
+              number: arrayData[0],
+              cp: arrayData[1],
+              hp: arrayData[2],
+              ATK_IV: arrayData[3],
+              DEF_IV: arrayData[4],
+              HP_IV: arrayData[5],
+              level: arrayData[6],
+              imgIndex: (arrayData[0] < 9) ? '00' + (arrayData[0] + 1) : ((arrayData[0] < 99) ? '0' + (arrayData[0] + 1) : (arrayData[0] + 1)),
+              fullData: true
+            };
+        } catch (e) {
+          for (var num = 0; num < vm.gameData.pokemonList.length; num++) {
+            if (uriData.toLocaleLowerCase() === vm.gameData.pokemonList[num].name.toLocaleLowerCase()) {
+              break;
+            }
+          }
+
+          if (num < vm.gameData.pokemonList.length) {
+            vm.baseData = {
+              number: num,
+              ATK_IV: 15,
+              DEF_IV: 15,
+              HP_IV: 15,
+              imgIndex: (num < 9) ? '00' + (num + 1) : ((num < 99) ? '0' + (num + 1) : (num + 1))
+            };
+          }
+        }
       } else {
         var num = parseInt(uriData) - 1;
-        vm.baseData = {
-          number: num,
-          ATK_IV: 15,
-          DEF_IV: 15,
-          HP_IV: 15,
-          imgIndex: (num < 9) ? '00' + (num + 1) : ((num < 99) ? '0' + (num + 1) : (num + 1))
-        };
+        if (num < vm.gameData.pokemonList.length) {
+          vm.baseData = {
+            number: num,
+            ATK_IV: 15,
+            DEF_IV: 15,
+            HP_IV: 15,
+            imgIndex: (num < 9) ? '00' + (num + 1) : ((num < 99) ? '0' + (num + 1) : (num + 1))
+          };
+        }
       }        
 
-      // Prepare PokemonData
-      vm.pokemonData = vm.gameData.pokemonData[vm.baseData.number];
-      vm.pokemonData.name = vm.gameData.pokemonList[vm.baseData.number].name;
+      if (vm.baseData.imgIndex != '000') {
+        // Prepare PokemonData
+        vm.pokemonData = vm.gameData.pokemonData[vm.baseData.number];
+        vm.pokemonData.name = vm.gameData.pokemonList[vm.baseData.number].name;
 
-      for (var i = 0; i < vm.pokemonData.MOVESET.BASIC.length; i++) {
-        var basic = vm.pokemonData.MOVESET.BASIC[i];
-        vm.pokemonData.MOVESET.BASIC[i] = vm.gameData.moveList.BASIC[basic];
-      }
-      for (var i = 0; i < vm.pokemonData.MOVESET.CHARGE.length; i++) {
-        var charge = vm.pokemonData.MOVESET.CHARGE[i];
-        vm.pokemonData.MOVESET.CHARGE[i] = vm.gameData.moveList.CHARGE[charge];
-      }
-
-      for (var i = 0; i < vm.pokemonData.LEGACY.BASIC.length; i++) {
-        var basic = vm.pokemonData.LEGACY.BASIC[i];
-        vm.pokemonData.LEGACY.BASIC[i] = vm.gameData.moveList.BASIC[basic];
-      }
-      for (var i = 0; i < vm.pokemonData.LEGACY.CHARGE.length; i++) {
-        var charge = vm.pokemonData.LEGACY.CHARGE[i];
-        vm.pokemonData.LEGACY.CHARGE[i] = vm.gameData.moveList.CHARGE[charge];
-      }
-
-      
-
-      // Prepare EvoData (if EVO)
-      if ((vm.pokemonData.EVO) && (vm.pokemonData.EVO.length > 0)) {
-        var evoNumber = vm.pokemonData.EVO[vm.pokemonData.EVO.length - 1];
-        vm.evoData = vm.gameData.pokemonData[evoNumber];
-        vm.evoData.name = vm.gameData.pokemonList[evoNumber].name;
-
-        for (var i = 0; i < vm.evoData.MOVESET.BASIC.length; i++) {
-          var basic = vm.evoData.MOVESET.BASIC[i];
-          vm.evoData.MOVESET.BASIC[i] = vm.gameData.moveList.BASIC[basic];
+        for (var num = 0; num < vm.pokemonData.MOVESET.BASIC.length; num++) {
+          var basic = vm.pokemonData.MOVESET.BASIC[num];
+          vm.pokemonData.MOVESET.BASIC[num] = vm.gameData.moveList.BASIC[basic];
         }
-        for (var i = 0; i < vm.evoData.MOVESET.CHARGE.length; i++) {
-          var charge = vm.evoData.MOVESET.CHARGE[i];
-          vm.evoData.MOVESET.CHARGE[i] = vm.gameData.moveList.CHARGE[charge];
+        for (var num = 0; num < vm.pokemonData.MOVESET.CHARGE.length; num++) {
+          var charge = vm.pokemonData.MOVESET.CHARGE[num];
+          vm.pokemonData.MOVESET.CHARGE[num] = vm.gameData.moveList.CHARGE[charge];
         }
 
-        for (var i = 0; i < vm.evoData.LEGACY.BASIC.length; i++) {
-          var basic = vm.evoData.LEGACY.BASIC[i];
-          vm.evoData.LEGACY.BASIC[i] = vm.gameData.moveList.BASIC[basic];
+        for (var num = 0; num < vm.pokemonData.LEGACY.BASIC.length; num++) {
+          var basic = vm.pokemonData.LEGACY.BASIC[num];
+          vm.pokemonData.LEGACY.BASIC[num] = vm.gameData.moveList.BASIC[basic];
         }
-        for (var i = 0; i < vm.evoData.LEGACY.CHARGE.length; i++) {
-          var charge = vm.evoData.LEGACY.CHARGE[i];
-          vm.evoData.LEGACY.CHARGE[i] = vm.gameData.moveList.CHARGE[charge];
+        for (var num = 0; num < vm.pokemonData.LEGACY.CHARGE.length; num++) {
+          var charge = vm.pokemonData.LEGACY.CHARGE[num];
+          vm.pokemonData.LEGACY.CHARGE[num] = vm.gameData.moveList.CHARGE[charge];
         }
-      } else {
-        vm.evoData = null;
+
+        // Prepare EvoData (if EVO)
+        if ((vm.pokemonData.EVO) && (vm.pokemonData.EVO.length > 0)) {
+          vm.evoData = [];
+          getEvoData(vm.pokemonData.EVO);
+        } else {
+          vm.evoData = null;
+        }
       }
+    }
+
+    function getEvoData(EVO) {
+      console.log(EVO);
+      for (var i = 0; i < EVO.length; i++) {
+          var evoNumber = EVO[i];
+          var evoData = vm.gameData.pokemonData[evoNumber];
+          evoData.name = vm.gameData.pokemonList[evoNumber].name;
+
+          for (var j = 0; j < evoData.MOVESET.BASIC.length; j++) {
+            var basic = evoData.MOVESET.BASIC[j];
+            evoData.MOVESET.BASIC[j] = vm.gameData.moveList.BASIC[basic];
+          }
+          for (var j = 0; j < evoData.MOVESET.CHARGE.length; j++) {
+            var charge = evoData.MOVESET.CHARGE[j];
+            evoData.MOVESET.CHARGE[j] = vm.gameData.moveList.CHARGE[charge];
+          }
+
+          for (var j = 0; j < evoData.LEGACY.BASIC.length; j++) {
+            var basic = evoData.LEGACY.BASIC[j];
+            evoData.LEGACY.BASIC[j] = vm.gameData.moveList.BASIC[basic];
+          }
+          for (var j = 0; j < evoData.LEGACY.CHARGE.length; j++) {
+            var charge = evoData.LEGACY.CHARGE[j];
+            evoData.LEGACY.CHARGE[j] = vm.gameData.moveList.CHARGE[charge];
+          }
+          vm.evoData.push(evoData);
+          if ((evoData.EVO) && (evoData.EVO.length > 0)) {
+            getEvoData(evoData.EVO);
+          }
+      }
+    }
+
+    function getEvoHP(i) {
+      if ((vm.gameData) && (vm.evoData) && (vm.baseData.level)) {
+        var ECpM = vm.gameData.getECpM(vm.baseData.level);
+        return Math.floor(ECpM * (vm.evoData[i].BHP + vm.baseData.HP_IV));
+      }
+      return '';
+    }
+
+    function getEvoCP(i) {
+      if ((vm.gameData) && (vm.evoData) && (vm.baseData.level)) {
+        var ECpM = vm.gameData.getECpM(vm.baseData.level);
+        return Math.floor((vm.evoData[i].BATK + vm.baseData.ATK_IV) * Math.pow(vm.evoData[i].BDEF + vm.baseData.DEF_IV, 0.5) *
+               Math.pow(vm.evoData[i].BHP + vm.baseData.HP_IV, 0.5) * Math.pow(ECpM, 2) / 10);
+      }
+      return '';
     }
 
     function getMaxHP() {
@@ -130,19 +182,19 @@
       return '';
     }
 
-    function getEvoMaxHP() {
+    function getEvoMaxHP(i) {
       if ((vm.gameData) && (vm.evoData)) {
         var ECpM = vm.gameData.getECpM(39);
-        return Math.floor(ECpM * (vm.evoData.BHP + vm.baseData.HP_IV));
+        return Math.floor(ECpM * (vm.evoData[i].BHP + vm.baseData.HP_IV));
       }
       return '';
     }
 
-    function getEvoMaxCP() {
+    function getEvoMaxCP(i) {
       if ((vm.gameData) && (vm.evoData)) {
         var ECpM = vm.gameData.getECpM(39);
-        return Math.floor((vm.evoData.BATK + vm.baseData.ATK_IV) * Math.pow(vm.evoData.BDEF + vm.baseData.DEF_IV, 0.5) *
-               Math.pow(vm.evoData.BHP + vm.baseData.HP_IV, 0.5) * Math.pow(ECpM, 2) / 10);
+        return Math.floor((vm.evoData[i].BATK + vm.baseData.ATK_IV) * Math.pow(vm.evoData[i].BDEF + vm.baseData.DEF_IV, 0.5) *
+               Math.pow(vm.evoData[i].BHP + vm.baseData.HP_IV, 0.5) * Math.pow(ECpM, 2) / 10);
       }
       return '';
     }

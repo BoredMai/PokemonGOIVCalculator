@@ -23,7 +23,6 @@ body {
   /*height: 20px;*/
 }
 
-
 .navbar .navbar-brand {
   color: white;
   font-weight: 500;
@@ -345,6 +344,13 @@ th, td {
   border-radius: 3px;
 }
 
+#advanced-view .evolved-status {
+  flex-direction: column !important;
+}
+
+#advanced-view .evolved-status .grey-border {
+  width: 100%;
+}
 
 @media (min-width: 992px) {
   #advanced-view .data-container>div {

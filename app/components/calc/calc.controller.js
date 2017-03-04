@@ -110,7 +110,7 @@ function CalcController($http, $route, $location, gameData, calcData) {
             if (vm.focusedItem == -1) {
               vm.focusedItem = 0;
             }
-            selectPokemon(vm.filteredList[vm.focusedItem]);
+            // selectPokemon(vm.filteredList[vm.focusedItem]);
           } else {
             vm.pokemonName = '';
             vm.pokemonInputChanged = false;
@@ -139,15 +139,31 @@ function CalcController($http, $route, $location, gameData, calcData) {
     }
 
     function selectPokemon(pokemon) {
-      vm.pokemonIndex = pokemon.number;
-      vm.pokemon = gameData.pokemonData[vm.pokemonIndex];
-      vm.pokemonName = pokemon.name;
-      vm.pokemonInputChanged = false;
-      vm.mouseOverDropdown = false;
-      vm.backgroundImg = (pokemon.number < 9) ? '00' + (pokemon.number + 1) : ((pokemon.number < 99) ? '0' + (pokemon.number + 1) : (pokemon.number + 1));
+      if (vm.pokemonIndex != pokemon.number) {
+        vm.pokemonIndex = pokemon.number;
+        vm.pokemon = gameData.pokemonData[vm.pokemonIndex];
+        vm.pokemonName = pokemon.name;
+        vm.pokemonInputChanged = false;
+        vm.mouseOverDropdown = false;
+        vm.backgroundImg = (pokemon.number < 9) ? '00' + (pokemon.number + 1) : ((pokemon.number < 99) ? '0' + (pokemon.number + 1) : (pokemon.number + 1));
 
-      vm.refine.pokemonList = [];
-      vm.addEvolutionsToRefineList(pokemon, vm.pokemon);
+        //Clearing form
+        vm.cp = null;
+        vm.hp = null;
+        vm.stardust = null;
+        vm.overall = null;
+        vm.stats = null;
+        vm.highHP = false;
+        vm.highATK = false;
+        vm.highDEF = false;
+
+        vm.refine.cp = null;
+        vm.refine.hp = null;
+        vm.refine.stardust = null;
+        vm.refine.isPoweredUp = false;
+        vm.refine.pokemonList = [];
+        vm.addEvolutionsToRefineList(pokemon, vm.pokemon);
+      }
     };
 
     function toggleCheck(check) {
