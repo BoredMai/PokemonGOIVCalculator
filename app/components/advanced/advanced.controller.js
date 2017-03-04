@@ -116,7 +116,7 @@
         }
 
         $("meta[property='og\\:title']").attr('content', 'PoGOBin - Advanced Data for ' + vm.pokemonData.name);
-        $("meta[property='og\\:image']").attr('content', './assets/img/sprites/' + vm.baseData.imgIndex + 'MS.png');
+        $("meta[property='og\\:image']").attr('content', 'http://pogo.trashbin.com.br/assets/img/sprites/' + vm.baseData.imgIndex + 'MS.png');
         var description = '';
         if (vm.fullData) {
           description += 'HP ' + vm.baseData.hp + ' | CP ' + vm.baseData.cp + '\n';
