@@ -1,1 +1,1 @@
-angular.module('pogoApp', ['ui.bootstrap', 'ngAnimate', 'ngRoute', 'ngMeta']);
+angular.module('pogoApp', ['ui.bootstrap', 'ngAnimate', 'ngRoute']);

@@ -3,7 +3,7 @@
 
   angular.module('pogoApp').controller('AdvancedController', AdvancedController);
 
-  AdvancedController.$inject = ['$http', '$route', 'gameData', 'ngMeta'];
+  AdvancedController.$inject = ['$http', '$route', 'gameData'];
 
   function AdvancedController($http, $route, gameData, ngMeta) {
     var vm = this;
@@ -115,8 +115,8 @@
           vm.evoData = null;
         }
 
-        ngMeta.setTag('og:title', 'PoGOBin - Advanced Data for ' + vm.pokemonData.name);
-        ngMeta.setTag('og:image', './assets/img/sprites/' + vm.baseData.imgIndex + 'MS.png');
+        $("meta[property='og\\:title']").attr('content', 'PoGOBin - Advanced Data for ' + vm.pokemonData.name);
+        $("meta[property='og\\:image']").attr('content', './assets/img/sprites/' + vm.baseData.imgIndex + 'MS.png');
         var description = '';
         if (vm.fullData) {
           description += 'HP ' + vm.baseData.hp + ' | CP ' + vm.baseData.cp + '\n';
@@ -129,7 +129,8 @@
         for (var i = 0; i < vm.evoData.length; i++) {
           description += 'Evolved (' + vm.evoData[i].name + ') Max HP ' + vm.getEvoMaxHP(i) + ' | Max CP ' + vm.getEvoMaxCP(i) + '\n';
         }
-        ngMeta.setTag('og:description', description);
+        description = description.slice(0, description.lastIndexOf('\n'));
+        $("meta[property='og\\:description']").attr('content', description);
       }
     }
 

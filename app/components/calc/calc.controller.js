@@ -50,6 +50,10 @@ function CalcController($http, $route, $location, gameData, calcData) {
     activate();
 
     function activate() {
+      $("meta[property='og\\:title']").attr('content', 'PoGOBin');
+      $("meta[property='og\\:image']").attr('content', './assets/img/pokeball.png');
+      $("meta[property='og\\:description']").attr('content', 'A Pokémon GO IV Calculator');
+
       vm.gameData.fetchData()
       .then(() => {
         vm.gameData.fetchMoves()
