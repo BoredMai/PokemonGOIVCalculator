@@ -1149,7 +1149,7 @@
       "LEGACY": { "BASIC": [], "CHARGE": [] }
      },
     
-    { "BHP": 150, "BATK": 197, "BDEF": 118,
+    { "BHP": 150, "BATK": 118, "BDEF": 197,
       "TYPE": ["GRASS", "FLYING"], "ACTIVE": true,
       "MOVESET": { "BASIC": [44, 52], "CHARGE": [97, 16, 77] },
       "LEGACY": { "BASIC": [], "CHARGE": [] }
