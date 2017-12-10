@@ -75,7 +75,8 @@ function CalcController($http, $route, $location, gameData, calcData) {
     function filterList() {
       vm.filteredList = [];
       for (var i = 0; i < vm.gameData.pokemonList.length; i++) {
-        if (vm.gameData.pokemonData[i].ACTIVE) {
+        var data = vm.gameData.pokemonData[(i+1).toString()];
+        if (data) {
           var name = vm.gameData.pokemonList[i].name.toLowerCase();
           if (name.indexOf(vm.pokemonName.toLowerCase()) != -1) {
             vm.filteredList.push(vm.gameData.pokemonList[i]);
@@ -149,7 +150,7 @@ function CalcController($http, $route, $location, gameData, calcData) {
         vm.pokemonName = pokemon.name;
         vm.pokemonInputChanged = false;
         vm.mouseOverDropdown = false;
-        vm.backgroundImg = (pokemon.number < 9) ? '00' + (pokemon.number + 1) : ((pokemon.number < 99) ? '0' + (pokemon.number + 1) : (pokemon.number + 1));
+        vm.backgroundImg = (pokemon.number < 10) ? '00' + (pokemon.number) : ((pokemon.number < 100) ? '0' + (pokemon.number) : (pokemon.number));
 
         //Clearing form
         vm.cp = null;
@@ -226,11 +227,12 @@ function CalcController($http, $route, $location, gameData, calcData) {
     }
 
     function addEvolutionsToRefineList(pokemonInfo, pokemonData) {
+      console.log(pokemonInfo, pokemonData.EVO)
       if (pokemonData.EVO) {
         for (var i = 0; i < pokemonData.EVO.length; i++) {
           var EVO = pokemonData.EVO[i];
-          if (gameData.pokemonData[EVO].ACTIVE) {
-            vm.addEvolutionsToRefineList(gameData.pokemonList[EVO], gameData.pokemonData[EVO]);
+          if (gameData.pokemonData[EVO.toString()]) {
+            vm.addEvolutionsToRefineList(gameData.pokemonList[EVO-1], gameData.pokemonData[EVO]);
           }
         }
       }

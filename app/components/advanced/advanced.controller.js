@@ -51,7 +51,7 @@
               DEF_IV: arrayData[4],
               HP_IV: arrayData[5],
               level: arrayData[6],
-              imgIndex: (arrayData[0] < 9) ? '00' + (arrayData[0] + 1) : ((arrayData[0] < 99) ? '0' + (arrayData[0] + 1) : (arrayData[0] + 1)),
+              imgIndex: (arrayData[0] < 100) ? '00' + (arrayData[0]) : ((arrayData[0] < 100) ? '0' + (arrayData[0]) : (arrayData[0])),
               fullData: true
             };
         } catch (e) {
@@ -72,22 +72,22 @@
           }
         }
       } else {
-        var num = parseInt(uriData) - 1;
+        var num = parseInt(uriData);
         if (num < vm.gameData.pokemonList.length) {
           vm.baseData = {
             number: num,
             ATK_IV: 15,
             DEF_IV: 15,
             HP_IV: 15,
-            imgIndex: (num < 9) ? '00' + (num + 1) : ((num < 99) ? '0' + (num + 1) : (num + 1))
+            imgIndex: (num < 10) ? '00' + (num) : ((num < 100) ? '0' + (num) : (num))
           };
         }
-      }        
+      }
 
       if (vm.baseData.imgIndex != '000') {
         // Prepare PokemonData
         vm.pokemonData = vm.gameData.pokemonData[vm.baseData.number];
-        vm.pokemonData.name = vm.gameData.pokemonList[vm.baseData.number].name;
+        vm.pokemonData.name = vm.gameData.pokemonList[vm.baseData.number - 1].name;
 
         for (var num = 0; num < vm.pokemonData.MOVESET.BASIC.length; num++) {
           var basic = vm.pokemonData.MOVESET.BASIC[num];
@@ -138,7 +138,7 @@
       for (var i = 0; i < EVO.length; i++) {
           var evoNumber = EVO[i];
           var evoData = vm.gameData.pokemonData[evoNumber];
-          evoData.name = vm.gameData.pokemonList[evoNumber].name;
+          evoData.name = vm.gameData.pokemonList[evoNumber-1].name;
 
           for (var j = 0; j < evoData.MOVESET.BASIC.length; j++) {
             var basic = evoData.MOVESET.BASIC[j];
